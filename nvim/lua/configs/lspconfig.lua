@@ -27,6 +27,12 @@ lspconfig.pyright.setup {
   root_dir = lspconfig.util.root_pattern("pyproject.toml", "setup.py", "setup.cfg", "requirements.txt", ".git"),
 }
 
+lspconfig.clangd.setup {
+  cmd = { "clangd" }, -- can also specify a full path if needed
+  filetypes = { "c", "cpp", "objc", "objcpp" },
+  root_dir = require("lspconfig.util").root_pattern("compile_commands.json", "compile_flags.txt", ".git"),
+}
+
 vim.diagnostic.config {
   virtual_text = {
     prefix = "●",

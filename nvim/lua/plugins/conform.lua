@@ -14,6 +14,7 @@ return {
         markdown = { "mdformat" },
         html = { "prettier" },
         typescript = { "prettier" },
+        cpp = { "clang-format" },
         ["*"] = { "trim_whitespace", "trim_newlines" },
       },
     },
