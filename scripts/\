@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo "lid event"
+
+#
+# # Read from stdin (ACPI passes the event here)
+# read event
+#
+# if [[ "$event" == *"LID close"* ]]; then
+#     hyprctl keyword monitor HDMI-A-1,disable
+# elif [[ "$event" == *"LID open"* ]]; then
+#     hyprctl reload  # or re-enable external monitor manually if you want
+# fi

@@ -1,0 +1,64 @@
+(defpoll themes :interval "300s" "python ~/scripts/list_themes.py")
+
+(defwidget themebutton [theme img text]
+  (button
+          :halign "center"
+          :valign "center"
+          :onclick "bash ${theme} &"
+          :hexpand true
+          :vexpand true
+          :height 350
+          :class "button"
+          (box
+            :orientation "v"
+            :space-evenly false
+            :halign "center"
+            :valign "center"
+            (image :path "${img}"
+                   :image-width 300
+                   :preserve-aspect-ratio true
+                   :class "image"
+                   :halign "center"
+                   :valign "center"
+            )
+            (label :text "${text}"
+                   :class "label"
+                   :halign "center"
+                   :valign "end"
+            )
+          )
+      )
+)
+
+(defwidget container []
+  (box :orientation "v" :hexpand true :vexpand true
+    (literal :content themes)
+  )
+)
+
+(defwidget killer []
+  (button
+    :class "button"
+    :onclick "sh -c '~/eww/target/release/eww close menu'"
+    "Close"
+  )
+)
+
+(defwindow menu
+  :monitor 0
+  :geometry (
+    geometry
+      :x "0px"
+      :y "0px"
+      :width "400px"
+      :height "500px"
+      :anchor "center"
+  )
+  :class "menu"
+  :stacking "overlay"
+  :focusable "ondemand"
+  (box :orientation "v" :space-evenly false :spacing 5
+    (killer)
+    (container)
+  ) ; killer scroll box
+) ; window
