@@ -34,7 +34,7 @@ def create_script():
 
 
 def create_application():
-    APP_PATH = Path(f"/home/zach/.local/share/applications")
+    APP_PATH = Path(f"/home/zach/.local/share/themes/applications")
     THEME_PATH = Path(f"/home/zach/scripts/themes/{FORMATTED_NAME}.sh")
 
     # TEMPLATE

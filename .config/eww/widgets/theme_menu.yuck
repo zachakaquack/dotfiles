@@ -1,0 +1,59 @@
+(include "/home/zach/.config/eww/general/killer.yuck")
+
+(defpoll themes :interval "300s" "python /home/zach/scripts/list_themes.py")
+
+(defwidget themebutton [theme img text]
+  (button
+          :halign "center"
+          :valign "center"
+          :onclick "bash ${theme} &"
+          :hexpand true
+          :vexpand true
+          :height 350
+          :class "theme-button"
+          (box
+            :orientation "v"
+            :space-evenly false
+            :halign "center"
+            :valign "center"
+            (image :path "${img}"
+                   :image-width 300
+                   :preserve-aspect-ratio true
+                   :class "theme-image"
+                   :halign "center"
+                   :valign "center"
+            )
+            (label :text "${text}"
+                   :class "theme-label"
+                   :halign "center"
+                   :valign "end"
+            )
+          )
+      )
+)
+
+(defwidget container []
+  (box :orientation "v" :hexpand true :vexpand true
+    (literal :content themes)
+  )
+)
+
+
+(defwindow thememenu
+  :monitor 0
+  :geometry (
+    geometry
+      :x "0px"
+      :y "0px"
+      :width "400px"
+      :height "500px"
+      :anchor "center"
+  )
+  :class "theme-menu"
+  :stacking "overlay"
+  :focusable "ondemand"
+  (box :orientation "v" :space-evenly false :spacing 5
+    (killer :menu "thememenu")
+    (container)
+  ) ; killer scroll box
+) ; window

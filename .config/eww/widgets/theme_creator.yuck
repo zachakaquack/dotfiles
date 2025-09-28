@@ -1,0 +1,73 @@
+(include "/home/zach/.config/eww/general/killer.yuck")
+
+; vars
+(defvar picturepath "~/Pictures/bgs/")
+(defvar themename "Load ")
+(defpoll images :interval "30s" "python /home/zach/scripts/list_images.py")
+
+; windows
+(defwindow themecreator
+  :monitor 0
+  :geometry (
+    geometry
+      :x "0px"
+      :y "0px"
+      :width "700px"
+      :height "300px"
+      :anchor "center"
+  )
+  :stacking "overlay"
+  :focusable "ondemand"
+  (box :orientation "h" :space-evenly false :spacing 5
+  :class "theme-creator-menu"
+    (box :orientation "v" :space-evenly false :spacing 5 :width 300
+      (label :text "Picture Path" :class "label")
+      (input
+        :value picturepath
+        :onchange "eww update picturepath='{}'"
+      )
+      (label :text "Theme Name" :class "label")
+      (input
+        :value themename
+        :onchange "eww update themename='{}'"
+      )
+      (button
+        :onclick "python ~/scripts/super_creator.py '${picturepath}' '${themename}' && eww close themecreator"
+        "Create Theme"
+      )
+      (button
+        :onclick "python ~/scripts/super_creator.py '${picturepath}' '${themename}' && eww close themecreator && python ~/scripts/load_theme_from_basics.py '${picturepath}' '${themename}'"
+      "Create Theme and Load"
+      )
+    )
+    (imagecontainer)
+  )
+
+) ; window
+
+
+; main container
+(defwidget imagecontainer []
+  (scroll :vscroll true :hscroll false
+    (literal :content images)
+  )
+)
+
+; background widget (holds two images in a horizontal box)
+(defwidget background [img1 img2]
+  (box :orientation "h"
+       :halign "center"
+       :valign "center"
+       :spacing 20
+       :space-evenly false
+       :class "theme-creator-background"
+      (button
+        :onclick "eww update picturepath='${img1}'"
+        (image :path {img1} :image-width 200 :class "image")
+      )
+      (button
+        :onclick "eww update picturepath='${img2}'"
+        (image :path "${img2}" :image-width 200 :class "image")
+      )
+  )
+)

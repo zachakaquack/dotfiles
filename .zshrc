@@ -62,6 +62,8 @@ fi
 export CONFIG_DIR=/home/zach/.config
 export EDITOR=nvim
 
+# eww
+export PATH="$HOME/eww/target/release:$PATH"
 # Created by `pipx` on 2025-06-15 13:27:28
 export PATH="$PATH:/home/zach/.local/bin"
 

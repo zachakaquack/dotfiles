@@ -4,6 +4,7 @@ from pathlib import Path
 home = Path.home()
 backup_to = home / "backups"
 config = home / ".config"
+
 paths = [
     # config stuff
     config / "albert",
