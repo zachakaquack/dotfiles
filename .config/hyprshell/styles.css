@@ -1,0 +1,69 @@
+:root {
+    --border-color: #5f65c3;
+    --border-color-active: #343387;
+
+    --bg-color: rgba(20, 20, 20, 0.8);
+    --bg-color-hover: rgba(40, 40, 50, 1);
+
+    --border-radius: 12px;
+    --border-size: 3px;
+    --border-style: solid;
+
+    /* --text-color: #fd9bc4; */
+    --text-color: white;
+
+    --window-padding: 0px;
+    --client-padding: 0px;
+    --monitor-border-radius: 20px;
+}
+
+.window {
+}
+
+
+.monitor {
+  /* background: transparent; */
+}
+
+.workspace {
+  padding: var(--client-padding);
+  border: 3px solid var(--bg-color);
+  margin: 3px;
+}
+
+.workspace.active {
+  padding: var(--client-padding);
+  border: 3px solid var(--border-color-active);
+}
+
+.client {
+  border: none;
+}
+
+.client-image {
+}
+
+
+.launcher {
+}
+
+.launcher-input {
+}
+
+.launcher-results {
+}
+
+.launcher-item {
+}
+
+.launcher-exec {
+}
+
+.launcher-key {
+}
+
+.launcher-plugins {
+}
+
+.launcher-plugin {
+}

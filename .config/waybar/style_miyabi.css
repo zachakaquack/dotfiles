@@ -1,0 +1,150 @@
+/* global styles */
+* {
+  border: none;
+  font-family: FontAwesome, JetbrainsMono Nerd Font;
+  font-size: 15px;
+  min-height: 10px;
+}
+
+/* general styles for the window as a whole */
+window#waybar{
+  background: transparent;
+  transition: none;
+}
+
+/* make the background of the bar the same color as your kitty background */
+window#waybar.kitty {
+  background: #0f0103;
+  border-bottom: 1px solid #303030;
+}
+
+/*general styles */
+#workspaces,
+#workspaces button,
+#window,
+#custom-vesktop-toggle,
+#network,
+#battery,
+#pulseaudio,
+#clock,
+#custom-power {
+  /* text color of everything */
+  color: #487d8b;
+  /* color: blue; */
+
+  /* background color of everything */
+  background: #48454d;
+
+  /* shadow underneath */
+  box-shadow: inset 0 -6px #2b3232;
+
+  /* no touchy */
+  margin-top: 6px;
+  margin-bottom: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  transition: none;
+}
+
+/* WORKSPACE STUFF */
+#workspaces {
+  border-radius: 10px;
+  margin: 6px 5px;
+  padding: 0px 6px;
+}
+
+/* button inside of the workspace */
+#workspaces button {
+  background: transparent;
+  padding: 4px 4px;
+  transition: color 0.5s ease, text-shadow 0.5s ease, transform 0.5s ease, box-shadow 0.5s ease;
+  box-shadow: none;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* button hover */
+#workspaces button:hover {
+  box-shadow: inset 0 -2px #487d8b;
+}
+
+/* urgent workspace */
+#workspaces button.urgent {
+  background: #763321;
+  color: #487d8b;
+}
+
+/* active workspace */
+#workspaces button.active {
+  color: #e4984a;
+}
+
+/* active workspace on hover */
+#workspaces button.active:hover {
+  box-shadow: inset 0 -4px #e4984a;
+}
+
+/* empty button */
+#workspaces button.empty {
+  transition: none;
+  color: #48616c;
+}
+
+/* empty button on hover */
+#workspaces button.empty:hover {
+  box-shadow: inset 0 -2px #48616c;
+}
+
+/* empty, but active workspace */
+#workspaces button.empty.active{
+  color: #e4984a;
+}
+
+/* empty, but active workspace on hover */
+#workspaces button.empty.active:hover {
+  box-shadow: inset 0 -2px #e4984a;
+}
+
+/* window thing at the top */
+#window {
+  border-radius: 10px;
+}
+
+/* remove the window thing when empty (on desktop) */
+window#waybar.empty #window {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  background-color: transparent;
+}
+
+#battery.discharging.critical{
+  background-color: #b9642d;
+  box-shadow: inset 0 -6px #b9642d;
+  color: #46474d;
+  transition: none;
+}
+
+/* border radius bull */
+#custom-vesktop-toggle {
+  margin-left: 5px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+#network{
+  margin-left: 0px;
+  padding-left: 0px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+#clock {
+  margin-right: 5px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+#pulseaudio {
+  padding-right: 0px;
+}

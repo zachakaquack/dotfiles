@@ -1,0 +1,141 @@
+@import url("../../.cache/wal/colors-waybar.css");
+
+* {
+  border: none;
+  font-family: FontAwesome, JetbrainsMono Nerd Font;
+  font-size: 15px;
+  min-height: 10px;
+}
+
+window#waybar {
+  background: @background;
+  border-bottom: 1px solid @color8;
+}
+
+/*general styles */
+#workspaces,
+#workspaces button,
+#window,
+#custom-vesktop-toggle,
+#network,
+#battery,
+#pulseaudio,
+#clock,
+#custom-power {
+  color: @foreground;
+  background: @background;
+  text-shadow: 0 0 7px @color2;
+
+  margin-top: 6px;
+  margin-bottom: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  transition: none;
+  box-shadow: none;
+}
+
+
+#window:hover,
+#custom-vesktop-toggle:hover,
+#network:hover,
+#battery:hover,
+#pulseaudio:hover,
+#clock:hover,
+#custom-power:hover {
+  transition: background 0.5s ease-out;
+  background: @color0;
+}
+
+/* specifics */
+
+/* left side specifics */
+#workspaces {
+  border-radius: 10px;
+  margin: 6px 5px;
+  padding: 0px 6px;
+}
+
+#workspaces button {
+  background: transparent;
+  padding: 4px 4px;
+  transition: color 0.5s ease, text-shadow 0.5s ease, transform 0.5s ease, box-shadow 0.5s ease;
+  box-shadow: none;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#workspaces button.urgent {
+  background: @color14;
+  color: @color14;
+}
+
+#workspaces button.active {
+  color: @color11;
+  text-shadow: 0 0 4px @color11;
+}
+
+#workspaces button.active:hover {
+  box-shadow: inset 0 -4px @color11;
+}
+
+#workspaces button:hover {
+  box-shadow: inset 0 -2px @color11;
+}
+
+#workspaces button.empty {
+  transition: none;
+  color: @color8;
+}
+
+#window {
+  border-radius: 10px;
+}
+
+window#waybar.empty #window {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+#custom-vesktop-toggle {
+  margin-left: 5px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+#custom-vesktop-toggle,
+#network,
+#battery,
+#pulseaudio{
+  margin: 0;
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+#network{
+  margin-left: 0px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+#clock {
+  margin-left: 10px;
+  margin-right: 5px;
+  border-radius: 10px;
+}
+
+#pulseaudio {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+#custom-power {
+  padding-left: 10px;
+  padding-right: 15px;
+  margin: 5px;
+  border-radius: 10px;
+  font-size: 15px;
+}

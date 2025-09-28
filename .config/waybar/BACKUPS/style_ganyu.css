@@ -1,0 +1,150 @@
+/* global styles */
+* {
+  border: none;
+  font-family: FontAwesome, JetbrainsMono Nerd Font;
+  font-size: 15px;
+  min-height: 10px;
+}
+
+window#waybar {
+  background: #5f65c3;
+}
+
+/*general styles */
+#workspaces,
+#workspaces button,
+#window,
+#network,
+#battery,
+#pulseaudio,
+#clock,
+#custom-power {
+  color: #d99e9c;
+  background: #425172;
+
+  margin-top: 6px;
+  margin-bottom: 6px;
+
+  padding-left: 10px;
+  padding-right: 10px;
+
+  transition: none;
+  box-shadow: inset 0 -6px #5b1f2b;
+}
+
+/* specifics */
+
+/* left side specifics */
+#workspaces {
+  border-radius: 10px;
+  margin: 6px 5px;
+  padding: 0px 6px;
+}
+
+#workspaces button {
+  background: transparent;
+  padding: 4px 4px;
+  transition: color 0.5s ease, text-shadow 0.5s ease, transform 0.5s ease, box-shadow 0.5s ease;
+  box-shadow: none;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#workspaces button.urgent {
+  background: #fc5f39;
+  color: #5b1f2b;
+}
+
+#workspaces button.active {
+  color: #f9525a;
+  text-shadow: 0 0 4px #5b1f2b;
+}
+
+#workspaces button.active:hover {
+  box-shadow: inset 0 -4px #5b1f2b;
+}
+
+#workspaces button:hover {
+  box-shadow: inset 0 -2px #fd9bc4;
+}
+
+#workspaces button.empty {
+  transition: none;
+  /* box-shadow: inset 0 -4px #e32a38; */
+  /* background: #343387; */
+  /* text-shadow: 0 0 4px white; */
+  /* background: #5d63c1; */
+  /* color: #fca299; */
+  color: #9d7a75;
+}
+
+/* middle specifics */
+#window {
+  border-radius: 10px;
+}
+
+window#waybar.empty #window {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  background-color: transparent;
+}
+
+
+/* overall background */
+window#waybar{
+  background: transparent;
+}
+
+/* right side specifics */
+#network {
+  margin-left: 5px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+#clock {
+  margin-right: 5px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+#custom-power {
+  padding-left: 10px;
+  padding-right: 15px;
+  margin: 5px;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+/* KITTY SPECIFICS */
+/* window#waybar.kitty { */
+/*   background: #0f0103; */
+/* } */
+/**/
+/* window#waybar.kitty #workspaces, */
+/* window#waybar.kitty #window, */
+/* window#waybar.kitty #network, */
+/* window#waybar.kitty #battery, */
+/* window#waybar.kitty #pulseaudio, */
+/* window#waybar.kitty #clock, */
+/* window#waybar.kitty #custom-power */
+/* { */
+/*    keep the colo the same */
+/*   color: #fd9bc4; */
+/**/
+/*   background: #4b080f; */
+/**/
+/*   margin-top: 6px; */
+/*   margin-bottom: 6px; */
+/**/
+/*   padding-left: 10px; */
+/*   padding-right: 10px; */
+/**/
+/*   transition: none; */
+/*   box-shadow: inset 0 -4px #2a040f; */
+/* } */
+/**/
+/* window#waybar.kitty #workspaces button.empty { */
+/*   transition: none; */
+/*   color: #8f3366; */
+/* } */
