@@ -1,0 +1,124 @@
+@import url("../../.cache/wal/colors-waybar.css");
+
+/* global styles */
+* {
+	border: none;
+	font-family: FontAwesome, JetbrainsMono Nerd Font;
+	font-size: 15px;
+	/* min-height: 10px; */
+}
+
+window#waybar {
+	background: @background;
+	/* border-bottom: 1px solid @cursor; */
+}
+
+/*general styles */
+#workspaces,
+#workspaces button,
+#window,
+#custom-vesktop-toggle,
+#network,
+#battery,
+#pulseaudio,
+#clock,
+#custom-power,
+#custom-weather,
+#custom-theme-menu,
+#custom-theme-menu-creator,
+#custom-game-launcher,
+#custom-random-theme {
+	/* color: @color11; */
+	color: @cursor;
+	/* background: @background; */
+	box-shadow: none;
+	text-shadow: 0 0 7px @color1;
+
+	/* margin-top: 3px; */
+	/* margin-bottom: 4px; */
+	padding-left: 10px;
+	padding-right: 10px;
+	transition: none;
+}
+
+/* specifics */
+
+/* left side specifics */
+#workspaces {
+	border-radius: 10px;
+	/* margin: 5px 5px; */
+	padding: 0px 6px;
+}
+
+#workspaces button {
+	/* background: transparent; */
+	/* padding: 4px 4px; */
+	padding: 4px 8px;
+	transition: color 0.5s ease, text-shadow 0.5s ease, transform 0.5s ease, box-shadow 0.5s ease;
+	box-shadow: none;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+#workspaces button.urgent {
+	color: orange;
+}
+
+#workspaces button.active {
+	/* color: @color4 */
+	/* color: @cursor; */
+	color: @color11;
+}
+
+#workspaces button.active:hover {
+	/* box-shadow: inset 0 -4px @cursor; */
+	/* box-shadow: inset 0 -4px @cursor; */
+	box-shadow: inset 0 -4px @color11;
+}
+
+#workspaces button:hover {
+	/* box-shadow: inset 0 -2px @cursor; */
+	box-shadow: inset 0 -2px @cursor;
+	background: transparent;
+}
+
+#workspaces button.empty {
+	color: @color8;
+}
+
+#workspaces button.empty:hover {
+	box-shadow: inset 0 -2px @color8;
+}
+
+#workspaces button.empty.active {
+	color: @color11;
+}
+
+#workspaces button.empty.active:hover {
+	box-shadow: inset 0 -2px @color11;
+}
+
+/* middle specifics */
+#window {
+	border-radius: 10px;
+}
+
+window#waybar.empty #window {
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+	background-color: transparent;
+}
+
+#custom-power {
+	margin-bottom: 4px;
+	margin-right: 5px;
+}
+
+window#waybar.empty {
+	background: rgba(0, 0, 0, 0.8);
+}
+
+window#waybar.vesktop {
+	background: rgba(0, 0, 0, 0.8);
+}

@@ -1,0 +1,171 @@
+{
+	"layer": "top",
+	"position": "top",
+	"autohide": true,
+	"autohide-blocked": false,
+	"exclusive": true,
+	"passthrough": false,
+	"signal": {
+		"8": [
+			"custom/vesktop-toggle"
+		]
+	},
+	"gtk-layer-shell": true,
+	"modules-left": [
+		"hyprland/workspaces"
+	],
+	"modules-center": [
+		"hyprland/window"
+	],
+	"modules-right": [
+		//      "custom/game-launcher",
+		"custom/theme-menu",
+		"custom/theme-menu-creator",
+		//"custom/random-theme",
+		//    "custom/vesktop-toggle",
+		"network",
+		"battery",
+		"pulseaudio",
+		//  "mpris",
+		"clock",
+		"custom/power"
+	],
+	"hyprland/workspaces": {
+		"format": "{windows}{name}",
+		"format-window-separator": "",
+		// "window-rewrite-default": " ",
+		"window-rewrite-default": "",
+		"window-rewrite": {
+			// 	"class<kitty>": " ",
+			// 	"class<kitty> title<.*/python.*>": " ",
+			// 	"class<kitty> title<.*/cpp.*>": " ",
+			// 	"class<kitty> title<.*nvim.*>": " ",
+			"class<.*vesktop.*> title<.*\\([0-9]+\\).*": " ",
+			"class<.*vesktop.*> title<.*•.*": "󰗖 ",
+			// 	"class<.*vesktop.*>": " ",
+			// 	"class<.*librewolf.*>": " ",
+			// 	"class<.*thunar.*>": " ",
+			// 	"class<.*albert.*>": "",
+			// 	"class<.*libreoffice-writer.*>": " "
+		},
+		"persistent-workspaces": {
+			"*": [
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10
+			]
+		},
+		"active-only": false,
+		"disable-scroll": true,
+		"all-outputs": true
+	},
+	"hyprland/window": {
+		"format": "{title}",
+		// "icon": true,
+		// "icon-size": 30,
+		"tooltip": true,
+		"tooltip-format": "Class: {class}\nTitle: {title}\nInitial Class: {initialClass}\nInitial Title: {initialTitle}",
+		"separate-outputs": true
+	},
+	"network": {
+		"interface": "enp34s0",
+		"format": "{ifname}",
+		"format-wifi": " ",
+		"format-ethernet": " ",
+		"format-disconnected": "󰤯 ",
+		"tooltip-format": "{ifname} via {gwaddr} 󰊗 ",
+		"tooltip-format-wifi": "{essid} ({signalStrength}%)  ",
+		"tooltip-format-ethernet": "{ifname}  ",
+		"tooltip-format-disconnected": "Disconnected",
+		"max-length": 50,
+		"on-click": "sh -c 'networkmanager_dmenu'"
+	},
+	"battery": {
+		"states": {
+			"good": 70,
+			"warning": 50,
+			"critical": 30
+		},
+		"format": "{icon}",
+		"format-full": "{icon}",
+		"format-charging": "{capacity}% 󰂄",
+		"format-plugged": "{capacity}% ",
+		"format-alt": "{time} {icon}",
+		"format-icons": [
+			" ",
+			" ",
+			" ",
+			" ",
+			" "
+		],
+		"tooltip": true,
+		"tooltip-format": "{capacity}%"
+	},
+	"pulseaudio": {
+		"format": "{volume}% {icon}",
+		"format-muted": " ",
+		"format-icons": {
+			"default": [
+				"",
+				""
+			]
+		},
+		"on-click": "sh -c 'wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle'",
+		"on-click-right": "sh -c 'pavucontrol'"
+	},
+	"clock": {
+		"timezone": "America/Chicago",
+		"format": "{:%H:%M %Y-%m-%d}",
+		"tooltip-format": "{calendar}",
+		"calendar": {
+			"mode": "month"
+		},
+		"on-click": "sh -c 'echo \"$(date +\"%A, %b %d, %Y %H:%M:%S\")\" | wl-copy'"
+	},
+	"custom/vesktop-toggle": {
+		"format": "{}",
+		"exec": "~/.config/waybar/scripts/vesktop-icon.sh",
+		"interval": 1,
+		"on-click": "~/.config/waybar/scripts/vesktop-icon.sh --toggle",
+		"tooltip": false
+	},
+	"custom/theme-menu": {
+		"format": " ",
+		"on-click": "/usr/bin/python /home/zach/Desktop/python/theme_chooser/main.py &",
+		"tooltip": false
+	},
+	"custom/theme-menu-creator": {
+		"format": " ",
+		"on-click": "/usr/bin/python ~/Desktop/python/theme_maker/main.py &",
+		"tooltip": false
+	},
+	"mpris": {
+		"format": "{dynamic}",
+		"format-paused": "{status_icon} <i>{dynamic}</i>",
+		"player-icons": {
+			"default": "▶",
+			"mpv": "🎵"
+		},
+		"status-icons": {
+			"paused": "⏸"
+		}
+		// "ignored-players": ["firefox"]
+	},
+	"custom/power": {
+		"format": "⏻",
+		"on-click-right": "sh -c 'systemctl suspend'",
+		"on-click-middle": "sudo /home/zach/scripts/boot_into_windows.sh",
+		"on-click": "wleave"
+	},
+	"custom/game-launcher": {
+		"format": " ",
+		"on-click": "eww open gamemenu"
+	}
+}
