@@ -27,7 +27,6 @@ gvfs
 gvfs-afc
 gvfs-mtp
 hawkeye
-htop
 hyprland
 hyprpaper
 hyprpicker

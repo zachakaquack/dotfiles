@@ -163,9 +163,5 @@
 		"on-click-right": "sh -c 'systemctl suspend'",
 		"on-click-middle": "sudo /home/zach/scripts/boot_into_windows.sh",
 		"on-click": "wleave"
-	},
-	"custom/game-launcher": {
-		"format": " ",
-		"on-click": "eww open gamemenu"
 	}
 }

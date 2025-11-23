@@ -1,5 +1,4 @@
-pacman -Qqe > pkglist.txt
-yay -Qqe > aurlist.txt
+./refresh_packages.sh
 git add .
 git commit -m "update"
 git push
