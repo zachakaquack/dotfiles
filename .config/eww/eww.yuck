@@ -1,2 +1,0 @@
-(include "./widgets/theme_menu.yuck")
-(include "./widgets/theme_creator.yuck")

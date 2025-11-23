@@ -1,7 +1,0 @@
-(defwidget killer [menu]
-  (button
-    :class "button"
-    :onclick "sh -c '/home/zach/eww/target/release/eww close {menu}'"
-    "Close"
-  )
-)
