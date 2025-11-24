@@ -9,6 +9,6 @@ echo "Finished updating package lists"
 
 # do git stuff
 git add . > /dev/null 2>&1
-git commit -m "update" || true > /dev/null 2>&1
+git commit -m "update" > /dev/null 2>&1 || true
 git push > /dev/null 2>&1
 echo "Done"
