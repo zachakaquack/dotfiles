@@ -7,9 +7,11 @@ bluez
 bluez-utils
 brightnessctl
 copyq
+cronie
 dolphin
 dvdts-fp-git
 efibootmgr
+equicord-installer-bin
 fastfetch
 fd
 ffmpeg4.4
@@ -27,6 +29,7 @@ gvfs
 gvfs-afc
 gvfs-mtp
 hawkeye
+htop
 hyprland
 hyprpaper
 hyprpicker
