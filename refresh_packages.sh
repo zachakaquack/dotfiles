@@ -1,7 +1,7 @@
 #!/bin/bash
 
-echo "updating pacman list"
+echo "Updating pacman list (pkglist.txt)"
 pacman -Qqe > $HOME/dotfiles/pkglist.txt
 
-echo "updating yay list"
+echo "Updating yay list (aurlist.txt)"
 yay -Qqe > $HOME/dotfiles/aurlist.txt
