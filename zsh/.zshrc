@@ -80,14 +80,6 @@ gzg() {
     ls
 }
 
-restart_albert(){
-    pkill -f albert
-    while pgrep -f albert >/dev/null; do
-        sleep 0.1
-    done
-    albert &
-}
-
 # wal stuff
 wal-tile() {
     # "$@" is the wallpaper path
@@ -99,7 +91,6 @@ wal-tile() {
     pywalfox update
     killall -SIGUSR2 waybar
     swaync-client --reload-css
-    #restart_albert
 }
 (cat ~/.cache/wal/sequences &)
 source ~/.cache/wal/colors-tty.sh
