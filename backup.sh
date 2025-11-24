@@ -8,6 +8,6 @@ $HOME/dotfiles/refresh_packages.sh
 echo "finished updating package lists"
 
 # do git stuff
-git add . > /dev/null
-git commit -m "update" || true > /dev/null
-git push > /dev/null
+git add . > /dev/null 2>&1
+git commit -m "update" || true > /dev/null 2>&1
+git push > /dev/null 2>&1
