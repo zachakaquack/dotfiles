@@ -29,7 +29,7 @@ HISTFILE=$ZSH/cache/.zsh_history
 
 # fzf search history (remove the bind then rebind to the fzf script)
 bindkey -r "^r"
-bindkey -s "^r" "$HOME/scripts/fzf_history.sh^M"
+bindkey -s "^r" "$HOME/scripts/fzf_scripts/fzf_history.sh^M"
 
 # other rnadom settings /stuff
 eval "$(zoxide init zsh)"
@@ -71,15 +71,7 @@ alias gs='git status'
 
 # wal stuff
 wal-tile() {
-    # "$@" is the wallpaper path
-    wal -n -i "$@"
-    swww img "$@"
-    # hyprland
-    cp $HOME/.cache/wal/colors-hyprland.conf $HOME/.config/hypr/colors.conf && hyprctl reload
-    pywal-discord -t default
-    pywalfox update
-    pkill waybar; waybar &
-    swaync-client --reload-css
+    $HOME/scripts/wal-tile.sh $@
 }
 
 # ?

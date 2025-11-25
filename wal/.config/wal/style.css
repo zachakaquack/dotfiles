@@ -3,9 +3,7 @@
 		font-family: "JetBrainsMono Nerd Font", monospace;
 		font-size: 14px;
 
-		color: {
-			cursor
-		}
+		/* color: {cursor} */
 
 		;
 	}
@@ -26,11 +24,7 @@ window#control-center,
 /* the actual notification stuff */
 .notification {
 		{
-		background-color: {
-			background
-		}
-
-		;
+		/* background-color: { background } ; */
 		border-radius: 16px;
 		border: 1px solid #487d8b;
 		padding: 12px;

@@ -44,6 +44,7 @@ libreoffice-still
 librewolf
 linux
 linux-firmware
+lsix
 man-db
 man-pages
 mbedtls
@@ -87,6 +88,7 @@ tuime
 tumbler
 vesktop
 vim
+viu
 vlc
 vlc-gui-qt
 vlc-plugin-ffmpeg
