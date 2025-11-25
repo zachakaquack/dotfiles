@@ -19,6 +19,7 @@ ffmpegthumbnailer
 ffmpegthumbs
 filelight
 flatpak
+foot
 fuzzel
 fzf
 gimp

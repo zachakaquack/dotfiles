@@ -1,8 +1,8 @@
-# p10k instant prompt
-# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-# fi
-#
+if [[ -r ~/.p10k.zsh ]]; then
+    source ~/.p10k.zsh
+fi
+source $ZSH/oh-my-zsh.sh
+(cat ~/.cache/wal/sequences &)
 
 
 # VARIALBES
@@ -19,67 +19,53 @@ export PATH="$PATH:$HOME/eww/target/release"
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/.cargo/bin"
 
+# zsh
+export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
+HISTSIZE=2000
+SAVEHIST=2000
+HISTFILE=$ZSH/cache/.zsh_history
+
+# fzf search history (remove the bind then rebind to the fzf script)
+bindkey -r "^r"
+bindkey -s "^r" "$HOME/scripts/fzf_history.sh^M"
+
+# other rnadom settings /stuff
 eval "$(zoxide init zsh)"
 source ~/powerlevel10k/powerlevel10k.zsh-theme
-ZSH_THEME="robbyrussell"
-HYPHEN_INSENSITIVE="true"
+
+# complete hidden files in tab
+# compinit
+_comp_options+=(globdots)
+
+# dont show . and .. when complete with tab
+zstyle ':completion:*' special-dirs false
+
 zstyle ':omz:update' mode auto
 zstyle ':omz:update' frequency 14
-typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+
+HYPHEN_INSENSITIVE="true"
 ENABLE_CORRECTION="true"
 
-# Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
 plugins=(
     git
     z
 )
 
-source $ZSH/oh-my-zsh.sh
-#eval "$(direnv hook zsh)"
 
 # ALIASES
 # ls, -C=-columns, -A=list all without dots, -p=write slash after dir, color
 alias ls='ls -C -A -p --color=auto --group-directories-first'
 alias reload='source ~/.zshrc'
 alias q='exit'
-alias zshrc='~ && nvim .zshrc'
+alias zshrc='nvim $HOME/dotfiles/zsh/.zshrc'
 alias gpp='g++ *.cpp -Wall -fdiagnostics-color=always && ./a.out'
 
 # random
-# alias current="swww query | awk '{print $NF}' | head -n 1"
 alias current="echo $(swww query | awk '{print $NF}' | head -n 1)"
 alias backupdots="/bin/bash -e '$HOME/dotfiles/backup.sh'"
 
 # all the git shit
 alias gs='git status'
-
-dzd() {
-    local sel
-    sel="$(fd . --type f --type d --hidden | command fzf --height 60% --preview 'bat --style=numbers --color=always --line-range :100 {}')" || return
-    [ -d "$sel" ] && cd "$sel" || cd "$(dirname "$sel")"
-    echo "Selected File: $(pwd)/$sel\n"
-    ls
-}
-
-fzf() {
-    val="$(pwd)/$(command fzf --height 60% --preview 'bat --style=numbers --color=always --line-range :100 {}')"
-    if [ $? -eq 0 ] && [ -n "$val" ]; then
-        echo "Selected File: $val"
-        cd $(dirname $val)
-        nvim "$val"
-    fi
-}
-
-gzg() {
-    local sel
-    sel="$(fd . /home/zach --type f --type d --hidden | command fzf --height 60% --preview 'bat --style=numbers --color=always --line-range :100 {}')" || return
-    [ -d "$sel" ] && cd "$sel" || cd "$(dirname "$sel")"
-    ls
-}
 
 # wal stuff
 wal-tile() {
@@ -90,7 +76,7 @@ wal-tile() {
     cp /home/zach/.cache/wal/colors-hyprland.conf /home/zach/.config/hypr/colors.conf && hyprctl reload
     pywal-discord -t default
     pywalfox update
-    killall -SIGUSR2 waybar
+    pkill waybar; waybar &
     swaync-client --reload-css
 }
 (cat ~/.cache/wal/sequences &)
@@ -102,10 +88,4 @@ source ~/.cache/wal/colors-tty.sh
 # run hyprland
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
     exec Hyprland
-fi
-
-# startup stuff
-if [[ $- == *i* && $TERM == "xterm-kitty" ]]; then
-    clear
-    # fastfetch
 fi
