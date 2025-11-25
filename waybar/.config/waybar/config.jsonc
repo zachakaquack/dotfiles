@@ -19,8 +19,8 @@
 	],
 	"modules-right": [
 		//      "custom/game-launcher",
-		"custom/theme-menu",
-		"custom/theme-menu-creator",
+		//"custom/theme-menu",
+		//"custom/theme-menu-creator",
 		//"custom/random-theme",
 		//    "custom/vesktop-toggle",
 		"network",
