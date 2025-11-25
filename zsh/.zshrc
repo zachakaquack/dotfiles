@@ -2,7 +2,9 @@ if [[ -r ~/.p10k.zsh ]]; then
     source ~/.p10k.zsh
 fi
 source $ZSH/oh-my-zsh.sh
+
 (cat ~/.cache/wal/sequences &)
+source ~/.cache/wal/colors-tty.sh
 
 
 # VARIALBES
@@ -11,8 +13,8 @@ export TERMINAL="kitty"
 export EDITOR="nvim"
 export VISUAL="nvim"
 export ZSH="$HOME/.oh-my-zsh"
-export HYPRSHOT_DIR="/home/zach/Pictures/screenshots"
-export CONFIG_DIR="/home/zach/.config"
+export HYPRSHOT_DIR="$HOME/Pictures/screenshots"
+export CONFIG_DIR="$HOME/.config"
 
 # path stuff
 export PATH="$PATH:$HOME/eww/target/release"
@@ -61,7 +63,7 @@ alias zshrc='nvim $HOME/dotfiles/zsh/.zshrc'
 alias gpp='g++ *.cpp -Wall -fdiagnostics-color=always && ./a.out'
 
 # random
-alias current="echo $(swww query | awk '{print $NF}' | head -n 1)"
+alias current="$HOME/scripts/current_theme.sh"
 alias backupdots="/bin/bash -e '$HOME/dotfiles/backup.sh'"
 
 # all the git shit
@@ -73,14 +75,12 @@ wal-tile() {
     wal -n -i "$@"
     swww img "$@"
     # hyprland
-    cp /home/zach/.cache/wal/colors-hyprland.conf /home/zach/.config/hypr/colors.conf && hyprctl reload
+    cp $HOME/.cache/wal/colors-hyprland.conf $HOME/.config/hypr/colors.conf && hyprctl reload
     pywal-discord -t default
     pywalfox update
     pkill waybar; waybar &
     swaync-client --reload-css
 }
-(cat ~/.cache/wal/sequences &)
-source ~/.cache/wal/colors-tty.sh
 
 # ?
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
