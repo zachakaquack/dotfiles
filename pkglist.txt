@@ -44,7 +44,6 @@ libreoffice-still
 librewolf
 linux
 linux-firmware
-lsix
 man-db
 man-pages
 mbedtls
@@ -60,7 +59,6 @@ nvidia-utils
 obs-studio
 os-prober
 pavucontrol
-pipes-rs
 pipewire
 pipewire-alsa
 pipewire-pulse
@@ -68,7 +66,6 @@ python-pipx
 python-pywal
 python-pywalfox
 pywal-discord-git
-rofi
 slurp
 socat
 steam
