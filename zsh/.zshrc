@@ -65,6 +65,7 @@ alias gpp='g++ *.cpp -Wall -fdiagnostics-color=always && ./a.out'
 # random
 alias current="$HOME/scripts/current_theme.sh"
 alias backupdots="/bin/bash -e '$HOME/dotfiles/backup.sh'"
+alias calc='kalker'
 
 # all the git shit
 alias gs='git status'

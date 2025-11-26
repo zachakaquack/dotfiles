@@ -34,11 +34,12 @@ htop
 hyprland
 hyprpaper
 hyprpicker
-hyprshell
 hyprshot
 ifuse
+kalker-bin
 kio-fuse
 kitty
+lazygit
 libnotify
 libreoffice-still
 librewolf
