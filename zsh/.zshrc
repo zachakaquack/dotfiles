@@ -70,6 +70,7 @@ alias backupdots="/bin/bash -e '$HOME/dotfiles/backup.sh'"
 alias gs='git status'
 
 # wal stuff
+# this used to be the script itself, but it's kept in the zshrc as a function for backwards compatibility
 wal-tile() {
     $HOME/scripts/wal-tile.sh $@
 }
