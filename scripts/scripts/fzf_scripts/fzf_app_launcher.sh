@@ -17,7 +17,7 @@ for directory in "${directories[@]}"; do
                     name="$(echo $name | sed 's/ /_/g')\n";
                     keys+=($line)
                     echo "adding $name"
-                    unedited_entries["$name"]="$entry";
+                    unedited_entries[" $name"]="$entry";
                 fi;
             fi;
         done < "$entry";
