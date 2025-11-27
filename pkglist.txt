@@ -11,6 +11,7 @@ cronie
 dolphin
 dvdts-fp-git
 efibootmgr
+emacs
 equicord-installer-bin
 fastfetch
 fd
