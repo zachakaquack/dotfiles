@@ -1,128 +1,129 @@
+/* THIS IS CURRENTLY BROKEN!!!! SORRY I DONT KNOW WHAT CAUSES IT. I HAVE COMMENTED OUT ALL OF THE DOUBLE LINES */
+
 * {
-		{
-		font-family: "JetBrainsMono Nerd Font", monospace;
-		font-size: 14px;
+	/* { */
+	font-family: "JetBrainsMono Nerd Font", monospace;
+	font-size: 14px;
 
-		/* color: {cursor} */
-
-		;
-	}
+	/* color: {cursor} */
+	/* ; */
+	/* } */
 }
 
 /* control center (super shift n) */
 window#control-center,
 .notification {
-		{
-		background-color: rgba(0, 0, 0, 0.3);
-		border-radius: 16px;
-		padding: 12px;
-		border: 1px solid rgba(68, 71, 90, 0.6);
-		backdrop-filter: blur(40px);
-	}
+	/* { */
+	background-color: rgba(0, 0, 0, 0.3);
+	border-radius: 16px;
+	padding: 12px;
+	border: 1px solid rgba(68, 71, 90, 0.6);
+	backdrop-filter: blur(40px);
+	/* } */
 }
 
 /* the actual notification stuff */
 .notification {
-		{
-		/* background-color: { background } ; */
-		border-radius: 16px;
-		border: 1px solid #487d8b;
-		padding: 12px;
-		margin: 12px;
-		color: #487d8b;
-	}
+	/* { */
+	/* background-color: { background } ; */
+	border-radius: 16px;
+	border: 1px solid #487d8b;
+	padding: 12px;
+	margin: 12px;
+	color: #487d8b;
+	/* } */
 }
 
 .notification-title {
-		{
-		font-weight: bold;
-		font-size: 15px;
-		color: #ff79c6;
-		margin-bottom: 4px;
-	}
+	/* { */
+	font-weight: bold;
+	font-size: 15px;
+	color: #ff79c6;
+	margin-bottom: 4px;
+	/* } */
 }
 
 .notification-appname {
-		{
-		font-size: 12px;
-		color: #6272a4;
-		margin-bottom: 6px;
-	}
+	/* { */
+	font-size: 12px;
+	color: #6272a4;
+	margin-bottom: 6px;
+	/* } */
 }
 
 .notification-body {
-		{
-		font-size: 13px;
-		color: #f8f8f2;
-	}
+	/* { */
+	font-size: 13px;
+	color: #f8f8f2;
+	/* } */
 }
 
 .notification-icon {
-		{
-		border-radius: 8px;
-		margin-right: 10px;
-	}
+	/* { */
+	border-radius: 8px;
+	margin-right: 10px;
+	/* } */
 }
 
 .notification-actions {
-		{
-		margin-top: 10px;
-		display: flex;
-		gap: 8px;
-	}
+	/* { */
+	margin-top: 10px;
+	display: flex;
+	gap: 8px;
+	/* } */
 }
 
 .notification-button {
-		{
-		background-color: rgba(80, 80, 100, 0.6);
-		border-radius: 8px;
-		padding: 6px 12px;
-		font-weight: 500;
-		color: #ffffff;
-	}
+	/* { */
+	background-color: rgba(80, 80, 100, 0.6);
+	border-radius: 8px;
+	padding: 6px 12px;
+	font-weight: 500;
+	color: #ffffff;
+	/* } */
 }
 
 .notification-button:hover {
-		{
-		background-color: rgba(100, 100, 150, 0.8);
-	}
+	/* { */
+	background-color: rgba(100, 100, 150, 0.8);
+	/* } */
 }
 
 .mpris-player {
-		{
-		background-color: #282a36;
-		border-radius: 16px;
-		padding: 12px;
-		margin: 8px;
-		border: 1px solid #44475a;
-	}
+	/* { */
+	background-color: #282a36;
+	border-radius: 16px;
+	padding: 12px;
+	margin: 8px;
+	border: 1px solid #44475a;
+	/* } */
 }
 
 .mpris-title {
-		{
-		font-weight: bold;
-		font-size: 16px;
-		color: #f8f8f2;
-	}
+	/* { */
+	font-weight: bold;
+	font-size: 16px;
+	color: #f8f8f2;
+	/* } */
 }
 
 .mpris-artist {
-		{
-		color: #bd93f9;
-	}
+	/* { */
+	color: #bd93f9;
+	/* } */
 }
 
 .mpris-buttons button {
-		{
-		background-color: #44475a;
-		border-radius: 10px;
-		padding: 4px 8px;
-		margin: 2px;
-	}
+	/* { */
+	background-color: #44475a;
+	border-radius: 10px;
+	padding: 4px 8px;
+	margin: 2px;
+	/* } */
 }
 
 .mpris-buttons button:hover {
-		{
-		background-color: #6272a4;
-	}
+	/* { */
+	background-color: #6272a4;
+	/* } */
 }
