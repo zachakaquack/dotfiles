@@ -9,6 +9,8 @@ yay -S --needed - < aurlist.txt
 
 echo "applying dotfiles bullshit"
 cd "$(dirname "$0")"
-stow -R hypr kitty nvim wal waybar zsh
 
+dirs=$(./get_dirs.sh)
+echo "setting up for: $dirs"
+stow -R $dirs
 echo "donezo!!!!!"
