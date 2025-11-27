@@ -69,6 +69,7 @@ python-pywalfox
 pywal-discord-git
 slurp
 socat
+speedtest++
 steam
 stow
 sudo

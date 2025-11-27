@@ -46,7 +46,7 @@ zstyle ':omz:update' frequency 14
 
 # thank you bread on penguins for this
 # "its (date) (uptime) (removed username / hostname)"
-echo -e "${NEWLINE}\x1b[38;5;137m\x1b[48;5;0m it's$(print -P '%D{%_I:%M%P}\n') \x1b[38;5;180m\x1b[48;5;0m $(uptime -p | cut -c 4-)" # current
+echo -e "${NEWLINE}\x1b[38;5;137m\x1b[48;5;0m it's $(print -P '%D{%_I:%M%P}\n') \x1b[38;5;180m\x1b[48;5;0m $(uptime -p | cut -c 4-)" # current
 
 HYPHEN_INSENSITIVE="true"
 ENABLE_CORRECTION="true"
@@ -69,6 +69,7 @@ alias gpp='g++ *.cpp -Wall -fdiagnostics-color=always && ./a.out'
 alias current="$HOME/scripts/current_theme.sh"
 alias backupdots="/bin/bash -e '$HOME/dotfiles/backup.sh'"
 alias calc='kalker'
+alias speedtest='speedtest++'
 
 # all the git shit
 alias gs='git status'
