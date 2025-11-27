@@ -78,6 +78,7 @@ swaync
 swig
 swww
 syncthing
+tealdeer
 tetrio-desktop
 thunar
 thunar-archive-plugin
