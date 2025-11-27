@@ -72,7 +72,9 @@ alias calc='kalker'
 alias speedtest='speedtest++'
 
 # all the git shit
+# either these arent in the git plugin already or just dont work for some reason
 alias gs='git status'
+alias ga='git add'
 
 # wal stuff
 # this used to be the script itself, but it's kept in the zshrc as a function for backwards compatibility
