@@ -4,13 +4,16 @@
 cd $HOME/dotfiles/
 
 # refresh the package list
-$HOME/dotfiles/refresh_packages.sh
-echo "Finished updating package lists"
+echo "updating pacman list (pkglist.txt)"
+pacman -Qqe > $HOME/dotfiles/pkglist.txt
+
+echo "updating yay list (aurlist.txt)"
+yay -Qqe > $HOME/dotfiles/aurlist.txt
 
 # do git stuff
 git add . > /dev/null 2>&1
 
-echo "Updating..."
+echo "updating..."
 git commit -m "update $(date -u +%Y-%m-%dT%H:%M:%S%Z)" || true
 git push > /dev/null 2>&1
-echo "Done"
+echo "done"
