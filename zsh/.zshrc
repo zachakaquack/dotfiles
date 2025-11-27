@@ -45,16 +45,11 @@ zstyle ':omz:update' mode auto
 zstyle ':omz:update' frequency 14
 
 # thank you bread on penguins for this
-# PROMPT="${NEWLINE}%K{$COL0}%F{$COL1}$(date +%_I:%M%P) %K{$COL0}%F{$COL2} %n %K{$COL3} %~ %f%k ❯ " # pywal colors, from postrun script
-# thing before prompt
-echo -e "${NEWLINE}\x1b[38;5;137m\x1b[48;5;0m it's$(print -P '%D{%_I:%M%P}\n') \x1b[38;5;180m\x1b[48;5;0m $(uptime -p | cut -c 4-) \x1b[38;5;223m\x1b[48;5;0m $(uname -r) \033[0m" # current
+# "its (date) (uptime) (removed username / hostname)"
+echo -e "${NEWLINE}\x1b[38;5;137m\x1b[48;5;0m it's$(print -P '%D{%_I:%M%P}\n') \x1b[38;5;180m\x1b[48;5;0m $(uptime -p | cut -c 4-)" # current
 
 HYPHEN_INSENSITIVE="true"
 ENABLE_CORRECTION="true"
-
-# for some reason, my ZSH_THEME doesn't work so i do this
-# ZSH_THEME="robbyrussell"
-source $ZSH/themes/simple.zsh-theme
 
 plugins=(
     git
@@ -85,9 +80,9 @@ wal-tile() {
 }
 
 # source p10k settings
-# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 # THEMES
-# source ~/powerlevel10k/powerlevel10k.zsh-theme
+source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 
 # run hyprland
