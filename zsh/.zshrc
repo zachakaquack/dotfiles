@@ -86,7 +86,7 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 # thank you bread on penguins for this
 # "its (date) (uptime) (removed username / hostname)"
 space="  "
-echo -e "${NEWLINE}${fg[red]}it's $(print -P '%D{%_I:%M%P}\n')${space}${fg[blue]}$(uptime -p | cut -c 4-)" # current
+echo -e "${NEWLINE}${fg[red]}$(print -P '%D{%_I:%M%P}\n')${space}${fg[blue]}$(uptime -p | cut -c 4-)" # current
 # echo -e "${fg[red]}test"
 
 # run hyprland
