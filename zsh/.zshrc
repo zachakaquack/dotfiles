@@ -6,7 +6,6 @@ source $ZSH/oh-my-zsh.sh
 (cat ~/.cache/wal/sequences &)
 source ~/.cache/wal/colors-tty.sh
 
-
 # VARIALBES
 export TERM="kitty"
 export TERMINAL="kitty"
@@ -44,9 +43,6 @@ zstyle ':completion:*' special-dirs false
 zstyle ':omz:update' mode auto
 zstyle ':omz:update' frequency 14
 
-# thank you bread on penguins for this
-# "its (date) (uptime) (removed username / hostname)"
-echo -e "${NEWLINE}\x1b[38;5;137m\x1b[48;5;0m it's $(print -P '%D{%_I:%M%P}\n') \x1b[38;5;180m\x1b[48;5;0m $(uptime -p | cut -c 4-)" # current
 
 HYPHEN_INSENSITIVE="true"
 ENABLE_CORRECTION="true"
@@ -87,6 +83,11 @@ wal-tile() {
 # THEMES
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
+# thank you bread on penguins for this
+# "its (date) (uptime) (removed username / hostname)"
+space="  "
+echo -e "${NEWLINE}${fg[red]}it's $(print -P '%D{%_I:%M%P}\n')${space}${fg[blue]}$(uptime -p | cut -c 4-)" # current
+# echo -e "${fg[red]}test"
 
 # run hyprland
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
