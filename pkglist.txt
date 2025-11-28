@@ -94,6 +94,7 @@ vlc-gui-qt
 vlc-plugin-ffmpeg
 waybar
 waybar-media-git
+webapp-manager
 wireplumber
 wl-clipboard
 wleave-git
