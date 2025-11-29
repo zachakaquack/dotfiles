@@ -19,9 +19,18 @@ backupdotfiles() { \
     notify-send -t 3000 -r $id "Done backing up dotfiles!"
 }
 
+projects(){
+    case $1 in
+        "python") $HOME/scripts/fzf_scripts/find_projects.sh "python" ;;
+        "c++") $HOME/scripts/fzf_scripts/find_projects.sh "c++" ;;
+    esac
+}
+
 options="Theme Menu""\\n"
 options+="Calculator""\\n"
 options+="Backup Dotfiles""\\n"
+options+="Search Python Projects""\\n"
+options+="Search C++ Projects (CPP)""\\n"
 
 chooseprogram() { \
         choice=$(printf "$options" | $HOME/scripts/fzf_scripts/fzfmenu.sh "fzf_menu_picker")
@@ -29,6 +38,8 @@ chooseprogram() { \
         "Theme Menu") themes ;;
         "Calculator") calculator ;;
         "Backup Dotfiles") backupdotfiles ;;
+        "Search Python Projects") projects "python" ;;
+        "Search C++ Projects (CPP)") projects "c++" ;;
     esac
 }
 
