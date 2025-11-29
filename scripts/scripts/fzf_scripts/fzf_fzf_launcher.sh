@@ -42,6 +42,10 @@ launchfzf(){
     fi
 }
 
+twitter(){
+    gtk-launch WebApp-twitter3005.desktop
+}
+
 options="Theme Menu""\\n"
 options+="Calculator""\\n"
 options+="Backup Dotfiles""\\n"
@@ -49,6 +53,7 @@ options+="Search Python Projects""\\n"
 options+="Search C++ Projects (CPP)""\\n"
 options+="Search Repos""\\n"
 options+="FZF""\\n"
+options+="Twitter""\\n"
 
 chooseprogram() { \
         choice=$(printf "$options" | $HOME/scripts/fzf_scripts/fzfmenu.sh "fzf_menu_picker")
@@ -60,6 +65,7 @@ chooseprogram() { \
         "Search C++ Projects (CPP)") projects "c++" ;;
         "Search Repos") projects "repos" ;;
         "FZF") launchfzf ;;
+        "Twitter") twitter ;;
     esac
 }
 
