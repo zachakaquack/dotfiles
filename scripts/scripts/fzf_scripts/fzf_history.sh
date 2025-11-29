@@ -7,4 +7,8 @@
 cmd="$(tac $ZSH/cache/.zsh_history | sed 's/^.*;//' | awk '!a[$0]++' | fzf --height 60%)"
 
 # check if command exists and then run in zsh
-[ -n "$cmd" ] && zsh -i -c "$cmd"
+# [ -n "$cmd" ] && zsh -i -c "$cmd"
+if [[ -n "$cmd" ]]; then
+    zsh -i -c "$cmd"
+    echo -e "\nRan '$cmd'"
+fi
