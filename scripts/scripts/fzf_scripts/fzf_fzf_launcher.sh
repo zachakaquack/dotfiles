@@ -12,8 +12,11 @@ calculator() { \
 }
 
 backupdotfiles() { \
-        $HOME/dotfiles/backup.sh
-    notify-send "Done backing up dotfiles"
+        notify-send -r 727 "Backing up dotfiles..."
+    $HOME/dotfiles/backup.sh
+
+    # expire in 3 seconds
+    notify-send -t 3000 -r 727 "Done backing up dotfiles!"
 }
 
 options="Theme Menu""\\n"
