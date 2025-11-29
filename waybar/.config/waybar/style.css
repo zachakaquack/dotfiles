@@ -18,6 +18,7 @@ window#waybar {
 #workspaces button,
 #window,
 #custom-vesktop-toggle,
+#keyboard-state,
 #network,
 #battery,
 #pulseaudio,
@@ -39,6 +40,12 @@ window#waybar {
 	padding-left: 10px;
 	padding-right: 10px;
 	transition: none;
+}
+
+#keyboard-state {
+	padding-left: 15px;
+	padding-right: 15px;
+	text-shadow: 0 0 4px @color1;
 }
 
 /* specifics */

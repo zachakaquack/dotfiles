@@ -23,6 +23,7 @@
 		//"custom/theme-menu-creator",
 		//"custom/random-theme",
 		//    "custom/vesktop-toggle",
+		"keyboard-state",
 		"network",
 		"battery",
 		"pulseaudio",
@@ -163,5 +164,13 @@
 		"on-click-right": "sh -c 'systemctl suspend'",
 		"on-click-middle": "sudo /home/zach/scripts/boot_into_windows.sh",
 		"on-click": "wleave"
+	},
+	"keyboard-state": {
+		"capslock": true,
+		"format": "{icon}",
+		"format-icons": {
+			"unlocked": " ",
+			"locked": " "
+		}
 	}
 }
