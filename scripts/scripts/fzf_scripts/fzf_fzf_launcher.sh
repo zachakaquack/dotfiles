@@ -23,12 +23,32 @@ projects(){
     $HOME/scripts/fzf_scripts/find_projects.sh "$1"
 }
 
+launchfzf(){
+    tmp=$(mktemp)
+    find "$HOME" > "$tmp"
+    choice=$($HOME/scripts/fzf_scripts/fzfmenu.sh "fzf_menu" < "$tmp")
+    rm "$tmp"
+
+    # if made choice, go to the directory
+    if [[ -n $choice ]]; then
+        # if directory
+        if [[ -d $choice ]]; then
+            kitty --directory "$choice" &
+        else
+            dir=$(dirname $choice)
+            file=$(basename $choice)
+            kitty --directory "$dir" sh -c "nvim \"$file\"; exec \$SHELL" &
+        fi
+    fi
+}
+
 options="Theme Menu""\\n"
 options+="Calculator""\\n"
 options+="Backup Dotfiles""\\n"
 options+="Search Python Projects""\\n"
 options+="Search C++ Projects (CPP)""\\n"
 options+="Search Repos""\\n"
+options+="FZF""\\n"
 
 chooseprogram() { \
         choice=$(printf "$options" | $HOME/scripts/fzf_scripts/fzfmenu.sh "fzf_menu_picker")
@@ -39,6 +59,7 @@ chooseprogram() { \
         "Search Python Projects") projects "python" ;;
         "Search C++ Projects (CPP)") projects "c++" ;;
         "Search Repos") projects "repos" ;;
+        "FZF") launchfzf ;;
     esac
 }
 
