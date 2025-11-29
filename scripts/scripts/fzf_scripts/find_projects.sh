@@ -1,23 +1,30 @@
 #!/bin/bash
 
 cplusplus(){
-    dir=$(fd . $HOME/Desktop/cpp -t=directory | $HOME/scripts/fzf_scripts/fzfmenu.sh "fzf_project")
-    terminal $dir
+    basedir="$HOME/Desktop/cpp/"
+    dir=$(fd . $basedir --max-depth=1 -t=directory | xargs -I {} basename {} | $HOME/scripts/fzf_scripts/fzfmenu.sh "fzf_project")
+
+
+    terminal $basedir $dir
 }
 
 py(){
-    dir=$(fd . $HOME/Desktop/python --max-depth=1 -t=directory | $HOME/scripts/fzf_scripts/fzfmenu.sh "fzf_project")
-    terminal $dir
+    basedir="$HOME/Desktop/python/"
+    dir=$(fd . $basedir --max-depth=1 -t=directory | xargs -I {} basename {} | $HOME/scripts/fzf_scripts/fzfmenu.sh "fzf_project")
+
+    terminal $basedir $dir
 }
 
 repos(){
-    dir=$(fd . $HOME/Desktop/repos --max-depth=1 -t=directory | $HOME/scripts/fzf_scripts/fzfmenu.sh "fzf_project")
-    terminal $dir
+    basedir="$HOME/Desktop/repos"
+    dir=$(fd . $basedir --max-depth=1 -t=directory | xargs -I {} basename {} | $HOME/scripts/fzf_scripts/fzfmenu.sh "fzf_project")
+
+    terminal $basedir $dir
 }
 
 terminal(){
-    if [[ -n $1 ]]; then
-        kitty --directory "$1" &
+    if [[ -n $2 ]]; then
+        kitty --directory "$1/$2" &
     fi
 }
 
