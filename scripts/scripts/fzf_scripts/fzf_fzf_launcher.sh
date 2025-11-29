@@ -13,6 +13,7 @@ calculator() { \
 
 backupdotfiles() { \
         $HOME/dotfiles/backup.sh
+    notify-send "Done backing up dotfiles"
 }
 
 options="Theme Menu""\\n"
