@@ -7,7 +7,7 @@ cd $HOME/dotfiles/
 id=$(notify-send "updating pacman list (pkglist.txt)")
 pacman -Qqe > $HOME/dotfiles/pkglist.txt
 
-id=$(notify-send -r $id "updating pacman list (pkglist.txt)")
+id=$(notify-send -r $id "updating yay list (pkglist.txt)")
 yay -Qqe > $HOME/dotfiles/aurlist.txt
 
 # do git stuff
