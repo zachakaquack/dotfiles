@@ -12,11 +12,7 @@ calculator() { \
 }
 
 backupdotfiles() { \
-        id=$(notify-send -p "Backing up dotfiles...")
-    $HOME/dotfiles/backup.sh
-
-    # expire in 3 seconds
-    notify-send -t 3000 -r $id "Done backing up dotfiles!"
+        $HOME/dotfiles/backup.sh
 }
 
 projects(){
