@@ -24,7 +24,7 @@ repos(){
 
 scripts(){
     basedir="$HOME/scripts/"
-    file=$(fd . $basedir | xargs -I {} basename {} | $HOME/scripts/fzf_scripts/fzfmenu.sh "fzf_project")
+    file=$(fd . -L $basedir | xargs -I {} basename {} | $HOME/scripts/fzf_scripts/fzfmenu.sh "fzf_project")
 
     if [[ -n $file ]]; then
         kitty --directory "$basedir" sh -c "cat ~/.cache/wal/sequences; nvim \"$file\"; exec \$SHELL" &
