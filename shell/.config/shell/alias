@@ -1,0 +1,13 @@
+alias \
+\
+ls='ls -C -A -p --color=auto --group-directories-first' \
+reload='source ~/.zshrc' \
+q='exit' \
+zshrc='nvim $HOME/dotfiles/zsh/.zshrc' \
+\
+gpp='g++ *.cpp -Wall -fdiagnostics-color=always && ./a.out' \
+current="$HOME/scripts/current_theme.sh" \
+\
+gs='git status' \
+ga='git add' \
+
