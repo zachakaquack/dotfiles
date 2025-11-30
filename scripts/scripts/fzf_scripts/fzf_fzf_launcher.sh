@@ -42,6 +42,12 @@ twitter(){
     gtk-launch WebApp-twitter3005.desktop
 }
 
+get_date(){
+    d=$(date)
+    wl-copy $d
+    notify-send "Copied $d"
+}
+
 options="Theme Menu""\\n"
 options+="Calculator""\\n"
 options+="Backup Dotfiles""\\n"
@@ -53,7 +59,7 @@ options+="FZF""\\n"
 options+="Twitter""\\n"
 
 chooseprogram() { \
-        choice=$(printf "$options" | shuf | $HOME/scripts/fzf_scripts/fzfmenu.sh "fzf_menu_picker")
+        choice=$(printf "$(date)\n$options" | $HOME/scripts/fzf_scripts/fzfmenu.sh "fzf_menu_picker")
     case "$choice" in
         "Theme Menu") themes ;;
         "Calculator") calculator ;;
@@ -64,6 +70,7 @@ chooseprogram() { \
         "Search Repos") projects "repos" ;;
         "FZF") launchfzf ;;
         "Twitter") twitter ;;
+	$(date)) get_date ;;
     esac
 }
 
