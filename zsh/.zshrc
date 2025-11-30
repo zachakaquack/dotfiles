@@ -7,7 +7,7 @@ fi
 source $ZSH/oh-my-zsh.sh
 
 # load aliases
-[ -f "$HOME/.config/shell/alias" ] && source "$HOME/.config/shell/alias"
+[ -f "$XDG_CONFIG_HOME/shell/alias" ] && source "$XDG_CONFIG_HOME/shell/alias"
 
 # load colors from wal
 (cat ~/.cache/wal/sequences &)
@@ -40,12 +40,6 @@ setopt autocd # type name of dir to cd
 setopt globdots # include dotfiles in tab complete
 setopt no_case_glob no_case_match # case insensitive
 
-
-plugins=(
-    git
-    z
-)
-
 # source p10k settings with its theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 source ~/powerlevel10k/powerlevel10k.zsh-theme
@@ -59,3 +53,9 @@ echo -e "${NEWLINE}${fg[red]}$(print -P '%D{%_I:%M%P}\n')${space}${fg[blue]}$(up
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
     exec Hyprland
 fi
+
+# plugins
+plugins=(
+    git
+    z
+)
