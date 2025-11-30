@@ -4,18 +4,18 @@
 cd $HOME/dotfiles/
 
 # refresh the package list
-id=$(notify-send "updating pacman list (pkglist.txt)")
+id=$(notify-send -p "updating pacman list (pkglist.txt)")
 pacman -Qqe > $HOME/dotfiles/pkglist.txt
 
-id=$(notify-send -r=$id "updating yay list (pkglist.txt)")
+notify-send -r $id "updating pacman list (pkglist.txt)"
 yay -Qqe > $HOME/dotfiles/aurlist.txt
 
 # do git stuff
 
-id=$(notify-send -r=$id "adding")
+notify-send -r $id "adding"
 git add . > /dev/null 2>&1
 
-id=$(notify-send -r $id="updating")
+notify-send -r $id "updating"
 git commit -m "update $(date -u +%Y-%m-%dT%H:%M:%S%Z)" || true
 git push > /dev/null 2>&1
-notify-send -t 3000 -r=$id "Done backing up dotfiles!"
+notify-send -t 3000 -r $id "Done backing up dotfiles!"
