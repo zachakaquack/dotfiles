@@ -22,6 +22,15 @@ repos(){
     terminal $basedir $dir
 }
 
+scripts(){
+    basedir="$HOME/scripts/"
+    file=$(fd . $basedir | xargs -I {} basename {} | $HOME/scripts/fzf_scripts/fzfmenu.sh "fzf_project")
+
+    if [[ -n $file ]]; then
+        kitty --directory "$basedir" sh -c "cat ~/.cache/wal/sequences; nvim \"$file\"; exec \$SHELL" &
+    fi
+}
+
 terminal(){
     if [[ -n $2 ]]; then
         kitty --directory "$1/$2" &
@@ -35,4 +44,5 @@ case $projecttype in
     "python") py ;;
     "py") py ;;
     "repos") repos ;;
+    "scripts") scripts ;;
 esac

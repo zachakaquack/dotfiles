@@ -52,17 +52,19 @@ options+="Backup Dotfiles""\\n"
 options+="Search Python Projects""\\n"
 options+="Search C++ Projects (CPP)""\\n"
 options+="Search Repos""\\n"
+options+="Search Scripts""\\n"
 options+="FZF""\\n"
 options+="Twitter""\\n"
 
 chooseprogram() { \
-        choice=$(printf "$options" | $HOME/scripts/fzf_scripts/fzfmenu.sh "fzf_menu_picker")
+        choice=$(printf "$options" | shuf | $HOME/scripts/fzf_scripts/fzfmenu.sh "fzf_menu_picker")
     case "$choice" in
         "Theme Menu") themes ;;
         "Calculator") calculator ;;
         "Backup Dotfiles") backupdotfiles ;;
         "Search Python Projects") projects "python" ;;
         "Search C++ Projects (CPP)") projects "c++" ;;
+        "Search Scripts") projects "scripts" ;;
         "Search Repos") projects "repos" ;;
         "FZF") launchfzf ;;
         "Twitter") twitter ;;
