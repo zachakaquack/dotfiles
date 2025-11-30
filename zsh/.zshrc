@@ -13,31 +13,33 @@ source $ZSH/oh-my-zsh.sh
 (cat ~/.cache/wal/sequences &)
 source ~/.cache/wal/colors-tty.sh
 
-# zsh
+# compdump location
 ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
+
+# history bullshit
 HISTFILE=$ZSH/cache/.zsh_history
-HISTSIZE=10000
-SAVEHIST=10000
+HISTCONTROL=ignoreboth
+HISTSIZE=1000000
+SAVEHIST=1000000
 
-# fzf search history (remove the bind then rebind to the fzf script)
-bindkey -r "^r"
-bindkey -s "^r" "$HOME/scripts/fzf_scripts/fzf_history.sh^M"
+# fzf search history
+source <(fzf --zsh)
 
-# initialize "z" command (zoxide)
-eval "$(zoxide init zsh)"
+# modules
+autoload compinit
+eval "$(zoxide init zsh)" # initialize "z" command (zoxide)
 
-# complete hidden files in tab
-# compinit
-_comp_options+=(globdots)
-HYPHEN_INSENSITIVE="true"
-ENABLE_CORRECTION="true"
+# zstyles
+zstyle ':completion:*' special-dirs false # turn off . and ..
+zstyle ':omz:update' mode auto # auto update omz
+zstyle ':omz:update' frequency 14 # check every 2 weeks (i think lol)
 
-# dont show . and .. when complete with tab
-zstyle ':completion:*' special-dirs false
+# main opts
+setopt append_history inc_append_history share_history # better history
+setopt autocd # type name of dir to cd
+setopt globdots # include dotfiles in tab complete
+setopt no_case_glob no_case_match # case insensitive
 
-# update frequency for oh-my-zsh
-zstyle ':omz:update' mode auto
-zstyle ':omz:update' frequency 14
 
 plugins=(
     git
