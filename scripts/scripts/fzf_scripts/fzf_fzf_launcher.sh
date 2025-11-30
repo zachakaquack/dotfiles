@@ -48,15 +48,19 @@ get_date(){
     notify-send "Copied $d"
 }
 
+run_dysk(){
+    foot --app-id "fzf_" sh -c "dysk; exec \$SHELL" &
+}
+
 options="Theme Menu""\\n"
 options+="Calculator""\\n"
 options+="Backup Dotfiles""\\n"
 options+="Search Python Projects""\\n"
 options+="Search C++ Projects (CPP)""\\n"
 options+="Search Repos""\\n"
-options+="Search Scripts""\\n"
 options+="FZF""\\n"
 options+="Twitter""\\n"
+options+="Dysk (Disk)""\\n"
 
 chooseprogram() { \
         choice=$(printf "$(date)\n$options" | $HOME/scripts/fzf_scripts/fzfmenu.sh "fzf_menu_picker")
@@ -66,10 +70,10 @@ chooseprogram() { \
         "Backup Dotfiles") backupdotfiles ;;
         "Search Python Projects") projects "python" ;;
         "Search C++ Projects (CPP)") projects "c++" ;;
-        "Search Scripts") projects "scripts" ;;
         "Search Repos") projects "repos" ;;
         "FZF") launchfzf ;;
         "Twitter") twitter ;;
+	"Dysk (Disk)") run_dysk ;;
 	$(date)) get_date ;;
     esac
 }

@@ -10,6 +10,7 @@ copyq
 cronie
 dolphin
 dvdts-fp-git
+dysk
 efibootmgr
 equicord-installer-bin
 fastfetch
