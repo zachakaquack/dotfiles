@@ -49,7 +49,11 @@ get_date(){
 }
 
 run_dysk(){
-    foot --app-id "fzf_" sh -c "dysk; exec \$SHELL" &
+    foot --app-id "fzf_dysk" sh -c "cat ~/.cache/wal/sequences; dysk; exec \$SHELL" &
+}
+
+run_speedtest(){
+    foot --app-id "fzf_speedtest" sh -c "cat ~/.cache/wal/sequences; speedtest++; exec \$SHELL" &
 }
 
 options="Theme Menu""\\n"
@@ -61,9 +65,12 @@ options+="Search Repos""\\n"
 options+="FZF""\\n"
 options+="Twitter""\\n"
 options+="Dysk (Disk)""\\n"
+options+="SpeedTest""\\n"
 
 chooseprogram() { \
-        choice=$(printf "$(date)\n$options" | $HOME/scripts/fzf_scripts/fzfmenu.sh "fzf_menu_picker")
+    # get rid of the preview
+    fzfargs="--preview=''"
+    choice=$(printf "$(date)\n$options" | $HOME/scripts/fzf_scripts/fzfmenu.sh "fzf_menu_picker" $fzfargs)
     case "$choice" in
         "Theme Menu") themes ;;
         "Calculator") calculator ;;
@@ -75,6 +82,7 @@ chooseprogram() { \
         "Twitter") twitter ;;
 	"Dysk (Disk)") run_dysk ;;
 	$(date)) get_date ;;
+	"SpeedTest") run_speedtest ;;
     esac
 }
 

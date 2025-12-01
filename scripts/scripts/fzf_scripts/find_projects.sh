@@ -2,7 +2,8 @@
 
 cplusplus(){
     basedir="$HOME/Desktop/cpp/"
-    dir=$(fd . $basedir --max-depth=1 -t=directory | xargs -I {} basename {} | $HOME/scripts/fzf_scripts/fzfmenu.sh "fzf_project")
+    fzfargs="--preview='ls $basedir/{}'"
+    dir=$(fd . $basedir --max-depth=1 -t=directory | xargs -I {} basename {} | $HOME/scripts/fzf_scripts/fzfmenu.sh "fzf_project" $fzfargs)
 
 
     terminal $basedir $dir
@@ -10,14 +11,16 @@ cplusplus(){
 
 py(){
     basedir="$HOME/Desktop/python/"
-    dir=$(fd . $basedir --max-depth=1 -t=directory | xargs -I {} basename {} | $HOME/scripts/fzf_scripts/fzfmenu.sh "fzf_project")
+    fzfargs="--preview='ls $basedir/{}'"
+    dir=$(fd . $basedir --max-depth=1 -t=directory | xargs -I {} basename {} | $HOME/scripts/fzf_scripts/fzfmenu.sh "fzf_project" $fzfargs)
 
     terminal $basedir $dir
 }
 
 repos(){
     basedir="$HOME/Desktop/repos"
-    dir=$(fd . $basedir --max-depth=1 -t=directory | xargs -I {} basename {} | $HOME/scripts/fzf_scripts/fzfmenu.sh "fzf_project")
+    fzfargs="--preview='ls $basedir/{}'"
+    dir=$(fd . $basedir --max-depth=1 -t=directory | xargs -I {} basename {} | $HOME/scripts/fzf_scripts/fzfmenu.sh "fzf_project" $fzfargs)
 
     terminal $basedir $dir
 }
