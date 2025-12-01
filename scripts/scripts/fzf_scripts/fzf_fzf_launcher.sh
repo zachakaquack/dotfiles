@@ -21,7 +21,7 @@ projects(){
 
 launchfzf(){
     tmp=$(mktemp)
-    find "$HOME" > "$tmp"
+    find "$HOME" -not -path "*/.cache/*" -not -path "*/Code Cache/*" -not -path "*/discord/*" -not -path "*/vesktop/*" > "$tmp"
     choice=$($HOME/scripts/fzf_scripts/fzfmenu.sh "fzf_menu" < "$tmp")
     rm "$tmp"
 
