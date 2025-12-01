@@ -1,6 +1,8 @@
-
 # default programs
 export EDITOR="nvim"
+
+# source some private stuff (like wttr location)
+[ -f "$HOME/.private_keys" ] && source "$HOME/.private_keys"
 
 # xdg stuff
 export XDG_CONFIG_HOME="$HOME/.config"

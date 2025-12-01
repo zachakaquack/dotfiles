@@ -23,6 +23,7 @@
 		//"custom/theme-menu-creator",
 		//"custom/random-theme",
 		//    "custom/vesktop-toggle",
+		"custom/weather",
 		"keyboard-state",
 		"network",
 		"battery",
@@ -42,7 +43,7 @@
 			// 	"class<kitty> title<.*/cpp.*>": " ",
 			// 	"class<kitty> title<.*nvim.*>": " ",
 			"class<.*vesktop.*> title<.*\\([0-9]+\\).*": " ",
-			"class<.*vesktop.*> title<.*•.*": "󰗖 ",
+			"class<.*vesktop.*> title<.*•.*": "󰗖 "
 			// 	"class<.*vesktop.*>": " ",
 			// 	"class<.*librewolf.*>": " ",
 			// 	"class<.*thunar.*>": " ",
@@ -172,5 +173,10 @@
 			"unlocked": " ",
 			"locked": " "
 		}
+	},
+	"custom/weather": {
+		"format": "{}",
+		"interval": 300,
+		"exec": "$HOME/scripts/get_weather.sh"
 	}
 }
