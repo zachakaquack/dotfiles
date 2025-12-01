@@ -1,7 +1,8 @@
-# instant prompt or whatever
-if [[ -r ~/.p10k.zsh ]]; then
-    source ~/.p10k.zsh
-fi
+# plugins
+plugins=(
+    # git
+    z
+)
 
 # load oh my zsh
 source $ZSH/oh-my-zsh.sh
@@ -22,11 +23,9 @@ HISTCONTROL=ignoreboth
 HISTSIZE=1000000
 SAVEHIST=1000000
 
-# fzf search history
-source <(fzf --zsh)
-
 # modules
-autoload compinit
+autoload -Uz compinit
+compinit
 eval "$(zoxide init zsh)" # initialize "z" command (zoxide)
 
 # zstyles
@@ -54,8 +53,3 @@ if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
     exec Hyprland
 fi
 
-# plugins
-plugins=(
-    git
-    z
-)
