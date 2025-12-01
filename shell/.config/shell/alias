@@ -10,4 +10,7 @@ current="$HOME/scripts/current_theme.sh" \
 \
 gs='git status' \
 ga='git add' \
-
+gc='git commit' \
+gcm='git commit -m' \
+gp='git push' \
+gitlines='git ls-files *.h *.cpp | xargs wc -l' \
