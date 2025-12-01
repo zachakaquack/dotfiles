@@ -49,11 +49,11 @@ get_date(){
 }
 
 run_dysk(){
-    foot --app-id "fzf_dysk" sh -c "cat ~/.cache/wal/sequences; dysk; exec \$SHELL" &
+    foot --app-id "fzf_dysk" sh -c "cat ~/.cache/wal/sequences; dysk; echo; read -n 1 _" &
 }
 
 run_speedtest(){
-    foot --app-id "fzf_speedtest" sh -c "cat ~/.cache/wal/sequences; speedtest++; exec \$SHELL" &
+    foot --app-id "fzf_speedtest" sh -c "cat ~/.cache/wal/sequences; speedtest++; echo; read -n 1 _" &
 }
 
 options="Theme Menu""\\n"
