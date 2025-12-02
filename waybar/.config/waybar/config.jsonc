@@ -124,12 +124,13 @@
 	},
 	"clock": {
 		"timezone": "America/Chicago",
-		"format": "{:%H:%M %Y-%m-%d}",
+		"format": "{:%r %Y-%m-%d}",
 		"tooltip-format": "{calendar}",
 		"calendar": {
 			"mode": "month"
 		},
-		"on-click": "sh -c 'echo \"$(date +\"%A, %b %d, %Y %H:%M:%S\")\" | wl-copy'"
+		"on-click": "sh -c 'echo \"$(date +\"%A, %b %d, %Y %H:%M:%S\")\" | wl-copy'",
+		"interval": 1
 	},
 	"custom/vesktop-toggle": {
 		"format": "{}",
