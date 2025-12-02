@@ -7,10 +7,12 @@ zshrc='nvim $HOME/dotfiles/zsh/.zshrc' \
 \
 gpp='g++ *.cpp -Wall -fdiagnostics-color=always && ./a.out' \
 current="$HOME/scripts/current_theme.sh" \
+path='echo -e ${PATH//:/\\n}'
 \
 gs='git status' \
 ga='git add' \
 gc='git commit' \
 gcm='git commit -m' \
 gp='git push' \
+gl='git pull' \
 gitlines='git ls-files *.h *.cpp | xargs wc -l' \
