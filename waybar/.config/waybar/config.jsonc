@@ -24,7 +24,7 @@
 		//"custom/random-theme",
 		//    "custom/vesktop-toggle",
 		"custom/weather",
-		"keyboard-state",
+		// "keyboard-state",
 		"network",
 		"battery",
 		"pulseaudio",

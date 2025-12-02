@@ -19,9 +19,10 @@ ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 
 # history bullshit
 HISTFILE=$ZSH/cache/.zsh_history
-HISTCONTROL=ignoreboth
 HISTSIZE=1000000
 SAVEHIST=1000000
+
+setopt HIST_IGNORE_DUPS # ignore dups
 
 # modules
 autoload -Uz compinit

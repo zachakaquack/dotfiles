@@ -1,5 +1,8 @@
 # default programs
 export EDITOR="nvim"
+export VISUAL="nvim"
+export TERM="kitty"
+export BROWSER="librewolf"
 
 # source some private stuff (like wttr location)
 [ -f "$HOME/.private_keys" ] && source "$HOME/.private_keys"
@@ -28,13 +31,6 @@ export PATH
 export HYPRSHOT_DIR="$HOME/Pictures/screenshots"
 export ZSH="$HOME/.oh-my-zsh"
 export SCRIPTS="$HOME/scripts"
-
-# no idea if these even do anything lol
-export TERM="kitty"
-export TERMINAL="kitty"
-export EDITOR="nvim"
-export VISUAL="nvim"
-export CONFIG_DIR="$HOME/.config"
 
 # fzf stuff
 export FZF_DEFAULT_OPTS="--style minimal --color 16 --preview 'bat --color=always {}'"
