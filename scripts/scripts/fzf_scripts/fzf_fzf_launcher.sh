@@ -21,7 +21,7 @@ projects(){
 
 launchfzf(){
     tmp=$(mktemp)
-    find "$HOME" -not -path "*/.cache/*" -not -path "*/Code Cache/*" -not -path "*/discord/*" -not -path "*/vesktop/*" > "$tmp"
+    fd . "$HOME" --hidden --no-ignore > "$tmp"
     choice=$($HOME/scripts/fzf_scripts/fzfmenu.sh "fzf_menu" < "$tmp")
     rm "$tmp"
 
@@ -33,7 +33,7 @@ launchfzf(){
         else
             dir=$(dirname $choice)
             file=$(basename $choice)
-            kitty --directory "$dir" sh -c "nvim \"$file\"; exec \$SHELL" &
+            kitty --directory "$dir" sh -c "cat ~/.cache/wal/sequences; nvim \"$file\"; exec \$SHELL" &
         fi
     fi
 }
