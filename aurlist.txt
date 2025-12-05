@@ -64,6 +64,7 @@ pavucontrol
 pipewire
 pipewire-alsa
 pipewire-pulse
+prismlauncher
 python-pipx
 python-pywal
 python-pywalfox
@@ -95,6 +96,7 @@ vlc-gui-qt
 vlc-plugin-ffmpeg
 waybar
 waybar-media-git
+waywall-working-git
 webapp-manager
 wireplumber
 wl-clipboard
