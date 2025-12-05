@@ -7,7 +7,7 @@ zshrc='nvim $HOME/dotfiles/zsh/.zshrc' \
 \
 gpp='g++ *.cpp -Wall -fdiagnostics-color=always && ./a.out' \
 current="$HOME/scripts/current_theme.sh" \
-path='echo -e ${PATH//:/\\n}'
+path='echo -e ${PATH//:/\\n}' \
 \
 gs='git status' \
 ga='git add' \
