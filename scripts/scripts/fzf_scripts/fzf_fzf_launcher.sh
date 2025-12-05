@@ -56,6 +56,10 @@ run_speedtest(){
     foot --app-id "fzf_speedtest" sh -c "cat ~/.cache/wal/sequences; speedtest++; echo; read -n 1 _" &
 }
 
+run_minecraft(){
+    prismlauncher --launch MCSRRanked-Linux-1.16.1-All & disown 
+}
+
 options="Theme Menu""\\n"
 options+="Calculator""\\n"
 options+="Backup Dotfiles""\\n"
@@ -66,6 +70,7 @@ options+="FZF""\\n"
 options+="Twitter""\\n"
 options+="Dysk (Disk)""\\n"
 options+="SpeedTest""\\n"
+options+="Minecraft (MCSR)""\\n"
 
 chooseprogram() { \
     # get rid of the preview
@@ -83,6 +88,7 @@ chooseprogram() { \
 	"Dysk (Disk)") run_dysk ;;
 	$(date)) get_date ;;
 	"SpeedTest") run_speedtest ;;
+	"Minecraft (MCSR)") run_minecraft ;;
     esac
 }
 

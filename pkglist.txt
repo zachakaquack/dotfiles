@@ -49,13 +49,16 @@ linux-firmware
 man-db
 man-pages
 mbedtls
+mesa-utils
 neovim
 nerd-fonts-git
 networkmanager
 networkmanager-dmenu-git
+ninjabrain-bot
 nomacs
 noto-fonts-emoji
 nvidia
+nvidia-prime
 nvidia-settings
 nvidia-utils
 obs-studio
