@@ -16,3 +16,4 @@ gcm='git commit -m' \
 gp='git push' \
 gl='git pull' \
 gitlines='git ls-files *.h *.cpp | xargs wc -l' \
+ginit='git init' \
