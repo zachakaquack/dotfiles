@@ -1,5 +1,5 @@
 return {
-  "backdround/improved-ft.nvim",
+  'backdround/improved-ft.nvim',
   lazy = false,
   opts = {
     use_default_mappings = true,
