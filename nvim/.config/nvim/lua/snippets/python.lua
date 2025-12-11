@@ -7,6 +7,13 @@ local fmt = require('luasnip.extras.fmt').fmt
 
 return {
 
+  s('namemain', {
+    t {
+      'if __name__ == "__main__":',
+      '\t',
+    },
+    i(1),
+  }),
   s('ending', {
     t {
       'app = QApplication(sys.argv)',
