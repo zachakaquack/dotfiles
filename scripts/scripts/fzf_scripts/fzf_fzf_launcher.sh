@@ -60,6 +60,10 @@ run_minecraft(){
     prismlauncher --launch MCSRRanked-Linux-1.16.1-All & disown 
 }
 
+run_rhythia(){
+    $HOME/Desktop/Rhythia/SoundSpacePlus.x86_64
+}
+
 options="Theme Menu""\\n"
 options+="Calculator""\\n"
 options+="Backup Dotfiles""\\n"
@@ -71,6 +75,7 @@ options+="Twitter""\\n"
 options+="Dysk (Disk)""\\n"
 options+="SpeedTest""\\n"
 options+="Minecraft (MCSR)""\\n"
+options+="Rhythia""\\n"
 
 chooseprogram() { \
     # get rid of the preview
@@ -89,6 +94,7 @@ chooseprogram() { \
 	$(date)) get_date ;;
 	"SpeedTest") run_speedtest ;;
 	"Minecraft (MCSR)") run_minecraft ;;
+	"Rhythia") run_rhythia ;;
     esac
 }
 

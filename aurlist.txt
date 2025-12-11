@@ -72,6 +72,7 @@ python-pipx
 python-pywal
 python-pywalfox
 pywal-discord-git
+qt6ct
 slurp
 socat
 speedtest++
