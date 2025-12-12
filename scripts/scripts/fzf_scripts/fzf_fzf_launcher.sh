@@ -68,6 +68,11 @@ run_mission_center(){
     missioncenter &
 }
 
+random_theme(){
+    image=$(find $HOME/Pictures/bgs | shuf -n 1)
+    $HOME/scripts/wal-tile.sh $image
+}
+
 options="Theme Menu""\\n"
 options+="Calculator""\\n"
 options+="Backup Dotfiles""\\n"
@@ -81,6 +86,7 @@ options+="SpeedTest""\\n"
 options+="Minecraft (MCSR)""\\n"
 options+="Rhythia""\\n"
 options+="Mission Center (Task Manager)""\\n"
+options+="Random Theme""\\n"
 
 chooseprogram() { \
     # get rid of the preview
@@ -100,7 +106,8 @@ chooseprogram() { \
 	"SpeedTest") run_speedtest ;;
 	"Minecraft (MCSR)") run_minecraft ;;
 	"Rhythia") run_rhythia ;;
-	"Mission Center (Task Manager)" ) run_mission_center ;;
+	"Mission Center (Task Manager)") run_mission_center ;;
+	"Random Theme") random_theme ;;
     esac
 }
 
