@@ -50,6 +50,7 @@ man-db
 man-pages
 mbedtls
 mesa-utils
+mission-center
 neovim
 nerd-fonts-git
 networkmanager

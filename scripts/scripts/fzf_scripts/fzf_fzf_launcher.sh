@@ -64,6 +64,10 @@ run_rhythia(){
     $HOME/Desktop/Rhythia/SoundSpacePlus.x86_64
 }
 
+run_mission_center(){
+    missioncenter &
+}
+
 options="Theme Menu""\\n"
 options+="Calculator""\\n"
 options+="Backup Dotfiles""\\n"
@@ -76,6 +80,7 @@ options+="Dysk (Disk)""\\n"
 options+="SpeedTest""\\n"
 options+="Minecraft (MCSR)""\\n"
 options+="Rhythia""\\n"
+options+="Mission Center (Task Manager)""\\n"
 
 chooseprogram() { \
     # get rid of the preview
@@ -95,6 +100,7 @@ chooseprogram() { \
 	"SpeedTest") run_speedtest ;;
 	"Minecraft (MCSR)") run_minecraft ;;
 	"Rhythia") run_rhythia ;;
+	"Mission Center (Task Manager)" ) run_mission_center ;;
     esac
 }
 
