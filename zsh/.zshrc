@@ -45,7 +45,7 @@ setopt no_case_glob no_case_match # case insensitive
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # thank you bread on penguins for this
-# "its (date) (uptime)"
+# its "(date) (uptime)"
 space="  "
 echo -e "${NEWLINE}${fg[red]}$(print -P '%D{%_I:%M%P}\n')${space}${fg[blue]}$(uptime -p | cut -c 4-)"
 

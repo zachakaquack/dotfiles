@@ -8,6 +8,7 @@ zshrc='nvim $HOME/dotfiles/zsh/.zshrc' \
 gpp='g++ *.cpp -Wall -fdiagnostics-color=always && ./a.out' \
 current="$HOME/scripts/current_theme.sh" \
 path='echo -e ${PATH//:/\\n}' \
+venv='$HOME/scripts/manage_python_venv.sh' \
 \
 gs='git status' \
 ga='git add' \
