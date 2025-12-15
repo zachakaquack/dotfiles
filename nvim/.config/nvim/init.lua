@@ -95,6 +95,10 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 -- general
 vim.keymap.set('n', 'j', 'gj')
 vim.keymap.set('n', 'k', 'gk')
+
+-- restart lsp more easily
+vim.keymap.set('n', '<leader>l', ':LspRestart<Enter>')
+
 vim.api.nvim_create_user_command('W', ':w', {})
 vim.api.nvim_create_user_command('WQ', ':wq', {})
 vim.api.nvim_create_user_command('Q', ':q', {})
