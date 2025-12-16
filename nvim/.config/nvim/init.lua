@@ -108,6 +108,12 @@ vim.keymap.set('n', '<Enter>', 'o<Esc>')
 vim.keymap.set('n', '<S-Enter>', 'O<Esc>')
 vim.keymap.set('i', '<S-Enter>', '<Enter><Esc>kA')
 
+-- tmux doesn't accept shift-enter by default; so i have
+-- 'map shift+enter send_key alt+page_down' in my kitty.conf
+-- to "fix" this
+vim.keymap.set('n', '<A-PageDown>', 'O<Esc>')
+vim.keymap.set('i', '<A-PageDown>', '<Enter><Esc>kA')
+
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 

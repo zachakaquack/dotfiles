@@ -58,6 +58,10 @@ attach_tmux(){
     $HOME/scripts/fzf_scripts/fzf_tmux_attach.sh
 }
 
+new_tmux(){
+    $HOME/scripts/fzf_scripts/tmux_new_session.sh
+}
+
 options="Theme Menu""\\n"
 options+="Calculator""\\n"
 options+="Backup Dotfiles""\\n"
@@ -71,7 +75,8 @@ options+="Minecraft (MCSR)""\\n"
 options+="Rhythia""\\n"
 options+="Mission Center (Task Manager)""\\n"
 options+="Random Theme""\\n"
-options+="Attach TMUX""\\n"
+options+="Attach TMUX Session""\\n"
+options+="New TMUX Session""\\n"
 
 chooseprogram() { \
         d=$(date)
@@ -91,7 +96,8 @@ chooseprogram() { \
         "Rhythia") run_rhythia ;;
         "Mission Center (Task Manager)") run_mission_center ;;
         "Random Theme") random_theme ;;
-        "Attach TMUX") attach_tmux ;;
+        "Attach TMUX Session") attach_tmux ;;
+        "New TMUX Session") new_tmux ;;
     esac
 }
 
