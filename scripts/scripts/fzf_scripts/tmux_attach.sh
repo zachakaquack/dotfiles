@@ -1,6 +1,6 @@
 #!/bin/bash
 
-session=$($HOME/scripts/fzf_scripts/fzfmenu.sh "$(printf "$(tmux ls -F "#S")")")
+session=$($HOME/scripts/fzf_scripts/menu.sh "$(printf "$(tmux ls -F "#S")")")
 
 # only execute session not empty
 if [ -n "$session" ]; then

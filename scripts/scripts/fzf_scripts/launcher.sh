@@ -4,7 +4,7 @@
 # https://youtu.be/h_E3ddNQ1xw
 
 themes() { \
-        $HOME/scripts/fzf_scripts/fzf_theme_menu.sh
+        $HOME/scripts/fzf_scripts/theme_menu.sh
 }
 
 calculator() { \
@@ -55,7 +55,7 @@ random_theme(){
 }
 
 attach_tmux(){
-    $HOME/scripts/fzf_scripts/fzf_tmux_attach.sh
+    $HOME/scripts/fzf_scripts/tmux_attach.sh
 }
 
 new_tmux(){
@@ -80,7 +80,7 @@ options+="New TMUX Session""\\n"
 
 chooseprogram() { \
         d=$(date)
-    choice=$($HOME/scripts/fzf_scripts/fzfmenu.sh "$d\n$options")
+    choice=$($HOME/scripts/fzf_scripts/menu.sh "$d\n$options")
     case "$choice" in
         "Theme Menu") themes ;;
         "Calculator") calculator ;;

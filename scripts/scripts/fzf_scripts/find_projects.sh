@@ -3,7 +3,7 @@
 cplusplus(){
     basedir="$HOME/Desktop/cpp/"
     fzfargs="--preview='ls $basedir/{}'"
-    dir=$($HOME/scripts/fzf_scripts/fzfmenu.sh "$(fd . $basedir --max-depth=1 -t=directory | xargs -I {} basename {})")
+    dir=$($HOME/scripts/fzf_scripts/menu.sh "$(fd . $basedir --max-depth=1 -t=directory | xargs -I {} basename {})")
 
 
     terminal $basedir $dir
@@ -12,7 +12,7 @@ cplusplus(){
 py(){
     basedir="$HOME/Desktop/python/"
     fzfargs="--preview='ls $basedir/{}'"
-    dir=$($HOME/scripts/fzf_scripts/fzfmenu.sh "$(fd . $basedir --max-depth=1 -t=directory | xargs -I {} basename {})")
+    dir=$($HOME/scripts/fzf_scripts/menu.sh "$(fd . $basedir --max-depth=1 -t=directory | xargs -I {} basename {})")
 
     terminal $basedir $dir
 }
@@ -20,7 +20,7 @@ py(){
 repos(){
     basedir="$HOME/Desktop/repos"
     fzfargs="--preview='ls $basedir/{}'"
-    dir=$($HOME/scripts/fzf_scripts/fzfmenu.sh "$(fd . $basedir --max-depth=1 -t=directory | xargs -I {} basename {})")
+    dir=$($HOME/scripts/fzf_scripts/menu.sh "$(fd . $basedir --max-depth=1 -t=directory | xargs -I {} basename {})")
 
     terminal $basedir $dir
 }
@@ -28,7 +28,7 @@ repos(){
 # no longer use
 scripts(){
     basedir="$HOME/scripts/"
-    file=$(fd . $basedir | xargs -I {} basename {} | $HOME/scripts/fzf_scripts/fzfmenu.sh "fzf_project")
+    file=$(fd . $basedir | xargs -I {} basename {} | $HOME/scripts/fzf_scripts/menu.sh "fzf_project")
 
     if [[ -n $file ]]; then
         kitty --directory "$basedir" sh -c "cat ~/.cache/wal/sequences; nvim \"$file\"; exec \$SHELL" &
