@@ -19,25 +19,6 @@ projects(){
     $HOME/scripts/fzf_scripts/find_projects.sh "$1"
 }
 
-launchfzf(){
-    tmp=$(mktemp)
-    fd . "$HOME" --hidden --no-ignore > "$tmp"
-    choice=$($HOME/scripts/fzf_scripts/fzfmenu.sh "fzf_menu" < "$tmp")
-    rm "$tmp"
-
-    # if made choice, go to the directory
-    if [[ -n $choice ]]; then
-        # if directory
-        if [[ -d $choice ]]; then
-            kitty --directory "$choice" &
-        else
-            dir=$(dirname $choice)
-            file=$(basename $choice)
-            kitty --directory "$dir" sh -c "cat ~/.cache/wal/sequences; nvim \"$file\"; exec \$SHELL" &
-        fi
-    fi
-}
-
 twitter(){
     gtk-launch WebApp-twitter3005.desktop
 }
@@ -83,7 +64,6 @@ options+="Backup Dotfiles""\\n"
 options+="Search Python Projects""\\n"
 options+="Search C++ Projects (CPP)""\\n"
 options+="Search Repos""\\n"
-options+="FZF""\\n"
 options+="Twitter""\\n"
 options+="Dysk (Disk)""\\n"
 options+="SpeedTest""\\n"
@@ -103,7 +83,6 @@ chooseprogram() { \
         "Search Python Projects") projects "python" ;;
         "Search C++ Projects (CPP)") projects "c++" ;;
         "Search Repos") projects "repos" ;;
-        "FZF") launchfzf ;;
         "Twitter") twitter ;;
         "Dysk (Disk)") run_dysk ;;
         $d) get_date ;;
