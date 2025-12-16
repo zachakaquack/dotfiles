@@ -91,6 +91,7 @@ tetrio-desktop
 thunar
 thunar-archive-plugin
 thunar-volman
+tmux
 ttf-baekmuk
 tuime
 tumbler

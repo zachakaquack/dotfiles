@@ -95,6 +95,7 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 -- general
 vim.keymap.set('n', 'j', 'gj')
 vim.keymap.set('n', 'k', 'gk')
+-- vim.keymap.del("n", "<C-S-t>")
 
 -- restart lsp more easily
 vim.keymap.set('n', '<leader>l', ':LspRestart<Enter>')

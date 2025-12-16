@@ -87,6 +87,7 @@ options+="Minecraft (MCSR)""\\n"
 options+="Rhythia""\\n"
 options+="Mission Center (Task Manager)""\\n"
 options+="Random Theme""\\n"
+options+="Attach tmux""\\n"
 
 chooseprogram() { \
     # get rid of the preview
@@ -108,6 +109,7 @@ chooseprogram() { \
 	"Rhythia") run_rhythia ;;
 	"Mission Center (Task Manager)") run_mission_center ;;
 	"Random Theme") random_theme ;;
+	"Attach tmux") $HOME/scripts/fzf_scripts/fzf_tmux_attach.sh
     esac
 }
 
