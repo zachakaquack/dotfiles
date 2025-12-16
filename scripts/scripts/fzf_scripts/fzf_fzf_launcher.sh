@@ -57,7 +57,7 @@ run_speedtest(){
 }
 
 run_minecraft(){
-    prismlauncher --launch MCSRRanked-Linux-1.16.1-All & disown 
+    prismlauncher --launch MCSRRanked-Linux-1.16.1-All & disown
 }
 
 run_rhythia(){
@@ -71,6 +71,10 @@ run_mission_center(){
 random_theme(){
     image=$(find $HOME/Pictures/bgs | shuf -n 1)
     $HOME/scripts/wal-tile.sh $image
+}
+
+attach_tmux(){
+    $HOME/scripts/fzf_scripts/fzf_tmux_attach.sh
 }
 
 options="Theme Menu""\\n"
@@ -87,12 +91,11 @@ options+="Minecraft (MCSR)""\\n"
 options+="Rhythia""\\n"
 options+="Mission Center (Task Manager)""\\n"
 options+="Random Theme""\\n"
-options+="Attach tmux""\\n"
+options+="Attach TMUX""\\n"
 
 chooseprogram() { \
-    # get rid of the preview
-    fzfargs="--preview=''"
-    choice=$(printf "$(date)\n$options" | $HOME/scripts/fzf_scripts/fzfmenu.sh "fzf_menu_picker" $fzfargs)
+        d=$(date)
+    choice=$($HOME/scripts/fzf_scripts/fzfmenu.sh "$d\n$options")
     case "$choice" in
         "Theme Menu") themes ;;
         "Calculator") calculator ;;
@@ -102,14 +105,14 @@ chooseprogram() { \
         "Search Repos") projects "repos" ;;
         "FZF") launchfzf ;;
         "Twitter") twitter ;;
-	"Dysk (Disk)") run_dysk ;;
-	$(date)) get_date ;;
-	"SpeedTest") run_speedtest ;;
-	"Minecraft (MCSR)") run_minecraft ;;
-	"Rhythia") run_rhythia ;;
-	"Mission Center (Task Manager)") run_mission_center ;;
-	"Random Theme") random_theme ;;
-	"Attach tmux") $HOME/scripts/fzf_scripts/fzf_tmux_attach.sh
+        "Dysk (Disk)") run_dysk ;;
+        $d) get_date ;;
+        "SpeedTest") run_speedtest ;;
+        "Minecraft (MCSR)") run_minecraft ;;
+        "Rhythia") run_rhythia ;;
+        "Mission Center (Task Manager)") run_mission_center ;;
+        "Random Theme") random_theme ;;
+        "Attach TMUX") attach_tmux ;;
     esac
 }
 

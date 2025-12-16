@@ -1,7 +1,6 @@
 #!/bin/bash
 
-app_id="fzf_tmux_attach"
-session=$(tmux ls -F "#S" | $HOME/scripts/fzf_scripts/fzfmenu.sh "$app_id" )
+session=$($HOME/scripts/fzf_scripts/fzfmenu.sh "$(printf "$(tmux ls -F "#S")")")
 
 # only execute session not empty
 if [ -n "$session" ]; then
