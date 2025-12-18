@@ -7,6 +7,32 @@ local fmt = require('luasnip.extras.fmt').fmt
 
 return {
 
+  s('newframe', {
+    t {
+      'from PySide6.QtGui import Qt',
+      'from PySide6.QtWidgets import QFrame, QSizePolicy, QVBoxLayout',
+      '',
+      '',
+      'class ',
+    },
+    i(1),
+    t {
+      '(QFrame):',
+      '    def __init__(self, *args, **kwargs):',
+      '        super().__init__(*args, *kwargs)',
+      '',
+      '        self.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)',
+      '',
+      '        self.main_layout = QVBoxLayout(self)',
+      '        self.setLayout(self.main_layout)',
+      '        self.main_layout.setContentsMargins(0, 0, 0, 0)',
+      '        self.main_layout.setSpacing(0)',
+      '        self.main_layout.setAlignment(',
+      '            Qt.AlignmentFlag.AlignTop | Qt.AlignmentFlag.AlignHCenter',
+      '        )',
+    },
+    i(2),
+  }),
   s('namemain', {
     t {
       'if __name__ == "__main__":',
@@ -119,6 +145,10 @@ return {
   }),
   s('switcher', {
     t {
+      'from PySide6.QtGui import Qt',
+      'from PySide6.QtWidgets import QFrame, QSizePolicy, QVBoxLayout, QWidget',
+      '',
+      '',
       'class Switcher(QFrame):',
       '    def __init__(self, *args, **kwargs):',
       '        super().__init__(*args, **kwargs)',

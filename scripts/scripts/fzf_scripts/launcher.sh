@@ -77,6 +77,7 @@ options+="Mission Center (Task Manager)""\\n"
 options+="Random Theme""\\n"
 options+="Attach TMUX Session""\\n"
 options+="New TMUX Session""\\n"
+options+="Define Word""\\n"
 
 chooseprogram() { \
         d=$(date)
@@ -98,6 +99,7 @@ chooseprogram() { \
         "Random Theme") random_theme ;;
         "Attach TMUX Session") attach_tmux ;;
         "New TMUX Session") new_tmux ;;
+        "Define Word") $HOME/scripts/fzf_scripts/define_menu.sh ;;
     esac
 }
 

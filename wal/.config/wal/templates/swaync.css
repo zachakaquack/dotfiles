@@ -1,0 +1,42 @@
+* {{
+    font-family: "JetbrainsMono Nerd Font", monospace;
+    font-size: 14px;
+}}
+
+.notification {{
+    border-radius: 16px;
+    border: 1px solid {cursor};
+    padding: 12px;
+    margin: 12px;
+    color: {cursor};
+    background-color: {background}
+}}
+
+.notification-title {{
+    font-weight: bold;
+    font-size: 15px;
+    color: {cursor};
+    margin-bottom: 4px;
+}}
+
+.notification-appname {{
+    font-size: 12px;
+    color: {cursor};
+    margin-bottom: 6px;
+}}
+
+.notification-body {{
+    font-size: 13px;
+    color: {cursor};
+}}
+
+.notification-icon {{
+    border-radius: 8px;
+    margin-right: 10px;
+}}
+
+.notification-actions {{
+    margin-top: 10px;
+    display: flex;
+    gap: 8px;
+}}
