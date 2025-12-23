@@ -1,34 +1,26 @@
 #!/bin/bash
 
-cwd="$HOME"
+cwd="${1:-$HOME}"
 
-echo_ls_command(){
-    ls "$cwd" -1 -a -p --group-directories-first
-}
+while true; do
 
-open_menu(){
-    command=$1
-
+    command=$(ls "$cwd" -1 -a -p --group-directories-first)
     item=$($SCRIPTS/fzf_scripts/menu.sh "$command")
-    [[ -z "$item" ]] && exit
+    [[ -z "$item" ]] && exit 0
 
-    [[ -d "$cwd$item" ]] && change_directory "$item" && exit
+    path=$(readlink -m "$cwd/$item")
 
-    # selected item is a file now
-    open_kitty "$cwd" "$item"
-}
+    if [[ -d "$path" ]]; then
+        # directory
+        cwd=$path
+    else
+        mime_type=$(file -b --mime-type "$path")
 
-open_kitty(){
-    directory=$1
-    filename=$2
-    kitty --directory "$directory" sh -c "cat $HOME/.cache/wal/sequences; nvim "$filename"; exec \$SHELL" &
-}
-
-change_directory(){
-    new_dir=$1
-    cwd="$cwd$new_dir"
-    open_menu "$(echo_ls_command)"
-}
-
-# init run
-open_menu "$(echo_ls_command)"
+        if [[ "$mime_type" == text/* ]]; then
+            kitty --directory "$cwd" sh -c "cat $HOME/.cache/wal/sequences; nvim \"$path\"; exec \$SHELL" &
+        else
+            xdg-open "$path" >/dev/null 2>&1 &
+        fi
+        exit 0
+    fi
+done
