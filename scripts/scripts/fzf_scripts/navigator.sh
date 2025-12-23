@@ -11,6 +11,13 @@ while true; do
     path=$(readlink -m "$cwd/$item")
 
     if [[ -d "$path" ]]; then
+
+        echo "$path"
+        if [[ "$path" = "$cwd" ]]; then
+            kitty --directory "$cwd" sh -c "cat $HOME/.cache/wal/sequences; exec \$SHELL" &
+            exit 0
+        fi
+
         cwd=$path
         continue
     fi
