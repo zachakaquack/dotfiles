@@ -52,6 +52,7 @@ man-pages
 mbedtls
 mesa-utils
 mission-center
+mpv
 neovim
 nerd-fonts-git
 networkmanager
@@ -95,6 +96,7 @@ tmux
 ttf-baekmuk
 tuime
 tumbler
+ueberzugpp
 vesktop
 vim
 viu
@@ -113,6 +115,8 @@ xdg-desktop-portal
 xdg-desktop-portal-hyprland
 yay
 yay-debug
+yazi-git
+yt-dlp
 z
 zathura
 zathura-pdf-mupdf

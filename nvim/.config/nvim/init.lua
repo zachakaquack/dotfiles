@@ -714,6 +714,7 @@ require('lazy').setup({
         go = { 'gofumpt' },
         rust = { 'rustfmt' },
         python = { 'black' },
+        markdown = { 'prettier' },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --

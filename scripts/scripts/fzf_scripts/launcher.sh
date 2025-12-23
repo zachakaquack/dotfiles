@@ -4,11 +4,11 @@
 # https://youtu.be/h_E3ddNQ1xw
 
 themes() { \
-        $HOME/scripts/fzf_scripts/theme_menu.sh
+        $SCRIPTS/fzf_scripts/theme_menu.sh
 }
 
 calculator() { \
-        $HOME/scripts/calculator.sh "fzf_calculator"
+        $SCRIPTS/calculator.sh "fzf_calculator"
 }
 
 backupdotfiles() { \
@@ -16,7 +16,7 @@ backupdotfiles() { \
 }
 
 projects(){
-    $HOME/scripts/fzf_scripts/find_projects.sh "$1"
+    $SCRIPTS/fzf_scripts/find_projects.sh "$1"
 }
 
 twitter(){
@@ -41,26 +41,11 @@ run_minecraft(){
     prismlauncher --launch MCSRRanked-Linux-1.16.1-All & disown
 }
 
-run_rhythia(){
-    $HOME/Desktop/Rhythia/SoundSpacePlus.x86_64
-}
-
-run_mission_center(){
-    missioncenter &
-}
-
 random_theme(){
     image=$(find $HOME/Pictures/bgs | shuf -n 1)
-    $HOME/scripts/wal-tile.sh $image
+    $SCRIPTS/wal-tile.sh $image
 }
 
-attach_tmux(){
-    $HOME/scripts/fzf_scripts/tmux_attach.sh
-}
-
-new_tmux(){
-    $HOME/scripts/fzf_scripts/tmux_new_session.sh
-}
 
 options="Theme Menu""\\n"
 options+="Calculator""\\n"
@@ -72,16 +57,16 @@ options+="Twitter""\\n"
 options+="Dysk (Disk)""\\n"
 options+="SpeedTest""\\n"
 options+="Minecraft (MCSR)""\\n"
-options+="Rhythia""\\n"
 options+="Mission Center (Task Manager)""\\n"
 options+="Random Theme""\\n"
 options+="Attach TMUX Session""\\n"
 options+="New TMUX Session""\\n"
 options+="Define Word""\\n"
+options+="Navigate / Open File""\\n"
 
 chooseprogram() { \
         d=$(date)
-    choice=$($HOME/scripts/fzf_scripts/menu.sh "$d\n$options")
+    choice=$($SCRIPTS/fzf_scripts/menu.sh "$d\n$options")
     case "$choice" in
         "Theme Menu") themes ;;
         "Calculator") calculator ;;
@@ -94,12 +79,12 @@ chooseprogram() { \
         $d) get_date ;;
         "SpeedTest") run_speedtest ;;
         "Minecraft (MCSR)") run_minecraft ;;
-        "Rhythia") run_rhythia ;;
-        "Mission Center (Task Manager)") run_mission_center ;;
+        "Mission Center (Task Manager)") missioncenter & ;;
         "Random Theme") random_theme ;;
-        "Attach TMUX Session") attach_tmux ;;
-        "New TMUX Session") new_tmux ;;
-        "Define Word") $HOME/scripts/fzf_scripts/define_menu.sh ;;
+        "Attach TMUX Session") $SCRIPTS/fzf_scripts/tmux_attach.sh ;;
+        "New TMUX Session") $SCRIPTS/fzf_scripts/tmux_new_session.sh ;;
+        "Define Word") $SCRIPTS/fzf_scripts/define_menu.sh ;;
+        "Navigate / Open File") $SCRIPTS/fzf_scripts/navigator.sh ;;
     esac
 }
 
