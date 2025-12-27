@@ -65,6 +65,7 @@ window#waybar {
 	box-shadow: none;
 	margin-left: 0;
 	margin-right: 0;
+	color: @color2;
 }
 
 #workspaces button.urgent {
@@ -73,8 +74,8 @@ window#waybar {
 
 #workspaces button.active {
 	/* color: @color4 */
-	/* color: @cursor; */
-	color: @color11;
+	color: @cursor;
+	/* color: @color11; */
 }
 
 #workspaces button.active:hover {
@@ -84,25 +85,24 @@ window#waybar {
 }
 
 #workspaces button:hover {
-	/* box-shadow: inset 0 -2px @cursor; */
-	box-shadow: inset 0 -2px @cursor;
+	box-shadow: inset 0 -2px @color2;
 	background: transparent;
 }
 
 #workspaces button.empty {
-	color: @color8;
-}
-
-#workspaces button.empty:hover {
-	box-shadow: inset 0 -2px @color8;
-}
-
-#workspaces button.empty.active {
 	color: @color11;
 }
 
-#workspaces button.empty.active:hover {
+#workspaces button.empty:hover {
 	box-shadow: inset 0 -2px @color11;
+}
+
+#workspaces button.empty.active {
+	color: @color8;
+}
+
+#workspaces button.empty.active:hover {
+	box-shadow: inset 0 -2px @color8;
 }
 
 /* middle specifics */

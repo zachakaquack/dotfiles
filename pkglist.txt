@@ -75,7 +75,9 @@ python-pipx
 python-pywal
 python-pywalfox
 pywal-discord-git
+qbittorrent
 qt6ct
+rtorrent
 slurp
 socat
 speedtest++
@@ -97,6 +99,7 @@ ttf-baekmuk
 tuime
 tumbler
 ueberzugpp
+unrar
 vesktop
 vim
 viu

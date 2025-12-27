@@ -177,7 +177,7 @@
 	},
 	"custom/weather": {
 		"format": "{}",
-		"interval": 300,
+		"interval": 3600000,
 		"exec": "$HOME/scripts/get_weather.sh"
 	}
 }
