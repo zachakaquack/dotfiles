@@ -62,7 +62,7 @@ options+="Random Theme""\\n"
 options+="Attach TMUX Session""\\n"
 options+="New TMUX Session""\\n"
 options+="Define Word""\\n"
-options+="Navigate / Open File""\\n"
+# options+="Navigate / Open File""\\n"
 
 chooseprogram() { \
         d=$(date)
@@ -84,7 +84,7 @@ chooseprogram() { \
         "Attach TMUX Session") $SCRIPTS/fzf_scripts/tmux_attach.sh ;;
         "New TMUX Session") $SCRIPTS/fzf_scripts/tmux_new_session.sh ;;
         "Define Word") $SCRIPTS/fzf_scripts/define_menu.sh ;;
-        "Navigate / Open File") $SCRIPTS/fzf_scripts/navigator.sh ;;
+            # "Navigate / Open File") $SCRIPTS/fzf_scripts/navigator.sh ;;
     esac
 }
 
