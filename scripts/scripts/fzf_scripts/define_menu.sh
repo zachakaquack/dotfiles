@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 prompt="Enter Word: "
 word=$(fuzzel -d -p "$prompt" -l 0 <<<"")

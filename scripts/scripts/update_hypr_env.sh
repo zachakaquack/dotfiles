@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Wait up to 10 seconds for Hyprland to appear
 for i in {1..10}; do

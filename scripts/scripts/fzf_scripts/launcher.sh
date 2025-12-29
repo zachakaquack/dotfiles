@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # inspired by bread on penguin's
 # "bash scripting into dmenu to improve workflow and solve problems"
 # https://youtu.be/h_E3ddNQ1xw

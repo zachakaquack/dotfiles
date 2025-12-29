@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 session=$($SCRIPTS/fzf_scripts/menu.sh "$(printf "$(tmux ls -F "#S")")")
 

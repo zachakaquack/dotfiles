@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 VENV_DEFAULT_NAME=".venv"
 VENV_PATH="$(pwd)/$VENV_DEFAULT_NAME"
