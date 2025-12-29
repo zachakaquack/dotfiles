@@ -6,7 +6,6 @@ bat
 bluez
 bluez-utils
 brightnessctl
-copyq
 cronie
 dolphin
 dvdts-fp-git
