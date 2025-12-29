@@ -51,6 +51,7 @@ man-db
 man-pages
 mbedtls
 mesa-utils
+millennium
 mission-center
 mpv
 neovim
