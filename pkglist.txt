@@ -32,9 +32,8 @@ gvfs-afc
 gvfs-mtp
 hawkeye
 htop
-hyprland
-hyprpaper
-hyprpicker
+hyprland-git
+hyprland-meta-git
 hyprshot
 ifuse
 kalker-bin
@@ -115,7 +114,6 @@ wl-clipboard
 wleave-git
 wofi
 xdg-desktop-portal
-xdg-desktop-portal-hyprland
 yay
 yay-debug
 yazi-git
