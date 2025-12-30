@@ -42,8 +42,9 @@ run_minecraft(){
 }
 
 random_theme(){
-    image=$(find $HOME/Pictures/bgs | shuf -n 1)
-    $SCRIPTS/wal-tile.sh $image
+    $SCRIPTS/random.sh
+    # image=$(find $HOME/Pictures/bgs | shuf -n 1)
+    # $SCRIPTS/wal-tile.sh $image
 }
 
 
