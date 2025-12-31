@@ -1,0 +1,33 @@
+font-family = "JetbrainsMono Nerd Font"
+font-size = 14
+
+window-padding-x = 4
+window-padding-y = 4
+
+unfocused-split-opacity = 100
+
+shell-integration = zsh
+window-save-state = always
+
+# tabs stuff
+gtk-tabs-location = bottom
+gtk-wide-tabs = false
+
+# keybindings
+keybind = alt+h=goto_split:left
+keybind = alt+j=goto_split:down
+keybind = alt+k=goto_split:up
+keybind = alt+l=goto_split:right
+
+keybind = alt+shift+h=new_split:left
+keybind = alt+shift+j=new_split:down
+keybind = alt+shift+k=new_split:up
+keybind = alt+shift+l=new_split:right
+
+keybind = ctrl+alt+h=resize_split:left,5
+keybind = ctrl+alt+j=resize_split:down,5
+keybind = ctrl+alt+k=resize_split:up,5
+keybind = ctrl+alt+l=resize_split:right,5
+
+keybind = ctrl+t=new_tab
+keybind = F3=prompt_surface_title

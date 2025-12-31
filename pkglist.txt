@@ -1,3 +1,4 @@
+alacritty
 archlinux-xdg-menu
 ark
 base
@@ -18,11 +19,11 @@ ffmpeg4.4
 ffmpegthumbnailer
 ffmpegthumbs
 filelight
-flatpak
 font-manager
 foot
 fuzzel
 fzf
+ghostty
 gimp
 git
 grim
@@ -64,6 +65,7 @@ nvidia-prime
 nvidia-settings
 nvidia-utils
 obs-studio
+openvpn
 os-prober
 pavucontrol
 pipewire
@@ -114,6 +116,7 @@ wl-clipboard
 wleave-git
 wofi
 xdg-desktop-portal
+xdg-desktop-portal-gtk
 yay
 yay-debug
 yazi-git

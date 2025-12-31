@@ -40,6 +40,11 @@ setopt autocd # type name of dir to cd
 setopt globdots # include dotfiles in tab complete
 setopt no_case_glob no_case_match # case insensitive
 
+# hook to ls every time i change directory
+chpwd() {
+    ls
+}
+
 # source p10k settings with its theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 source ~/powerlevel10k/powerlevel10k.zsh-theme
