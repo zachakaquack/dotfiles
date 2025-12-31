@@ -1,6 +1,6 @@
 # plugins
 plugins=(
-    # git
+    git
     z
 )
 
@@ -45,8 +45,9 @@ chpwd() {
     ls
 }
 
-# source p10k settings with its theme
+# source p10k settings
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# p10k theme
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # thank you bread on penguins for this
@@ -59,4 +60,3 @@ if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
     # exec Hyprland
     exec start-hyprland
 fi
-
