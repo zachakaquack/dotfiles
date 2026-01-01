@@ -1,6 +1,6 @@
 alias \
 \
-ls='ls -1 -A | wc -l && ls -C -A -p --color=auto --group-directories-first' \
+ls='ls -C -A -p --color=auto --group-directories-first' \
 reload='source ~/.zshrc' \
 q='exit' \
 \
