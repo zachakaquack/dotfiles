@@ -54,11 +54,11 @@ options+="Backup Dotfiles""\\n"
 options+="Search Python Projects""\\n"
 options+="Search C++ Projects (CPP)""\\n"
 options+="Search Repos""\\n"
-options+="Twitter""\\n"
-options+="Dysk (Disk)""\\n"
-options+="SpeedTest""\\n"
-options+="Minecraft (MCSR)""\\n"
-options+="Mission Center (Task Manager)""\\n"
+# options+="Twitter""\\n"
+# options+="Dysk (Disk)""\\n"
+# options+="SpeedTest""\\n"
+# options+="Minecraft (MCSR)""\\n"
+# options+="Mission Center (Task Manager)""\\n"
 options+="Random Theme""\\n"
 # options+="Attach TMUX Session""\\n"
 # options+="New TMUX Session""\\n"
@@ -75,12 +75,12 @@ chooseprogram() { \
         "Search Python Projects") projects "python" ;;
         "Search C++ Projects (CPP)") projects "c++" ;;
         "Search Repos") projects "repos" ;;
-        "Twitter") twitter ;;
-        "Dysk (Disk)") run_dysk ;;
+            # "Twitter") twitter ;;
+            # "Dysk (Disk)") run_dysk ;;
         $d) get_date ;;
-        "SpeedTest") run_speedtest ;;
-        "Minecraft (MCSR)") run_minecraft ;;
-        "Mission Center (Task Manager)") missioncenter & ;;
+            # "SpeedTest") run_speedtest ;;
+            # "Minecraft (MCSR)") run_minecraft ;;
+            # "Mission Center (Task Manager)") missioncenter & ;;
         "Random Theme") random_theme ;;
             # "Attach TMUX Session") $SCRIPTS/fzf_scripts/tmux_attach.sh ;;
             # "New TMUX Session") $SCRIPTS/fzf_scripts/tmux_new_session.sh ;;
