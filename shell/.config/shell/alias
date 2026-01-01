@@ -3,13 +3,11 @@ alias \
 ls='ls -1 -A | wc -l && ls -C -A -p --color=auto --group-directories-first' \
 reload='source ~/.zshrc' \
 q='exit' \
-zshrc='nvim $HOME/dotfiles/zsh/.zshrc' \
 \
 gpp='g++ *.cpp -Wall -fdiagnostics-color=always && ./a.out' \
 current="$HOME/scripts/current_theme.sh" \
 path='echo -e ${PATH//:/\\n}' \
 venv='$HOME/scripts/manage_python_venv.sh' \
-y='yazi' \
 \
 gs='git status' \
 ga='git add' \

@@ -1,7 +1,6 @@
 # default programs
 export EDITOR="nvim"
 export VISUAL="nvim"
-export TERM="xterm-kitty"
 export BROWSER="librewolf"
 
 # source some private stuff (like wttr location)
@@ -13,12 +12,11 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
 
 # path
-# export PATH="$PATH:$HOME/.local/bin"
-# export PATH="$PATH:$HOME/.cargo/bin"
 path=(
     $path # for previous entries
     $HOME/.local/bin
     $HOME/.cargo/bin
+    $SCRIPTS
 )
 
 # remove duplicates and non-existent dirs
@@ -35,5 +33,3 @@ export SCRIPTS="$HOME/scripts"
 # fzf stuff
 export FZF_DEFAULT_OPTS="--style minimal --color 16 --preview 'bat --color=always {}'"
 export FZF_CTRL_R_OPTS="--style minimal --color 16 --info inline --no-sort --no-preview"
-
-export NV_SURFACE_FLINGER_WM_SELECTION_CONTROL=1
