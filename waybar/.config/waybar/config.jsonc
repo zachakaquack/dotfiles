@@ -77,7 +77,7 @@
 		"separate-outputs": true
 	},
 	"network": {
-		"interface": "enp34s0",
+		"interface": "nordlynx",
 		"format": "{ifname}",
 		"format-wifi": " ",
 		"format-ethernet": " ",
