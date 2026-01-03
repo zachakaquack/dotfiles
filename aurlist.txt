@@ -72,7 +72,7 @@ pavucontrol
 pipewire
 pipewire-alsa
 pipewire-pulse
-prismlauncher
+prismlauncher-git
 python-pipx
 python-pywal
 python-pywalfox
