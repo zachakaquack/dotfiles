@@ -4,6 +4,7 @@ ls='ls -C -A -p --color=auto --group-directories-first' \
 reload='source ~/.zshrc' \
 q='exit' \
 rm='rm -i' \
+fzf='fd -H . | fzf' \
 \
 gpp='g++ *.cpp -Wall -fdiagnostics-color=always && ./a.out' \
 current="$HOME/scripts/current_theme.sh" \
@@ -16,6 +17,4 @@ gc='git commit' \
 gcm='git commit -m' \
 gp='git push' \
 gl='git pull' \
-gitlinescpp='git ls-files *.h *.cpp | xargs wc -l' \
-gitlinespy='git ls-files | xargs wc -l' \
 ginit='git init' \

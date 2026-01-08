@@ -2,6 +2,7 @@
 plugins=(
     git
     z
+    fast-syntax-highlighting
 )
 
 # load oh my zsh
@@ -11,8 +12,8 @@ source $ZSH/oh-my-zsh.sh
 [ -f "$XDG_CONFIG_HOME/shell/alias" ] && source "$XDG_CONFIG_HOME/shell/alias"
 
 # load colors from wal
-(cat ~/.cache/wal/sequences &)
-source ~/.cache/wal/colors-tty.sh
+(cat $HOME/.cache/wal/sequences &)
+source $HOME/.cache/wal/colors-tty.sh
 
 # compdump location
 ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
@@ -46,9 +47,9 @@ chpwd() {
 }
 
 # source p10k settings
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+[[ ! -f $XDG_CONFIG_HOME/shell/.p10k.zsh ]] || source $XDG_CONFIG_HOME/shell/.p10k.zsh
 # p10k theme
-source ~/powerlevel10k/powerlevel10k.zsh-theme
+source $HOME/powerlevel10k/powerlevel10k.zsh-theme
 
 # thank you bread on penguins for this
 # its "(date) (uptime)"

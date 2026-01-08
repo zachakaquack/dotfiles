@@ -57,7 +57,7 @@ options+="Search Repos""\\n"
 # options+="Twitter""\\n"
 # options+="Dysk (Disk)""\\n"
 # options+="SpeedTest""\\n"
-# options+="Minecraft (MCSR)""\\n"
+options+="Minecraft (MCSR)""\\n"
 # options+="Mission Center (Task Manager)""\\n"
 options+="Random Theme""\\n"
 # options+="Attach TMUX Session""\\n"
@@ -79,7 +79,7 @@ chooseprogram() { \
             # "Dysk (Disk)") run_dysk ;;
         $d) get_date ;;
             # "SpeedTest") run_speedtest ;;
-            # "Minecraft (MCSR)") run_minecraft ;;
+        "Minecraft (MCSR)") run_minecraft ;;
             # "Mission Center (Task Manager)") missioncenter & ;;
         "Random Theme") random_theme ;;
             # "Attach TMUX Session") $SCRIPTS/fzf_scripts/tmux_attach.sh ;;
