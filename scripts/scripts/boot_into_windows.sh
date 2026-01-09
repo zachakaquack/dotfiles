@@ -11,6 +11,12 @@ WINDOWS_NUMBER=2
 # run `sudo visudo`
 # at the bottom, add this, but replace with the relevant info
 # {USERNAME} ALL=(ALL) NOPASSWD: {path/to/script/boot_into_windows.sh}
+# and in, for say, waybar, you can do this:
+# "custom/power": {
+# 	"format": "⏻",
+# 	"on-click-middle": "sudo $HOME/scripts/boot_into_windows.sh",
+# },
+
 
 # 2 = windows
 grub-reboot "$WINDOWS_NUMBER"
