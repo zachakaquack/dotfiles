@@ -60,8 +60,8 @@ options+="Search Repos""\\n"
 options+="Minecraft (MCSR)""\\n"
 # options+="Mission Center (Task Manager)""\\n"
 options+="Random Theme""\\n"
-# options+="Attach TMUX Session""\\n"
-# options+="New TMUX Session""\\n"
+options+="Attach Zellij Session""\\n"
+options+="New Zellij Session""\\n"
 options+="Define Word""\\n"
 # options+="Navigate / Open File""\\n"
 
@@ -82,8 +82,8 @@ chooseprogram() { \
         "Minecraft (MCSR)") run_minecraft ;;
             # "Mission Center (Task Manager)") missioncenter & ;;
         "Random Theme") random_theme ;;
-            # "Attach TMUX Session") $SCRIPTS/fzf_scripts/tmux_attach.sh ;;
-            # "New TMUX Session") $SCRIPTS/fzf_scripts/tmux_new_session.sh ;;
+        "Attach Zellij Session") $SCRIPTS/fzf_scripts/zellij_attach.sh ;;
+        "New Zellij Session") $SCRIPTS/fzf_scripts/zellij_new_session.sh ;;
         "Define Word") $SCRIPTS/fzf_scripts/define_menu.sh ;;
             # "Navigate / Open File") $SCRIPTS/fzf_scripts/navigator.sh ;;
     esac

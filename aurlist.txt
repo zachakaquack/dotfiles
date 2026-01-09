@@ -20,6 +20,7 @@ ffmpegthumbnailer
 ffmpegthumbs
 filelight
 font-manager
+foot
 fuzzel
 fzf
 ghostty
@@ -96,7 +97,6 @@ tetrio-desktop
 thunar
 thunar-archive-plugin
 thunar-volman
-tmux
 ttf-baekmuk
 tuime
 tumbler
@@ -125,6 +125,7 @@ yt-dlp
 z
 zathura
 zathura-pdf-mupdf
+zellij
 zip
 zsh
 zsh-autocomplete-git
