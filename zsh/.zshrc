@@ -49,7 +49,7 @@ chpwd() {
 # source p10k settings
 [[ ! -f $XDG_CONFIG_HOME/shell/.p10k.zsh ]] || source $XDG_CONFIG_HOME/shell/.p10k.zsh
 # p10k theme
-source $HOME/powerlevel10k/powerlevel10k.zsh-theme
+source $ZSH_CUSTOM/themes/powerlevel10k/powerlevel10k.zsh-theme
 
 # thank you bread on penguins for this
 # its "(date) (uptime)"
