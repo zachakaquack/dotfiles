@@ -5,11 +5,6 @@
 	"autohide-blocked": false,
 	"exclusive": true,
 	"passthrough": false,
-	"signal": {
-		"8": [
-			"custom/vesktop-toggle"
-		]
-	},
 	"gtk-layer-shell": true,
 	"modules-left": [
 		"hyprland/workspaces"
@@ -18,17 +13,10 @@
 		"hyprland/window"
 	],
 	"modules-right": [
-		//      "custom/game-launcher",
-		//"custom/theme-menu",
-		//"custom/theme-menu-creator",
-		//"custom/random-theme",
-		//    "custom/vesktop-toggle",
 		"custom/weather",
-		// "keyboard-state",
 		"network",
 		"battery",
 		"pulseaudio",
-		//  "mpris",
 		"clock",
 		"custom/power"
 	],
@@ -38,17 +26,8 @@
 		// "window-rewrite-default": " ",
 		"window-rewrite-default": "",
 		"window-rewrite": {
-			// 	"class<kitty>": " ",
-			// 	"class<kitty> title<.*/python.*>": " ",
-			// 	"class<kitty> title<.*/cpp.*>": " ",
-			// 	"class<kitty> title<.*nvim.*>": " ",
 			"class<.*vesktop.*> title<.*\\([0-9]+\\).*": " ",
 			"class<.*vesktop.*> title<.*•.*": "󰗖 "
-			// 	"class<.*vesktop.*>": " ",
-			// 	"class<.*librewolf.*>": " ",
-			// 	"class<.*thunar.*>": " ",
-			// 	"class<.*albert.*>": "",
-			// 	"class<.*libreoffice-writer.*>": " "
 		},
 		"persistent-workspaces": {
 			"*": [
@@ -132,48 +111,11 @@
 		"on-click": "sh -c 'echo \"$(date +\"%A, %b %d, %Y %H:%M:%S\")\" | wl-copy'",
 		"interval": 1
 	},
-	"custom/vesktop-toggle": {
-		"format": "{}",
-		"exec": "~/.config/waybar/scripts/vesktop-icon.sh",
-		"interval": 1,
-		"on-click": "~/.config/waybar/scripts/vesktop-icon.sh --toggle",
-		"tooltip": false
-	},
-	"custom/theme-menu": {
-		"format": " ",
-		"on-click": "/usr/bin/python /home/zach/Desktop/python/theme_chooser/main.py &",
-		"tooltip": false
-	},
-	"custom/theme-menu-creator": {
-		"format": " ",
-		"on-click": "/usr/bin/python ~/Desktop/python/theme_maker/main.py &",
-		"tooltip": false
-	},
-	"mpris": {
-		"format": "{dynamic}",
-		"format-paused": "{status_icon} <i>{dynamic}</i>",
-		"player-icons": {
-			"default": "▶",
-			"mpv": "🎵"
-		},
-		"status-icons": {
-			"paused": "⏸"
-		}
-		// "ignored-players": ["firefox"]
-	},
 	"custom/power": {
 		"format": "⏻",
 		"on-click-right": "sh -c 'systemctl suspend'",
 		"on-click-middle": "sudo /home/zach/scripts/boot_into_windows.sh",
 		"on-click": "wleave"
-	},
-	"keyboard-state": {
-		"capslock": true,
-		"format": "{icon}",
-		"format-icons": {
-			"unlocked": " ",
-			"locked": " "
-		}
 	},
 	"custom/weather": {
 		"format": "{}",
