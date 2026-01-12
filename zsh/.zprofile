@@ -1,7 +1,6 @@
 # default programs
 export EDITOR="nvim"
 export VISUAL="nvim"
-export BROWSER="librewolf"
 
 # source some private stuff (like wttr location)
 [ -f "$HOME/.private_keys" ] && source "$HOME/.private_keys"

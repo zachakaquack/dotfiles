@@ -1,0 +1,57 @@
+/**
+ * See https://gnome.pages.gitlab.gnome.org/libadwaita/doc/main/css-variables.html for more CSS variables.
+ * Or use your own colors. Both work, but using your own colors may break the automatic light/dark theme function.
+ */
+
+@import url("/home/zach/.cache/wal/colors.css");
+
+*{
+  font-size: 0px;
+}
+
+window {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), var(--wallpaper);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+button {
+  margin: 10px;
+  opacity: 0.8;
+  /* border in between buttons */
+  border: 1px solid var(--cursor);
+  color: var(--color11);
+  text-shadow: 0 0 4px var(--color11);
+	background-color: var(--background);
+
+  /* used for the images (the icons in the center), no touch */
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 25%;
+}
+
+
+button label.action-name {
+    font-size: 24px;
+}
+
+button label.keybind {
+    font-size: 0px;
+    font-family: monospace;
+}
+
+button:hover label.keybind, button:focus label.keybind {
+    background-color: var(--color1);
+    opacity: 1;
+}
+
+button:hover {
+    background-color: var(--color1);
+    opacity: 1;
+}
+
+button:active {
+    color: var(--accent-fg-color);
+    background-color: var(--accent-bg-color);
+}

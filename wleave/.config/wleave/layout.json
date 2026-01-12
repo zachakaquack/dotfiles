@@ -1,0 +1,35 @@
+{
+	"buttons-per-row": "1/2",
+	"delay-command-ms": 0,
+	"css": "/home/zach/.config/wleave/style.css",
+	"buttons": [
+		{
+			"label": "shutdown",
+			"action": "systemctl poweroff",
+			"text": "Shutdown",
+			"keybind": "s",
+			"icon": "/usr/share/wleave/icons/shutdown.svg"
+		},
+		{
+			"label": "logout",
+			"action": "sudo /home/zach/scripts/boot_into_windows.sh",
+			"text": "Windows",
+			"keybind": "e",
+			"icon": "/usr/share/wleave/icons/logout.svg"
+		},
+		{
+			"label": "suspend",
+			"action": "systemctl suspend",
+			"text": "Suspend",
+			"keybind": "u",
+			"icon": "/usr/share/wleave/icons/suspend.svg"
+		},
+		{
+			"label": "reboot",
+			"action": "systemctl reboot",
+			"text": "Reboot",
+			"keybind": "r",
+			"icon": "/usr/share/wleave/icons/reboot.svg"
+		}
+	]
+}

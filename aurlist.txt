@@ -32,6 +32,7 @@ gvfs
 gvfs-afc
 gvfs-mtp
 hawkeye
+helium-browser-bin
 htop
 hyprland-git
 hyprland-meta-git

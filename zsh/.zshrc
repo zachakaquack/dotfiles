@@ -58,6 +58,5 @@ echo -e "${NEWLINE}${fg[red]}$(print -P '%D{%_I:%M%P}\n')${space}${fg[blue]}$(up
 
 # run hyprland on tty1
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
-    # exec Hyprland
     exec start-hyprland
 fi
