@@ -4,9 +4,8 @@ ls='ls -C -A -p --color=auto --group-directories-first' \
 reload='source ~/.zshrc' \
 q='exit' \
 rm='rm -i' \
-fzf='fd -H . | fzf' \
 \
-gpp='g++ *.cpp -Wall -fdiagnostics-color=always && ./a.out' \
+gpp='g++ *.cpp -Wall && ./a.out' \
 current="$HOME/scripts/current_theme.sh" \
 path='echo -e ${PATH//:/\\n}' \
 venv='$HOME/scripts/manage_python_venv.sh' \

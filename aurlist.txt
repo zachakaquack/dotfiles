@@ -121,7 +121,6 @@ xdg-desktop-portal
 xdg-desktop-portal-gtk
 yay
 yay-debug
-yazi-git
 yt-dlp
 z
 zathura

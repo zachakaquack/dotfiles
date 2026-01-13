@@ -37,9 +37,9 @@ random_theme(){
 options="Theme Menu""\\n"
 options+="Calculator""\\n"
 options+="Backup Dotfiles""\\n"
-options+="Search Python Projects""\\n"
-options+="Search C++ Projects (CPP)""\\n"
-options+="Search Repos""\\n"
+# options+="Search Python Projects""\\n"
+# options+="Search C++ Projects (CPP)""\\n"
+# options+="Search Repos""\\n"
 options+="Minecraft (MCSR)""\\n"
 options+="Random Theme""\\n"
 options+="Define Word""\\n"
@@ -51,9 +51,9 @@ chooseprogram() { \
         "Theme Menu") themes ;;
         "Calculator") calculator ;;
         "Backup Dotfiles") backupdotfiles ;;
-        "Search Python Projects") projects "python" ;;
-        "Search C++ Projects (CPP)") projects "c++" ;;
-        "Search Repos") projects "repos" ;;
+            # "Search Python Projects") projects "python" ;;
+            # "Search C++ Projects (CPP)") projects "c++" ;;
+            # "Search Repos") projects "repos" ;;
         $d) get_date ;;
         "Minecraft (MCSR)") run_minecraft ;;
         "Random Theme") random_theme ;;
