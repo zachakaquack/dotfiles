@@ -37,7 +37,6 @@ zstyle ':omz:update' frequency 14 # check every 2 weeks (i think lol)
 
 # main opts
 setopt append_history inc_append_history share_history # better history
-setopt autocd # type name of dir to cd
 setopt globdots # include dotfiles in tab complete
 setopt no_case_glob no_case_match # case insensitive
 

@@ -383,6 +383,7 @@
     fi
 
     local res
+    res='('
 
     if [[ -n $VCS_STATUS_LOCAL_BRANCH ]]; then
       local branch=${(V)VCS_STATUS_LOCAL_BRANCH}
@@ -458,6 +459,7 @@
     # in this case.
     (( VCS_STATUS_HAS_UNSTAGED == -1 )) && res+=" ${modified}-"
 
+    res+=')'
     typeset -g my_git_format=$res
   }
   functions -M my_git_formatter 2>/dev/null
