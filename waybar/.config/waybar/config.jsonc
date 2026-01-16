@@ -120,6 +120,6 @@
 	"custom/weather": {
 		"format": "{}",
 		"interval": 3600000,
-		"exec": "$HOME/scripts/get_weather.sh"
+		"exec": "$SCRIPTS/get_weather.sh"
 	}
 }

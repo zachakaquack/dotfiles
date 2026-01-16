@@ -118,6 +118,7 @@ webapp-manager
 wireplumber
 wl-clipboard
 wleave-git
+woff-fira-code
 wofi
 xdg-desktop-portal
 xdg-desktop-portal-gtk
