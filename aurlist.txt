@@ -55,6 +55,7 @@ mesa-utils
 millennium
 mission-center
 mpv
+mupdf
 neovim
 nerd-fonts-git
 networkmanager
@@ -127,7 +128,7 @@ yay-debug
 yt-dlp
 z
 zathura
-zathura-pdf-mupdf
+zathura-pdf-poppler
 zellij
 zip
 zsh
