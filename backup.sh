@@ -4,10 +4,7 @@
 cd $HOME/dotfiles/
 
 # refresh the package list
-id=$(notify-send -p "Updating AUR list...")
-pacman -Qqe > $HOME/dotfiles/pkglist.txt
-
-notify-send -r $id "Updating YAY list..."
+id=$(notify-send -p "Updating YAY list...")
 yay -Qqe > $HOME/dotfiles/aurlist.txt
 
 # do git stuff

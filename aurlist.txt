@@ -52,6 +52,7 @@ man-db
 man-pages
 mbedtls
 mesa-utils
+meson-python
 millennium
 mission-center
 mpv
@@ -70,6 +71,7 @@ nvidia-prime
 nvidia-settings
 nvidia-utils
 nwg-look
+obs-studio
 openvpn
 os-prober
 pavucontrol
