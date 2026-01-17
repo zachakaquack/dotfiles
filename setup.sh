@@ -1,8 +1,6 @@
 #!/bin/bash
 set -e
 
-echo "installing aur (yay stuff)"
-yay -S --needed - < pkglist.txt
 yay -S --needed - < aurlist.txt
 
 echo "applying dotfiles bullshit"
