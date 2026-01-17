@@ -70,7 +70,6 @@ nvidia-prime
 nvidia-settings
 nvidia-utils
 nwg-look
-obs-studio
 openvpn
 os-prober
 pavucontrol
@@ -106,6 +105,7 @@ tuime
 tumbler
 ueberzugpp
 unrar
+v4l2loopback-dkms
 vesktop
 vim
 viu
