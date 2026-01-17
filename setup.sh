@@ -35,9 +35,22 @@ install_packages(){
 }
 
 install_yay(){
-    git clone https://aur.archlinux.org/yay.git "$fake_home/yay"
+    rm -rf "$fake_home/yay"
+    sudo -u "$real_user" git clone https://aur.archlinux.org/yay.git "$fake_home/yay"
     cd "$fake_home/yay"
-    makepkg -si
+
+    echo -e "\n\n\n\n\n\n\n\n\n\n"
+    echo "Please run 'makepkg -si' in '$fake_home/yay' before continuing"
+    echo "type 'y' to continue"
+
+    while true; do
+	read -s -n 1 key
+	case "$key" in 
+	    "y") break ;;
+	    "*") continue ;;
+	esac
+    done
+
     rm -rf "$fake_home/yay"
 }
 
