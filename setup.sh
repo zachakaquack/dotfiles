@@ -1,18 +1,33 @@
 #!/usr/bin/env bash
 
+# startup checks
+if ! [ $(id -u) = 0 ]; then
+   echo "the script must run as sudo!!!!" >&2
+   exit 1
+fi
+
+if [ $SUDO_USER ]; then
+    real_user=$SUDO_USER
+else
+    real_user=$(whoami)
+fi
+
+fake_home="/home/$real_user"
 start="$(pwd)"
-cd "$HOME"
+cd "$fake_home"
 
 notify(){
     local msg
     msg=$1
 
-    notify-send "$msg"
+    # notify-send unfortunately does not work with sudo so
+    # i have to comment it out
+    # notify-send "$msg"
     echo -e "$msg"
 }
 
 startup(){
-    sudo pacman -Syu --needed git base-devel
+    pacman -Syu --needed git base-devel
 }
 
 install_packages(){
@@ -20,10 +35,10 @@ install_packages(){
 }
 
 install_yay(){
-    git clone https://aur.archlinux.org/yay.git "$HOME/yay"
-    cd "$HOME/yay"
+    git clone https://aur.archlinux.org/yay.git "$fake_home/yay"
+    cd "$fake_home/yay"
     makepkg -si
-    rm -rf "$HOME/yay"
+    rm -rf "$fake_home/yay"
 }
 
 setup_stow(){
