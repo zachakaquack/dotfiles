@@ -10,7 +10,6 @@ bluez
 bluez-utils
 brightnessctl
 cronie
-dolphin
 dvdts-fp-git
 dysk
 efibootmgr
@@ -126,6 +125,7 @@ waybar
 waybar-media-git
 waywall-working-git
 webapp-manager
+wev
 wireplumber
 wl-clipboard
 wleave-git
