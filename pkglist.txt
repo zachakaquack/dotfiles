@@ -42,6 +42,7 @@ ifuse
 kalker-bin
 kio-fuse
 kitty
+kolourpaint
 lazygit
 libnotify
 libreoffice-still

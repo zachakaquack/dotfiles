@@ -40,7 +40,7 @@ setopt append_history inc_append_history share_history # better history
 setopt globdots # include dotfiles in tab complete
 setopt no_case_glob no_case_match # case insensitive
 
-# hook to ls every time i change directory
+# ls every time i change directory
 chpwd() {
     ls
 }

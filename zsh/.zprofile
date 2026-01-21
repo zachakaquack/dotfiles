@@ -10,6 +10,9 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
 
+# get rid of the annoying zcompdump stuff
+export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
+
 # path
 path=(
     $path # for previous entries

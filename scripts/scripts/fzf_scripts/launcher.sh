@@ -43,6 +43,7 @@ options+="Backup Dotfiles""\\n"
 options+="Minecraft (MCSR)""\\n"
 options+="Random Theme""\\n"
 options+="Define Word""\\n"
+options+="Notes""\\n"
 
 chooseprogram() { \
         d=$(date)
@@ -58,6 +59,7 @@ chooseprogram() { \
         "Minecraft (MCSR)") run_minecraft ;;
         "Random Theme") random_theme ;;
         "Define Word") $SCRIPTS/fzf_scripts/define_menu.sh ;;
+        "Notes") $SCRIPTS/noter/main.sh ;;
     esac
 }
 
