@@ -12,23 +12,24 @@ construct_menu(){
     local note_name
     local other_options
     note_names=$1
-    other_options="Today's Note\nNew Note\n"
+    # other_options="Today's Note\nNew Note\n"
+    other_options="New Note\n"
 
     note_name="$(echo -e "$other_options$note_names" | fuzzel -d)"
 
     if [[ "$note_name" == "New Note" ]]; then
-	echo "new_note"
-	return
+        echo "new_note"
+        return
     fi
 
-    if [[ "$note_name" == "Today's Note" ]]; then
-	echo "todays_note"
-	return
-    fi
+    # if [[ "$note_name" == "Today's Note" ]]; then
+    #     echo "todays_note"
+    #     return
+    # fi
 
     if [[ -n "$note_name" ]]; then
-	full_path="$dir/$note_name"
-	echo "$full_path"
+        full_path="$dir/$note_name"
+        echo "$full_path"
     fi
 }
 
@@ -39,13 +40,13 @@ main(){
     note=$(construct_menu "$notes_paths")
 
     if [[ "$note" == "new_note" ]]; then
-	$SCRIPTS/noter/new_notes.sh "$dir"
+        $SCRIPTS/noter/new_notes.sh "$dir"
 
     elif [[ "$note" == "todays_note" ]]; then
-	$SCRIPTS/noter/handle_todays_note.sh "$dir"
+        $SCRIPTS/noter/handle_todays_note.sh "$dir"
 
-   elif [[ -n "$note" ]]; then
-	$SCRIPTS/noter/open_note.sh "$note"
+    elif [[ -n "$note" ]]; then
+        $SCRIPTS/noter/open_note.sh "$note"
     fi
 }
 

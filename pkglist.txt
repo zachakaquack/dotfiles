@@ -13,7 +13,6 @@ cronie
 dvdts-fp-git
 dysk
 efibootmgr
-equicord-installer-bin
 fastfetch
 fd
 ffmpeg4.4
@@ -27,6 +26,7 @@ fzf
 ghostty
 gimp
 git
+gnome-tweaks
 grim
 grub
 gvfs
@@ -40,6 +40,7 @@ hyprland-meta-git
 hyprshot
 ifuse
 kalker-bin
+kdenlive
 kio-fuse
 kitty
 kolourpaint
@@ -49,8 +50,11 @@ libreoffice-still
 librewolf-bin
 linux
 linux-firmware
+linux-lts
+linux-lts-headers
 man-db
 man-pages
+materia-gtk-theme
 mbedtls
 mesa-utils
 meson-python
@@ -79,7 +83,8 @@ pavucontrol
 pipewire
 pipewire-alsa
 pipewire-pulse
-prismlauncher-git
+prismlauncher
+protonplus
 python-jaraco.classes
 python-jaraco.envs
 python-jaraco.itertools

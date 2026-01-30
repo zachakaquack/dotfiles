@@ -8,4 +8,4 @@ pywal-discord -t default
 pywalfox update
 pkill waybar; waybar &
 swaync-client --reload-css
-ffmpeg -i $1 "$XDG_CONFIG_HOME/waywall/resources/background.png"
+ffmpeg -i $1 "$XDG_CONFIG_HOME/waywall/resources/background.png" &
