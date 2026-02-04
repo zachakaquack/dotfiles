@@ -39,6 +39,7 @@ hyprland-git
 hyprland-meta-git
 hyprshot
 ifuse
+isoimagewriter
 kalker-bin
 kdenlive
 kio-fuse
@@ -68,8 +69,6 @@ networkmanager
 networkmanager-dmenu-git
 ninjabrain-bot
 nomacs
-nordvpn-bin
-nordvpn-gui
 noto-fonts-emoji
 nvidia-open
 nvidia-prime

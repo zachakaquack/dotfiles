@@ -1,0 +1,48 @@
+{
+	"$schema": "/etc/xdg/swaync/configSchema.json",
+	"widgets": [
+		"mpris",
+		"dnd",
+		"notifications"
+	],
+	"widget-config": {
+		"mpris": {
+			"image-size": 96,
+			"image-radius": 16,
+			"blacklist": []
+		},
+		"dnd": {
+			"text": "Do Not Disturb"
+		},
+		"notifications": {}
+	},
+	"notification-icon-size": 64,
+	"notification-body-image-height": 100,
+	"notification-body-image-width": 200,
+	"notification-inline-replies": false,
+	"notification-2fa-action": true,
+	"timeout": 8,
+	"timeout-low": 4,
+	"timeout-critical": 0,
+	"control-center-width": 500,
+	"control-center-height": 600,
+	"positionX": "right",
+	"positionY": "top",
+	"layer": "overlay",
+	"control-center-layer": "top",
+	"layer-shell": true,
+	"layer-shell-cover-screen": true,
+	"fit-to-screen": true,
+	"relative-timestamps": true,
+	"transition-time": 200,
+	"hide-on-clear": false,
+	"hide-on-action": true,
+	"text-empty": "No Notifications",
+	"scripts": {
+		"vesktop-onclick": {
+			"run-on": "action",
+			"exec": "sh -c '/usr/bin/hyprctl dispatch workspace 2 && hyprctl dispatch focuswindow class:vesktop'",
+			"app-name": "vesktop"
+		}
+	}
+}
