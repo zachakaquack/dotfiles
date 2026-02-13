@@ -61,6 +61,8 @@ mesa-utils
 meson-python
 millennium
 mission-center
+mpc
+mpd
 mpv
 mupdf
 neovim

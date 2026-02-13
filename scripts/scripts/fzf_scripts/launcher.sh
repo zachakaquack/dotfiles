@@ -45,7 +45,7 @@ options+="Random Theme""\\n"
 options+="Define Word""\\n"
 options+="Notes""\\n"
 options+="Rhythia""\\n"
-options+="Phoenyx""\\n"
+options+="Rhythia Nightly""\\n"
 
 chooseprogram() { \
         d=$(date)
@@ -62,8 +62,8 @@ chooseprogram() { \
         "Random Theme") random_theme ;;
         "Define Word") $SCRIPTS/fzf_scripts/define_menu.sh ;;
         "Notes") $SCRIPTS/noter/main.sh ;;
-        "Rhythia") "$HOME/Desktop/Rhythia Nightly/SoundSpacePlus.x86_64" ;;
-        "Phoenyx") "$HOME/Desktop/Phoenyx/Phoenyx.x86_64" ;;
+        "Rhythia") "$HOME/Desktop/Rhythia/Rhythia" ;;
+        "Rhythia Nightly") "$HOME/Desktop/Rhythia Nightly/SoundSpacePlus.x86_64" ;;
     esac
 }
 

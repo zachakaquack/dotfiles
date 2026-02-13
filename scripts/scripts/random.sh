@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-BACKGROUNDS_DIR="$HOME/Pictures/bgs/"
+BACKGROUNDS_DIR="$HOME/dotfiles/backgrounds"
 random(){
     local image
     image=$(ls -1 "$BACKGROUNDS_DIR" |  shuf -n 1)
-    $SCRIPTS/wal-tile.sh "$BACKGROUNDS_DIR$image"
+    $SCRIPTS/wal-tile.sh "$BACKGROUNDS_DIR/$image"
 }
 
 open_menu(){
