@@ -40,12 +40,13 @@ options+="Backup Dotfiles""\\n"
 # options+="Search Python Projects""\\n"
 # options+="Search C++ Projects (CPP)""\\n"
 # options+="Search Repos""\\n"
-options+="Minecraft (MCSR)""\\n"
+# options+="Minecraft (MCSR)""\\n"
 options+="Random Theme""\\n"
 options+="Define Word""\\n"
 options+="Notes""\\n"
-options+="Rhythia""\\n"
-options+="Rhythia Nightly""\\n"
+options+="Music Controls""\\n"
+# options+="Rhythia""\\n"
+# options+="Rhythia Nightly""\\n"
 
 chooseprogram() { \
         d=$(date)
@@ -58,12 +59,13 @@ chooseprogram() { \
             # "Search C++ Projects (CPP)") projects "c++" ;;
             # "Search Repos") projects "repos" ;;
         $d) get_date ;;
-        "Minecraft (MCSR)") run_minecraft ;;
+            # "Minecraft (MCSR)") run_minecraft ;;
         "Random Theme") random_theme ;;
         "Define Word") $SCRIPTS/fzf_scripts/define_menu.sh ;;
         "Notes") $SCRIPTS/noter/main.sh ;;
-        "Rhythia") "$HOME/Desktop/Rhythia/Rhythia" ;;
-        "Rhythia Nightly") "$HOME/Desktop/Rhythia Nightly/SoundSpacePlus.x86_64" ;;
+        "Music Controls") $SCRIPTS/music.sh ;;
+            # "Rhythia") "$HOME/Desktop/Rhythia/Rhythia" ;;
+            # "Rhythia Nightly") "$HOME/Desktop/Rhythia Nightly/SoundSpacePlus.x86_64" ;;
     esac
 }
 
