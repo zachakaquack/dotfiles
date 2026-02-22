@@ -7,14 +7,14 @@ while true; do
     is_paused="$(mpc | sed -n '2p' | awk '{print $1}' | sed 's/\[//g' | sed 's/\]//g')"
     settings="$(mpc | tail -n 1 | tr -s ' ')"
     is_repeat="$(echo "$settings" | awk '{print $4}')"
-    is_shuffle="$(echo "$settings" | awk '{print $6}')"
+    is_random="$(echo "$settings" | awk '{print $6}')"
     is_single="$(echo "$settings" | awk '{print $8}')"
     # is_consume="$(echo "$settings" | awk '{print $10}')"
 
     # make them uppercase
     is_paused="${is_paused^^}"
     is_repeat="${is_repeat^^}"
-    is_shuffle="${is_shuffle^^}"
+    is_random="${is_random^^}"
     is_single="${is_single^^}"
     # is_consume="${is_consume^^}"
 
@@ -32,9 +32,10 @@ while true; do
     options+="Volume Up +5%""\n"
     options+="Volume Down -5%""\n"
     options+="Repeat Album (currently $is_repeat)""\n"
-    options+="Shuffle (currently $is_shuffle)""\n"
+    options+="Random Next Song (currently $is_random)""\n"
     options+="Repeat Song (currently $is_single)""\n"
     # options+="Consume Songs (currently $is_consume)""\n"
+    options+="Shuffle List""\n"
     options+="Next Song""\n"
     options+="Previous Song""\n"
     options+="Restart Song""\n"
@@ -69,6 +70,7 @@ while true; do
         "shuffle"* ) mpc shuffle ;;
         "repeat song"* ) mpc single ;;
             # "consume"* ) mpc consume ;;
+        "random"* ) mpc random ;;
         "next song" ) mpc next && notify-send -t 3000 "Now Playing: $(mpc current)" ;;
         "previous song" ) mpc prev ;;
         "restart song" ) mpc seek 0% ;;
