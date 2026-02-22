@@ -50,17 +50,21 @@ while true; do
     # if first time launching, then go to play/pause button
     [[ -z "$selection" ]] && selection="$toggle"
 
-    echo "trying to select $selection"
-    chosen="$(echo -e "$current\n$options" | fuzzel -d --select="$selection")"
+    song="$current"
+    [[ -z "$song" ]] && song="None Playing..."
+
+    chosen="$(echo -e "$song\n$options" | fuzzel -d --select="$selection")"
     selection="$chosen"
     chosen="${chosen,,}"
 
+
     # choose the correct one
     case "$chosen" in
+        "${song,,}" ) ghostty -e ncmpcpp && exit ;;
         "play" ) mpc play && exit ;;
         "pause" ) mpc pause && exit ;;
-        *"+"* ) mpc volume +5 && notify-send -t 500 "$(mpc volume | awk '{print $2}')" ;;
-        *"-"* ) mpc volume -5 && notify-send -t 500 "$(mpc volume | awk '{print $2}')" ;;
+        *"+5"* ) mpc volume +5 && notify-send -t 500 "$(mpc volume | awk '{print $2}')" ;;
+        *"-5"* ) mpc volume -5 && notify-send -t 500 "$(mpc volume | awk '{print $2}')" ;;
         "repeat album"* ) mpc repeat ;;
         "shuffle"* ) mpc shuffle ;;
         "repeat song"* ) mpc single ;;
@@ -68,6 +72,6 @@ while true; do
         "next song" ) mpc next && notify-send -t 3000 "Now Playing: $(mpc current)" ;;
         "previous song" ) mpc prev ;;
         "restart song" ) mpc seek 0% ;;
-        *) exit ;;
+        *) echo "$chosen, $current" && exit ;;
     esac
 done
