@@ -10,7 +10,8 @@
 		"hyprland/workspaces"
 	],
 	"modules-center": [
-		"hyprland/window"
+		//	"hyprland/window"
+		"mpd"
 	],
 	"modules-right": [
 		"custom/weather",
@@ -121,5 +122,19 @@
 		"format": "{}",
 		"interval": 3600000,
 		// "exec": "$SCRIPTS/get_weather.sh"
+	},
+	"mpd": {
+		"format": "{album} - {artist} - {title} - {elapsedTime:%M:%S}/{totalTime:%M:%S}",
+		"format-paused": "{stateIcon} {album} - {artist} - {title}",
+		"format-disconnected": "Disconnected...",
+		"format-stopped": "",
+		"interval": 1,
+		"state-icons": {
+			"paused": "",
+			"playing": ""
+		},
+		"tooltip-format": "MPD (connected)",
+		"tooltip-format-disconnected": "MPD (disconnected)",
+		"on-click": "sh -c 'ghostty -e ncmpcpp'"
 	}
 }
