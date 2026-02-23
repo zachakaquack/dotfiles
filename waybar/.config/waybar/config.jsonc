@@ -120,21 +120,24 @@
 	},
 	"custom/weather": {
 		"format": "{}",
-		"interval": 3600000,
+		"interval": 3600000
 		// "exec": "$SCRIPTS/get_weather.sh"
 	},
 	"mpd": {
-		"format": "{album} - {artist} - {title} - {elapsedTime:%M:%S}/{totalTime:%M:%S}",
+		"format": "{volume}% - {album} - {artist} - {title} - {elapsedTime:%M:%S}/{totalTime:%M:%S}",
 		"format-paused": "{stateIcon} {album} - {artist} - {title}",
 		"format-disconnected": "Disconnected...",
 		"format-stopped": "",
-		"interval": 1,
+		"interval": 10,
 		"state-icons": {
 			"paused": "",
 			"playing": ""
 		},
 		"tooltip-format": "MPD (connected)",
 		"tooltip-format-disconnected": "MPD (disconnected)",
-		"on-click": "sh -c 'ghostty -e ncmpcpp'"
+		"on-click": "sh -c 'ghostty -e ncmpcpp'",
+		"on-click-right": "sh -c 'mpc toggle'",
+		"on-scroll-up": "sh -c 'mpc volume +1'",
+		"on-scroll-down": "sh -c 'mpc volume -1'"
 	}
 }
