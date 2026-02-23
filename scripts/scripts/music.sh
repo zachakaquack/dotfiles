@@ -38,7 +38,7 @@ while true; do
     options+="Shuffle List""\n"
     options+="Next Song""\n"
     options+="Previous Song""\n"
-    options+="Restart Song""\n"
+    options+="Restart Song"
 
 
     # keep in the same spot when toggling play and pause
