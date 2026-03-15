@@ -54,7 +54,7 @@ while true; do
     song="$current"
     [[ -z "$song" ]] && song="None Playing..."
 
-    chosen="$(echo -e "$song\n$options" | fuzzel -d --select="$selection")"
+    chosen="$(echo -e "$song\n$options" | fuzzel -d --select=${selection:=$toggle})"
     selection="$chosen"
     chosen="${chosen,,}"
 

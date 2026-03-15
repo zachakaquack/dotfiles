@@ -45,6 +45,7 @@ options+="Random Theme""\\n"
 options+="Define Word""\\n"
 options+="Notes""\\n"
 options+="Music Controls""\\n"
+options+="Youtube Downloader""\\n"
 # options+="Rhythia""\\n"
 # options+="Rhythia Nightly""\\n"
 
@@ -64,6 +65,7 @@ chooseprogram() { \
         "Define Word") $SCRIPTS/fzf_scripts/define_menu.sh ;;
         "Notes") $SCRIPTS/noter/main.sh ;;
         "Music Controls") $SCRIPTS/music.sh ;;
+        "Youtube Downloader") $SCRIPTS/ytdownloader.sh ;;
             # "Rhythia") "$HOME/Desktop/Rhythia/Rhythia" ;;
             # "Rhythia Nightly") "$HOME/Desktop/Rhythia Nightly/SoundSpacePlus.x86_64" ;;
     esac

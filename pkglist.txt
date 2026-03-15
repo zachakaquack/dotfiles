@@ -109,6 +109,7 @@ python-rich
 pywal-discord-git
 qbittorrent
 qt6ct
+ranger
 rtorrent
 slurp
 socat
@@ -123,11 +124,11 @@ swww
 syncthing
 tealdeer
 tetrio-desktop
-the-honkers-railway-launcher-bin
 thunar
 thunar-archive-plugin
 thunar-volman
 tinymist
+tmux
 ttf-baekmuk
 tuime
 tumbler
@@ -150,6 +151,7 @@ wev
 wireplumber
 wl-clipboard
 wleave-git
+wlr-randr
 woff-fira-code
 wofi
 xdg-desktop-portal
@@ -159,6 +161,7 @@ yay-debug
 yt-dlp
 z
 zathura
+zathura-epub-mupdf
 zathura-pdf-poppler
 zellij
 zip

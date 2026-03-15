@@ -31,7 +31,7 @@ compinit
 eval "$(zoxide init zsh)" # initialize "z" command (zoxide)
 
 # zstyles
-zstyle ':completion:*' special-dirs false # turn off . and ..
+zstyle ':completion:*' special-dirs false # turn off . and .. when tab completing
 zstyle ':omz:update' mode auto # auto update omz
 zstyle ':omz:update' frequency 14 # check every 2 weeks (i think lol)
 
