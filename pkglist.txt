@@ -1,5 +1,4 @@
 adapta-gtk-theme
-alacritty
 archlinux-xdg-menu
 archstatus-git
 ark
@@ -19,11 +18,11 @@ ffmpeg4.4
 ffmpegthumbnailer
 ffmpegthumbs
 filelight
-firefox
 font-manager
 foot
 fuzzel
 fzf
+gdb
 ghostty
 gifsicle
 gimp
@@ -110,10 +109,12 @@ pywal-discord-git
 qbittorrent
 qt6ct
 ranger
+reflector
 rtorrent
 slurp
 socat
 speedtest++
+sqlitebrowser
 steam
 stow
 sudo
@@ -161,8 +162,7 @@ yay-debug
 yt-dlp
 z
 zathura
-zathura-epub-mupdf
-zathura-pdf-poppler
+zathura-pdf-mupdf
 zellij
 zip
 zsh

@@ -5,7 +5,8 @@ reload='source $XDG_CONFIG_HOME/shell/.zshrc' \
 q='exit' \
 rm='rm -i' \
 \
-gpp='g++ *.cpp -std=c++20 -Wall && ./a.out' \
+gpp='g++ *.cpp -std=c++20 -Wall -g && ./a.out' \
+build='make && ./build/final_program' \
 path='echo -e ${PATH//:/\\n}' \
 venv='$HOME/scripts/manage_python_venv.sh' \
 \

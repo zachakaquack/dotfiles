@@ -18,7 +18,7 @@ vim.o.number = true
 vim.o.relativenumber = true
 
 -- Enable mouse mode, can be useful for resizing splits for example!
-vim.o.mouse = 'v'
+vim.o.mouse = 'a'
 
 -- Don't show the mode, since it's already in the status line
 vim.o.showmode = false
@@ -71,14 +71,13 @@ vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 vim.o.inccommand = 'split'
 
 -- Show which line your cursor is on
-vim.o.cursorline = false
+vim.o.cursorline = true
 
 -- turn off statusline
 vim.o.laststatus = 0
 
 -- Minimal number of screen lines to keep above and below the cursor.
--- keep it centered
--- vim.o.scrolloff = 30
+vim.o.scrolloff = 3
 
 -- if performing an operation that would fail due to unsaved changes in the buffer (like `:q`),
 -- instead raise a dialog asking if you wish to save the current file(s)
@@ -96,6 +95,9 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 vim.keymap.set('n', 'j', 'gj')
 vim.keymap.set('n', 'k', 'gk')
 -- vim.keymap.del("n", "<C-S-t>")
+
+-- recompiles
+vim.keymap.set('n', '<leader>r', ':vert Recompile<CR>')
 
 -- restart lsp more easily
 vim.keymap.set('n', '<leader>l', ':LspRestart<Enter>')
@@ -342,11 +344,11 @@ require('lazy').setup({
         -- You can put your default mappings / updates / etc. in here
         --  All the info you're looking for is in `:help telescope.setup()`
         --
-        -- defaults = {
-        --   mappings = {
-        --     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
-        --   },
-        -- },
+        defaults = {
+          mappings = {
+            i = { ['<c-enter>'] = 'to_fuzzy_refine' },
+          },
+        },
         -- pickers = {}
         extensions = {
           ['ui-select'] = {
