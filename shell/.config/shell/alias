@@ -6,7 +6,7 @@ q='exit' \
 rm='rm -i' \
 \
 gpp='g++ *.cpp -std=c++20 -Wall -g && ./a.out' \
-build='make && ./build/final_program' \
+build='make && echo -e "\n------------\n" && ./build/final_program' \
 path='echo -e ${PATH//:/\\n}' \
 venv='$HOME/scripts/manage_python_venv.sh' \
 \
