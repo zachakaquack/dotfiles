@@ -2,13 +2,16 @@ adapta-gtk-theme
 archlinux-xdg-menu
 archstatus-git
 ark
+awww
 base
 base-devel
 bat
 bluez
 bluez-utils
+boost
 brightnessctl
 cronie
+docopt
 dvdts-fp-git
 dysk
 efibootmgr
@@ -28,6 +31,7 @@ gifsicle
 gimp
 git
 gnome-tweaks
+godot
 grim
 grub
 gvfs
@@ -94,6 +98,8 @@ prismlauncher
 protonplus
 pyside6
 pyside6-tools
+python-breathe
+python-docopt
 python-jaraco.classes
 python-jaraco.envs
 python-jaraco.itertools
@@ -101,10 +107,12 @@ python-jaraco.logging
 python-jaraco.path
 python-jaraco.stream
 python-jaraco.test
+python-pipenv
 python-pipx
 python-pywal
 python-pywalfox
 python-rich
+python-yaml
 pywal-discord-git
 qbittorrent
 qt6ct
@@ -121,7 +129,6 @@ sudo
 swayidle
 swaync
 swig
-swww
 syncthing
 tealdeer
 tetrio-desktop
@@ -163,7 +170,6 @@ yt-dlp
 z
 zathura
 zathura-pdf-mupdf
-zellij
 zip
 zsh
 zsh-autocomplete-git

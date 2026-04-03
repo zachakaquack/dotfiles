@@ -11,7 +11,7 @@ open_menu(){
     local result
     local current
 
-    current=$(swww query | awk '{print $NF}' | head -n 1 | xargs basename)
+    current=$(awww query | awk '{print $NF}' | head -n 1 | xargs basename)
     result=$(echo -e "Again\nCurrent: $current" | fuzzel -d -l 2)
 
     [[ ! "$result" == "Again" ]] && exit

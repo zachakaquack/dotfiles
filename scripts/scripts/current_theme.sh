@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-current=$(swww query | awk '{print $NF}' | head -n 1)
+current=$(awww query | awk '{print $NF}' | head -n 1)
 text=" copied!"
 notify_seconds=3
 

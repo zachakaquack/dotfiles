@@ -11,12 +11,6 @@ return {
         show_close_icon = false,
         always_show_bufferline = false,
 
-        custom_filter = function(buf_number, buf_numbers)
-          -- filter out by buffer name
-          if vim.fn.bufname(buf_number) ~= '*compilation*' then
-            return true
-          end
-        end,
         offsets = {
           {
             filetype = 'NvimTree',
