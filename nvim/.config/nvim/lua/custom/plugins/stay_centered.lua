@@ -1,5 +1,6 @@
-return {
-  -- 'arnamak/stay-centered.nvim',
-  -- lazy = false,
-  -- opts = {},
-}
+return {}
+-- return {
+--   'arnamak/stay-centered.nvim',
+--   lazy = false,
+--   opts = {},
+-- }

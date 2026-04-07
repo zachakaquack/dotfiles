@@ -45,6 +45,11 @@ chpwd() {
     ls
 }
 
+# prints random bullshit so you can jump between prompts in foot
+precmd() {
+    print -Pn "\e]133;A\e\\"
+}
+
 # source p10k settings
 [[ ! -f $XDG_CONFIG_HOME/shell/.p10k.zsh ]] || source $XDG_CONFIG_HOME/shell/.p10k.zsh
 # p10k theme

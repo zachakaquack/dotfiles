@@ -1,4 +1,5 @@
 adapta-gtk-theme
+alvr-launcher-bin
 archlinux-xdg-menu
 archstatus-git
 ark
@@ -10,6 +11,7 @@ bluez
 bluez-utils
 boost
 brightnessctl
+chromium
 cronie
 docopt
 dvdts-fp-git
@@ -109,6 +111,7 @@ python-jaraco.stream
 python-jaraco.test
 python-pipenv
 python-pipx
+python-pygame
 python-pywal
 python-pywalfox
 python-rich
