@@ -29,6 +29,7 @@ setopt HIST_IGNORE_DUPS # ignore dups
 autoload -Uz compinit
 compinit
 eval "$(zoxide init zsh)" # initialize "z" command (zoxide)
+eval "$(tv init zsh)" # initialize tv's zsh autocompletes
 
 # zstyles
 zstyle ':completion:*' special-dirs false # turn off . and .. when tab completing

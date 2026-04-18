@@ -24,7 +24,9 @@ ffmpegthumbnailer
 ffmpegthumbs
 filelight
 font-manager
+foobar2000
 foot
+ftxui
 fuzzel
 fzf
 gdb
@@ -52,6 +54,7 @@ kdenlive
 kio-fuse
 kitty
 kolourpaint
+kruler
 lazygit
 libnotify
 libreoffice-still
@@ -60,6 +63,7 @@ linux
 linux-firmware
 linux-lts
 linux-lts-headers
+lldb
 man-db
 man-pages
 mariadb
@@ -67,6 +71,7 @@ materia-gtk-theme
 mbedtls
 mesa-utils
 meson-python
+metronome
 millennium
 mission-center
 mpc
@@ -81,6 +86,7 @@ networkmanager
 networkmanager-dmenu-git
 ninjabrain-bot
 nomacs
+notcurses
 noto-fonts-emoji
 nvidia-open
 nvidia-prime
@@ -102,6 +108,7 @@ pyside6
 pyside6-tools
 python-breathe
 python-docopt
+python-gdbgui
 python-jaraco.classes
 python-jaraco.envs
 python-jaraco.itertools
@@ -122,6 +129,7 @@ qt6ct
 ranger
 reflector
 rtorrent
+sesh-bin
 slurp
 socat
 speedtest++
@@ -134,6 +142,7 @@ swaync
 swig
 syncthing
 tealdeer
+television
 tetrio-desktop
 thunar
 thunar-archive-plugin

@@ -4,10 +4,14 @@ ls='ls -C -A -p --color=auto --group-directories-first' \
 reload='source $XDG_CONFIG_HOME/shell/.zshrc' \
 q='exit' \
 rm='rm -i' \
+s='tv sesh' \
+todos='tv todo-comments' \
 \
 gpp='g++ *.cpp -std=c++20 -Wall -g && ./a.out' \
 path='echo -e ${PATH//:/\\n}' \
 venv='$HOME/scripts/manage_python_venv.sh' \
+findpy='fd . -t f --extension=".py" | xargs nvim' \
+findcpp='fd . -t f --extension=".cpp" --extension=".h" | xargs nvim' \
 \
 gs='git status' \
 ga='git add' \
