@@ -80,7 +80,7 @@ mpv
 mupdf
 mysql-workbench
 ncmpcpp
-neovim
+neovim-git
 nerd-fonts-git
 networkmanager
 networkmanager-dmenu-git
@@ -102,6 +102,7 @@ pipewire
 pipewire-alsa
 pipewire-pulse
 postgresql
+prettier
 prismlauncher
 protonplus
 pyside6
@@ -129,6 +130,7 @@ qt6ct
 ranger
 reflector
 rtorrent
+rust-analyzer
 sesh-bin
 slurp
 socat
@@ -149,6 +151,7 @@ thunar-archive-plugin
 thunar-volman
 tinymist
 tmux
+tree-sitter-cli
 ttf-baekmuk
 tuime
 tumbler

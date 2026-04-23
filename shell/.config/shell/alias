@@ -20,3 +20,4 @@ gcm='git commit -m' \
 gp='git push' \
 gl='git pull' \
 ginit='git init' \
+glog='git log --decorate --graph' \
