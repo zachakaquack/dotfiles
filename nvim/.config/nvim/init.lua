@@ -1,5 +1,7 @@
 -- ZACH CHANGES
 
+require("vim._core.ui2").enable({})
+
 -- allow for mistakes (im human after all)
 vim.api.nvim_create_user_command("W", ":w", {})
 vim.api.nvim_create_user_command("WQ", ":wq", {})
@@ -47,7 +49,7 @@ vim.o.breakindent = true
 vim.o.undofile = true
 vim.o.ignorecase = true
 vim.o.smartcase = true
-vim.o.signcolumn = "number"
+vim.o.signcolumn = "yes"
 vim.o.termguicolors = true
 vim.o.timeoutlen = 300
 vim.o.swapfile = false
@@ -62,7 +64,7 @@ vim.o.laststatus = 0
 
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 vim.diagnostic.config({
-	update_in_insert = false,
+	update_in_insert = true,
 	severity_sort = true,
 	float = { border = "rounded", source = "if_many" },
 	underline = { severity = { min = vim.diagnostic.severity.WARN } },
@@ -73,6 +75,7 @@ vim.diagnostic.config({
 
 	-- Auto open the float, so you can easily read the errors when jumping with `[d` and `]d`
 	jump = { float = true },
+	-- jump_on_jump = { float = true },
 })
 
 vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
@@ -106,6 +109,144 @@ rtp:prepend(lazypath)
 -- PLUGINS
 require("lazy").setup({
 	-- ZACH PLUGINS
+	{
+		"xzbdmw/colorful-menu.nvim",
+		config = function()
+			-- You don't need to set these options.
+			require("colorful-menu").setup({
+				ls = {
+					lua_ls = {
+						-- Maybe you want to dim arguments a bit.
+						arguments_hl = "@comment",
+					},
+					gopls = {
+						-- By default, we render variable/function's type in the right most side,
+						-- to make them not to crowd together with the original label.
+
+						-- when true:
+						-- foo             *Foo
+						-- ast         "go/ast"
+
+						-- when false:
+						-- foo *Foo
+						-- ast "go/ast"
+						align_type_to_right = true,
+						-- When true, label for field and variable will format like "foo: Foo"
+						-- instead of go's original syntax "foo Foo". If align_type_to_right is
+						-- true, this option has no effect.
+						add_colon_before_type = false,
+						-- See https://github.com/xzbdmw/colorful-menu.nvim/pull/36
+						preserve_type_when_truncate = true,
+					},
+					-- for lsp_config or typescript-tools
+					ts_ls = {
+						-- false means do not include any extra info,
+						-- see https://github.com/xzbdmw/colorful-menu.nvim/issues/42
+						extra_info_hl = "@comment",
+					},
+					vtsls = {
+						-- false means do not include any extra info,
+						-- see https://github.com/xzbdmw/colorful-menu.nvim/issues/42
+						extra_info_hl = "@comment",
+					},
+					["rust-analyzer"] = {
+						-- Such as (as Iterator), (use std::io).
+						extra_info_hl = "@comment",
+						-- Similar to the same setting of gopls.
+						align_type_to_right = true,
+						-- See https://github.com/xzbdmw/colorful-menu.nvim/pull/36
+						preserve_type_when_truncate = true,
+					},
+					clangd = {
+						-- Such as "From <stdio.h>".
+						extra_info_hl = "@comment",
+						-- Similar to the same setting of gopls.
+						align_type_to_right = true,
+						-- the hl group of leading dot of "•std::filesystem::permissions(..)"
+						import_dot_hl = "@comment",
+						-- See https://github.com/xzbdmw/colorful-menu.nvim/pull/36
+						preserve_type_when_truncate = true,
+					},
+					zls = {
+						-- Similar to the same setting of gopls.
+						align_type_to_right = true,
+					},
+					roslyn = {
+						extra_info_hl = "@comment",
+					},
+					dartls = {
+						extra_info_hl = "@comment",
+					},
+					-- The same applies to pyright/pylance
+					basedpyright = {
+						-- It is usually import path such as "os"
+						extra_info_hl = "@comment",
+					},
+					pylsp = {
+						extra_info_hl = "@comment",
+						-- Dim the function argument area, which is the main
+						-- difference with pyright.
+						arguments_hl = "@comment",
+					},
+					-- If true, try to highlight "not supported" languages.
+					fallback = true,
+					-- this will be applied to label description for unsupport languages
+					fallback_extra_info_hl = "@comment",
+				},
+				-- If the built-in logic fails to find a suitable highlight group for a label,
+				-- this highlight is applied to the label.
+				fallback_highlight = "@variable",
+				-- If provided, the plugin truncates the final displayed text to
+				-- this width (measured in display cells). Any highlights that extend
+				-- beyond the truncation point are ignored. When set to a float
+				-- between 0 and 1, it'll be treated as percentage of the width of
+				-- the window: math.floor(max_width * vim.api.nvim_win_get_width(0))
+				-- Default 60.
+				max_width = 60,
+			})
+		end,
+	},
+	{
+		"folke/trouble.nvim",
+		opts = {
+			auto_close = true,
+			auto_open = true,
+			focus = true,
+		}, -- for default options, refer to the configuration section for custom setup.
+		cmd = "Trouble",
+		keys = {
+			{
+				"<leader>xx",
+				"<cmd>Trouble diagnostics toggle<cr>",
+				desc = "Diagnostics (Trouble)",
+			},
+			{
+				"<leader>xX",
+				"<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
+				desc = "Buffer Diagnostics (Trouble)",
+			},
+			{
+				"<leader>cs",
+				"<cmd>Trouble symbols toggle focus=false<cr>",
+				desc = "Symbols (Trouble)",
+			},
+			{
+				"<leader>cl",
+				"<cmd>Trouble lsp toggle focus=false win.position=right<cr>",
+				desc = "LSP Definitions / references / ... (Trouble)",
+			},
+			{
+				"<leader>xL",
+				"<cmd>Trouble loclist toggle<cr>",
+				desc = "Location List (Trouble)",
+			},
+			{
+				"<leader>xQ",
+				"<cmd>Trouble qflist toggle<cr>",
+				desc = "Quickfix List (Trouble)",
+			},
+		},
+	},
 	{
 		"mcauley-penney/visual-whitespace.nvim",
 		config = true,
@@ -481,7 +622,7 @@ require("lazy").setup({
 			---@type table<string, vim.lsp.Config>
 			local servers = {
 				clangd = {},
-				pyright = {},
+				basedpyright = {},
 				rust_analyzer = {},
 				stylua = {},
 				-- Special Lua Config, as recommended by neovim help docs
@@ -571,16 +712,14 @@ require("lazy").setup({
 				-- end
 			end,
 			formatters_by_ft = {
-				cpp = { "clangd" },
+				cpp = { "clang-format" },
 				lua = { "stylua" },
 				sh = { "beautysh" },
 				zsh = { "beautysh" },
 				bash = { "beautysh" },
-				go = { "gofumpt" },
 				python = { "black" },
 				markdown = { "prettier" },
 				json = { "jq" },
-				rust = { "rust-analyzer" },
 			},
 		},
 	},
@@ -663,7 +802,24 @@ require("lazy").setup({
 			completion = {
 				-- By default, you may press `<c-space>` to show the documentation.
 				-- Optionally, set `auto_show = true` to show the documentation after a delay.
-				documentation = { auto_show = false, auto_show_delay_ms = 500 },
+				documentation = { auto_show = true, auto_show_delay_ms = 500 },
+				menu = {
+					draw = {
+						-- We don't need label_description now because label and label_description are already
+						-- combined together in label by colorful-menu.nvim.
+						columns = { { "kind_icon" }, { "label", gap = 1 } },
+						components = {
+							label = {
+								text = function(ctx)
+									return require("colorful-menu").blink_components_text(ctx)
+								end,
+								highlight = function(ctx)
+									return require("colorful-menu").blink_components_highlight(ctx)
+								end,
+							},
+						},
+					},
+				},
 			},
 
 			sources = {
@@ -688,7 +844,6 @@ require("lazy").setup({
 			signature = { enabled = true },
 		},
 	},
-
 	{
 		"eldritch-theme/eldritch.nvim",
 		priority = 1000, -- Make sure to load this before all the other start plugins.
@@ -703,11 +858,13 @@ require("lazy").setup({
 					colors.comment = "#6a9955"
 				end,
 				on_highlights = function(highlights, colors)
-					highlights["@lsp.type.variable.cpp"] = { fg = colors.red, italic = false }
-					highlights["@lsp.typemod.variable.readonly.cpp"] = {
+					highlights["@lsp.type.variable"] = { fg = colors.red, italic = false }
+					highlights["@lsp.typemod.variable.readonly"] = {
 						fg = colors.green,
 						italic = true,
 					}
+
+					highlights["@lsp.type.variable.python"] = { fg = colors.cyan, italic = false }
 				end,
 			})
 			vim.cmd.colorscheme("eldritch")
@@ -753,6 +910,8 @@ require("lazy").setup({
 				"query",
 				"vim",
 				"vimdoc",
+				"python",
+				"rust",
 			}
 			require("nvim-treesitter").install(parsers)
 
