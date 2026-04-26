@@ -61,12 +61,6 @@ source $ZSH_CUSTOM/themes/powerlevel10k/powerlevel10k.zsh-theme
 space="  "
 echo -e "${NEWLINE}${fg[red]}$(print -P '%D{%_I:%M%P}\n')${space}${fg[blue]}$(uptime -p | cut -c 4-)"
 
-# automatically go into `tv sesh` when launching a terminal
-# if already in a tmux session, dont do anything
-if [[ -z "$TMUX" ]]; then 
-    s
-fi
-
 # run hyprland on tty1
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
     exec start-hyprland
