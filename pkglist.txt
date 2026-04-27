@@ -11,6 +11,7 @@ bluez
 bluez-utils
 boost
 brightnessctl
+brlaser
 chromium
 cronie
 docopt

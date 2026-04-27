@@ -1,3 +1,7 @@
+-- Set <space> as the leader key
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
 -- ZACH CHANGES
 
 require("vim._core.ui2").enable({})
@@ -6,6 +10,11 @@ require("vim._core.ui2").enable({})
 vim.api.nvim_create_user_command("W", ":w", {})
 vim.api.nvim_create_user_command("WQ", ":wq", {})
 vim.api.nvim_create_user_command("Q", ":q", {})
+
+-- next and prev git hunks
+vim.keymap.set("n", "<leader>gh", ":Gitsigns next_hunk<Enter>")
+vim.keymap.set("n", "<leader>gH", ":Gitsigns prev_hunk<Enter>")
+vim.keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk<Enter>")
 
 -- BINDINGS
 -- tmux doesn't accept shift-enter by default; so i have
@@ -34,9 +43,6 @@ vim.keymap.set("n", "<leader>r", ":vert Recompile<CR>")
 -- restart lsp more easily
 vim.keymap.set("n", "<leader>l", ":LspRestart<Enter>")
 
--- Set <space> as the leader key
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
 vim.g.have_nerd_font = true
 vim.o.number = true
 vim.o.relativenumber = true
