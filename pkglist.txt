@@ -1,3 +1,4 @@
+7zip
 adapta-gtk-theme
 alvr-launcher-bin
 archlinux-xdg-menu
@@ -13,6 +14,7 @@ boost
 brightnessctl
 brlaser
 chromium
+codeberg-cli
 cronie
 docopt
 dvdts-fp-git
@@ -36,6 +38,7 @@ gimp
 git
 gnome-tweaks
 godot
+gram
 grim
 grub
 gvfs
@@ -44,11 +47,11 @@ gvfs-mtp
 hawkeye
 helium-browser-bin
 htop
-hyprland-git
-hyprland-meta-git
+hyprland
 hyprshot
 ifuse
 isoimagewriter
+jq
 kalker-bin
 kdenlive
 kio-fuse
@@ -67,6 +70,7 @@ lldb
 man-db
 man-pages
 mariadb
+markdownlint
 materia-gtk-theme
 mbedtls
 mesa-utils
@@ -80,7 +84,7 @@ mpv
 mupdf
 mysql-workbench
 ncmpcpp
-neovim-git
+neovim
 nerd-fonts-git
 networkmanager
 networkmanager-dmenu-git
@@ -129,6 +133,7 @@ qbittorrent
 qt6ct
 ranger
 reflector
+ripgrep
 rtorrent
 rust-analyzer
 sesh-bin
@@ -151,8 +156,9 @@ thunar-archive-plugin
 thunar-volman
 tinymist
 tmux
-tree-sitter-cli
+tree-sitter-cli-git
 ttf-baekmuk
+ttf-dejavu
 tuime
 tumbler
 typst
@@ -179,8 +185,8 @@ woff-fira-code
 wofi
 xdg-desktop-portal
 xdg-desktop-portal-gtk
+xdg-desktop-portal-hyprland
 yay
-yay-debug
 yt-dlp
 z
 zathura

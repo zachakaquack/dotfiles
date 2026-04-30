@@ -1,4 +1,4 @@
-#files: 862	version: 5.9
+#files: 857	version: 5.9
 
 _comps=(
 '-' '_precommand'
@@ -86,6 +86,7 @@ _comps=(
 'batch' '_at'
 'baz' '_baz'
 'beep' '_beep'
+'berg' '_berg'
 'bg' '_jobs_bg'
 'bibtex' '_bibtex'
 'bindkey' '_bindkey'
@@ -122,7 +123,6 @@ _comps=(
 'bttrack' '_bittorrent'
 'buildhash' '_ispell'
 'builtin' '_builtin'
-'bun' '_bun'
 'bunzip2' '_bzip2'
 'burst' '_mh'
 'busctl' '_busctl'
@@ -222,7 +222,6 @@ _comps=(
 'ctags' '_ctags'
 'ctags-exuberant' '_ctags'
 'ctags-universal' '_ctags'
-'ctr' '_ctr'
 'curl' '_curl'
 'cut' '_cut'
 'cvs' '_cvs'
@@ -269,7 +268,6 @@ _comps=(
 'dmesg' '_dmesg'
 'dmidecode' '_dmidecode'
 'doas' '_doas'
-'docker' '_docker'
 'domainname' '_yp'
 'dos2unix' '_dos2unix'
 'drill' '_drill'
@@ -666,7 +664,6 @@ _comps=(
 'jq' '_jq'
 'kdeconnect-cli' '_kdeconnect'
 'kernel-install' '_kernel-install'
-'keyring' '_keyring'
 'keystone' '_openstack'
 'keytool' '_java'
 'kfmclient' '_kfmclient'
@@ -970,7 +967,6 @@ _comps=(
 'pinfo' '_texinfo'
 'ping' '_ping'
 'ping6' '_ping'
-'pipenv' '_pipenv'
 'pkgadd' '_pkgadd'
 'pkg-config' '_pkg-config'
 'pkginfo' '_pkginfo'
@@ -1113,7 +1109,6 @@ _comps=(
 'rubber-pipe' '_rubber'
 'ruby' '_ruby'
 'ruby-mri' '_ruby'
-'ruff' '_ruff'
 'run0' '_run0'
 'run-help' '_run-help'
 'rup' '_hosts'
@@ -1254,6 +1249,7 @@ _comps=(
 'systemd-cgtop' '_systemd'
 'systemd-delta' '_systemd-delta'
 'systemd-detect-virt' '_systemd'
+'systemd-hwdb' '_systemd-hwdb'
 'systemd-id128' '_systemd-id128'
 'systemd-inhibit' '_systemd-inhibit'
 'systemd-machine-id-setup' '_systemd'
@@ -1316,7 +1312,6 @@ _comps=(
 'transmission-remote' '_transmission'
 'trap' '_trap'
 'tree' '_tree'
-'tree-sitter' '_tree-sitter'
 'trial' '_twisted'
 'trove' '_openstack'
 'true' '_nothing'
@@ -1731,22 +1726,21 @@ bindkey '^[/' _history-complete-older
 bindkey '^[~' _bash_complete-word
 
 autoload -Uz _fast-theme _z _sesh _awww _bat \
-            _bluetoothctl _bootctl _bun _busctl _bwrap \
-            _cargo _chafa _coredumpctl _ctr _curl \
-            _deno _dkms _docker _dysk _fastfetch \
-            _fd _foot _footclient _fuzzel _ghostty \
-            _hostnamectl _hyprctl _hyprpm _img2sixel _insmod \
-            _journalctl _kernel-install _keyring _kitty _localectl \
-            _loginctl _lsmod _machinectl _meson _mkinitcpio \
-            _mpv _networkctl _ninja _oomctl _p11-kit \
-            _pacman _patchelf _pip _pipenv _playerctl \
-            _pulseaudio _qpdf _resolvectl _rg _rmmod \
-            _ruff _run0 _sd_bus_address _sd_hosts_or_user_at_host _sd_machines \
+            _berg _bluetoothctl _bootctl _busctl _bwrap \
+            _cargo _chafa _coredumpctl _curl _deno \
+            _dkms _dysk _fastfetch _fd _foot \
+            _footclient _fuzzel _ghostty _hostnamectl _hyprctl \
+            _hyprpm _img2sixel _insmod _journalctl _kernel-install \
+            _kitty _localectl _loginctl _lsmod _machinectl \
+            _meson _mkinitcpio _mpv _networkctl _ninja \
+            _oomctl _p11-kit _pacman _patchelf _pip \
+            _playerctl _pulseaudio _qpdf _resolvectl _rg \
+            _rmmod _run0 _sd_bus_address _sd_hosts_or_user_at_host _sd_machines \
             _sd_outputmodes _sd_unit_files _sensors _sensors-detect _swayidle \
             _swaync _swaync-client _systemctl _systemd _systemd-analyze \
-            _systemd-delta _systemd-id128 _systemd-inhibit _systemd-nspawn _systemd-path \
-            _systemd-run _systemd-tmpfiles _timedatectl _tinymist _tldr \
-            _tree-sitter _trust _typst _typstyle _udevadm \
+            _systemd-delta _systemd-hwdb _systemd-id128 _systemd-inhibit _systemd-nspawn \
+            _systemd-path _systemd-run _systemd-tmpfiles _timedatectl _tinymist \
+            _tldr _trust _typst _typstyle _udevadm \
             _udisks2 _upower _userdbctl _varlinkctl _wl-copy \
             _wleave _wl-paste _wpctl _yay _yt-dlp \
             _zathura _zoxide _cdr _all_labels _all_matches \

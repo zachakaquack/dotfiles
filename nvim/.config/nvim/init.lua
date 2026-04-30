@@ -37,8 +37,12 @@ vim.keymap.set("i", "<S-Enter>", "<Enter><Esc>kA")
 vim.keymap.set("n", "j", "gj")
 vim.keymap.set("n", "k", "gk")
 
--- recompiles
-vim.keymap.set("n", "<leader>r", ":vert Recompile<CR>")
+-- duplicate a line in insert mode
+vim.keymap.set("i", "<C-d>", "<Esc>:t.<Enter>a")
+
+-- move lines up and down
+vim.keymap.set("n", "<C-S-J>", ":m+1<Enter>")
+vim.keymap.set("n", "<C-S-K>", ":m-2<Enter>")
 
 -- restart lsp more easily
 vim.keymap.set("n", "<leader>l", ":LspRestart<Enter>")
@@ -67,6 +71,8 @@ vim.o.inccommand = "split"
 vim.o.cursorline = true
 vim.o.scrolloff = 3
 vim.o.laststatus = 0
+vim.o.linebreak = true
+vim.o.wrap = true
 
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 vim.diagnostic.config({
@@ -631,6 +637,7 @@ require("lazy").setup({
 				basedpyright = {},
 				rust_analyzer = {},
 				stylua = {},
+				denols = {},
 				-- Special Lua Config, as recommended by neovim help docs
 				lua_ls = {
 					on_init = function(client)
@@ -726,6 +733,9 @@ require("lazy").setup({
 				python = { "black" },
 				markdown = { "prettier" },
 				json = { "jq" },
+				js = { "prettier" },
+				javascript = { "prettier" },
+				rust = { "ast-grep" },
 			},
 		},
 	},
