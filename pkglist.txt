@@ -36,6 +36,7 @@ ghostty
 gifsicle
 gimp
 git
+gnome-multi-writer
 gnome-tweaks
 godot
 gram
@@ -166,6 +167,7 @@ typstyle
 ueberzugpp
 unrar
 v4l2loopback-dkms
+ventoy-bin
 vesktop
 vim
 viu

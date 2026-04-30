@@ -10,8 +10,8 @@
 		"hyprland/workspaces"
 	],
 	"modules-center": [
-		//	"hyprland/window"
-		"mpd"
+			"hyprland/window"
+		// "mpd"
 	],
 	"modules-right": [
 		"custom/weather",
