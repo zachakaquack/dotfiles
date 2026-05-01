@@ -33,21 +33,33 @@ random_theme(){
     $SCRIPTS/random.sh
 }
 
+toggle_vesktop_notifications(){
+    source $SCRIPTS/toggle_vesktop_notifications.sh
+    toggle
+}
+
+get_vesktop_status_str(){
+    source $SCRIPTS/toggle_vesktop_notifications.sh
+
+    local state
+    state=$(jq  "$STATE_PATH" "$CONFIG_HOME")
+
+    if [[ "$state" == "$ENABLED" ]]; then
+        echo "Disable Vesktop Notifications"
+    else
+        echo "Enable Vesktop Notifications"
+    fi
+}
 
 options="Theme Menu""\\n"
 options+="Calculator""\\n"
 options+="Backup Dotfiles""\\n"
-# options+="Search Python Projects""\\n"
-# options+="Search C++ Projects (CPP)""\\n"
-# options+="Search Repos""\\n"
-# options+="Minecraft (MCSR)""\\n"
 options+="Random Theme""\\n"
 options+="Define Word""\\n"
 options+="Notes""\\n"
 options+="Music Controls""\\n"
 options+="Youtube Downloader""\\n"
-# options+="Rhythia""\\n"
-# options+="Rhythia Nightly""\\n"
+options+="$(get_vesktop_status_str)""\\n"
 
 chooseprogram() { \
         d=$(date)
@@ -56,18 +68,13 @@ chooseprogram() { \
         "Theme Menu") themes ;;
         "Calculator") calculator ;;
         "Backup Dotfiles") backupdotfiles ;;
-            # "Search Python Projects") projects "python" ;;
-            # "Search C++ Projects (CPP)") projects "c++" ;;
-            # "Search Repos") projects "repos" ;;
         $d) get_date ;;
-            # "Minecraft (MCSR)") run_minecraft ;;
         "Random Theme") random_theme ;;
         "Define Word") $SCRIPTS/fzf_scripts/define_menu.sh ;;
         "Notes") $SCRIPTS/noter/main.sh ;;
         "Music Controls") $SCRIPTS/music.sh ;;
         "Youtube Downloader") $SCRIPTS/ytdownloader.sh ;;
-            # "Rhythia") "$HOME/Desktop/Rhythia/Rhythia" ;;
-            # "Rhythia Nightly") "$HOME/Desktop/Rhythia Nightly/SoundSpacePlus.x86_64" ;;
+        *"Vesktop Notifications") toggle_vesktop_notifications ;;
     esac
 }
 
