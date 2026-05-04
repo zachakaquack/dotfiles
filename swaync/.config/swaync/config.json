@@ -44,5 +44,11 @@
                      "exec": "sh -c '/usr/bin/hyprctl dispatch workspace 2 && hyprctl dispatch focuswindow class:vesktop'",
                      "app-name": "vesktop"
               }
+       },
+       "notification-visibility": {
+              "vesktop-blocker": {
+                     "state": "muted",
+                     "app-name": "vesktop"
+              }
        }
 }
