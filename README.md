@@ -11,3 +11,5 @@ this uses stow for everything, so make sure you have that installed ;)
 - 2026-04-07 - switched from ghostty to foot because speed, and i use tmux now
 
 - 2026-04-17 - redo nvim config, one init.lua
+
+- 2026-05-04 - getting rid of kitty and ghostty cause i dont need it anymore
