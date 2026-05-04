@@ -1,5 +1,6 @@
 7zip
 adapta-gtk-theme
+apple-music-bin
 archlinux-xdg-menu
 ark
 awww
@@ -30,7 +31,6 @@ git
 gnome-multi-writer
 gnome-tweaks
 godot
-gram
 grim
 grub
 gvfs
@@ -39,6 +39,7 @@ gvfs-mtp
 helium-browser-bin
 htop
 hyprland
+hyprpicker
 hyprshot
 ifuse
 isoimagewriter
@@ -48,6 +49,7 @@ kio-fuse
 kitty
 kolourpaint
 libnotify
+libqalculate
 libreoffice-still
 librewolf-bin
 linux
@@ -72,7 +74,7 @@ nerd-fonts-git
 networkmanager
 networkmanager-dmenu-git
 ninjabrain-bot
-nomacs
+nomacs-git
 noto-fonts-emoji
 nvidia-open
 nvidia-prime
@@ -86,6 +88,7 @@ pipewire-alsa
 pipewire-pulse
 prettier
 prismlauncher
+protonplus
 pyside6
 pyside6-tools
 python-breathe
@@ -111,6 +114,8 @@ qt6ct
 reflector
 ripgrep
 rust-analyzer
+rust-src
+rustup
 sesh-bin
 slurp
 socat
