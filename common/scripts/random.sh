@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-BACKGROUNDS_DIR="$HOME/dotfiles/backgrounds"
+BACKGROUNDS_DIR="$HOME/Pictures/bgs"
 random(){
     local image
     image=$(ls -1 "$BACKGROUNDS_DIR" |  shuf -n 1)
