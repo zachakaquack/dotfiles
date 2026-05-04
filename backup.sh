@@ -1,15 +1,10 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # move so the git repo works
 cd $HOME/dotfiles/
 
-# refresh the package list
-id=$(notify-send -p "Updating YAY list...")
-yay -Qqe > $HOME/dotfiles/pkglist.txt
-
 # do git stuff
-
-notify-send -r $id "Adding files..."
+id=$(notify-send -p "Adding files...")
 git add . > /dev/null 2>&1
 
 notify-send -r $id "Committing..."
