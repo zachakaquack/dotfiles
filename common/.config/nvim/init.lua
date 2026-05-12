@@ -16,6 +16,9 @@ vim.keymap.set("n", "<leader>gh", ":Gitsigns next_hunk<Enter>")
 vim.keymap.set("n", "<leader>gH", ":Gitsigns prev_hunk<Enter>")
 vim.keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk<Enter>")
 
+-- a
+vim.keymap.set("n", "gl", vim.diagnostic.open_float)
+
 -- BINDINGS
 -- tmux doesn't accept shift-enter by default; so i have
 -- 'map shift+enter send_key alt+page_down' in my kitty.conf
@@ -45,7 +48,9 @@ vim.keymap.set("n", "<C-S-J>", ":m+1<Enter>")
 vim.keymap.set("n", "<C-S-K>", ":m-2<Enter>")
 
 -- rust run
-vim.keymap.set("n", "<leader>r", ":RustRun<Enter>")
+vim.keymap.set("n", "<leader>r", ":!cargo run<Enter>")
+-- replace todos
+vim.keymap.set("n", "<leader>n", "/todo!()<Enter>cf)")
 
 -- restart lsp more easily
 vim.keymap.set("n", "<leader>l", ":LspRestart<Enter>")

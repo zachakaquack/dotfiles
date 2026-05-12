@@ -7,7 +7,7 @@ TO_OVERRIDE="$(ls -1 $LIBRE_WALLPAPERS)"
 source "$XDG_CACHE_HOME/wal/colors.sh"
 
 # create imagemagick of background
-magick "$wallpaper" -gravity center -resize 1920x1080 "$XDG_CACHE_HOME/magick.png"
+# magick "$wallpaper" -gravity center -resize 1920x1080 "$XDG_CACHE_HOME/magick.png"
 
 # 114 +
 # move to new spot in ~/.librewolf/uea6t6ay.default-release/wallpaper
