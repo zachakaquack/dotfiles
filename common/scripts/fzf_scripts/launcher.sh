@@ -60,6 +60,7 @@ options+="Notes""\\n"
 options+="Music Controls""\\n"
 options+="Youtube Downloader""\\n"
 options+="$(get_vesktop_status_str)""\\n"
+options+="ncmpcpp""\\n"
 
 chooseprogram() { \
         d=$(date)
@@ -75,6 +76,7 @@ chooseprogram() { \
         "Music Controls") $SCRIPTS/music.sh ;;
         "Youtube Downloader") $SCRIPTS/ytdownloader.sh ;;
         *"Vesktop Notifications") toggle_vesktop_notifications ;;
+        "ncmpcpp") "$SCRIPTS/ncmpcpp.sh" ;;
     esac
 }
 
