@@ -14,6 +14,7 @@
 		// "mpd"
 	],
 	"modules-right": [
+		"custom/music-controls",
 		"custom/weather",
 		"network",
 		"battery",
@@ -138,6 +139,16 @@
 		"on-click": "sh -c 'mpc toggle'",
 		"on-click-right": "sh -c 'mpc next'",
 		"on-click-middle": "sh -c 'ghostty -e ncmpcpp'",
+		"on-scroll-up": "sh -c 'mpc volume +1'",
+		"on-scroll-down": "sh -c 'mpc volume -1'"
+	},
+	"custom/music-controls": {
+		"format": "󰎇",
+		"tooltip-format": "MPD (connected)",
+		"tooltip-format-disconnected": "MPD (disconnected)",
+		"on-click": "sh -c 'mpc toggle'",
+		"on-click-right": "sh -c 'mpc next'",
+		"on-click-middle": "sh -c '$SCRIPTS/ncmpcpp.sh'",
 		"on-scroll-up": "sh -c 'mpc volume +1'",
 		"on-scroll-down": "sh -c 'mpc volume -1'"
 	}
