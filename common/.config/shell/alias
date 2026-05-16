@@ -4,6 +4,9 @@ ls='ls -C -A -p --color=auto --group-directories-first' \
 reload='source $XDG_CONFIG_HOME/shell/.zshrc' \
 q='exit' \
 rm='rm -i' \
+mkdir='mkdir -p' \
+cp='cp -i' \
+mv='mv -i' \
 s='tv sesh' \
 s='sesh connect $(sesh list | fzf)' \
 todos='tv todo-comments' \
