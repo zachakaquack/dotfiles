@@ -14,11 +14,12 @@
 		// "mpd"
 	],
 	"modules-right": [
+		"custom/keyboard",
 		"custom/weather",
 		"network",
 		"battery",
 		"pulseaudio",
-		"clock",
+		"clock"
 		// "custom/power"
 	],
 	"hyprland/workspaces": {
@@ -139,5 +140,9 @@
 		"on-click-middle": "sh -c 'ghostty -e ncmpcpp'",
 		"on-scroll-up": "sh -c 'mpc volume +1'",
 		"on-scroll-down": "sh -c 'mpc volume -1'"
+	},
+	"custom/keyboard": {
+		"format": " ",
+		"on-click": "$XDG_CONFIG_HOME/waybar/toggle_keyboard.sh"
 	}
 }
