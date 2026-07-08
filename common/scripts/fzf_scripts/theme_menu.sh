@@ -3,7 +3,7 @@
 directory="$HOME/Pictures/bgs"
 
 # list without directories
-theme=$($SCRIPTS/fzf_scripts/menu.sh "$(ls -1 $directory)")
+theme=$($SCRIPTS/fzf_scripts/menu.sh "$(ls -1t $directory)")
 
 # only execute theme not empty
 if [[ -n "$theme" ]]; then
