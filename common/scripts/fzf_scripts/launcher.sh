@@ -58,7 +58,6 @@ options+="Random Theme""\\n"
 options+="Define Word""\\n"
 options+="Notes""\\n"
 options+="Music Controls""\\n"
-options+="Youtube Downloader""\\n"
 options+="$(get_vesktop_status_str)""\\n"
 options+="ncmpcpp""\\n"
 
@@ -74,7 +73,6 @@ chooseprogram() { \
         "Define Word") $SCRIPTS/fzf_scripts/define_menu.sh ;;
         "Notes") $SCRIPTS/noter/main.sh ;;
         "Music Controls") $SCRIPTS/music.sh ;;
-        "Youtube Downloader") $SCRIPTS/ytdownloader.sh ;;
         *"Vesktop Notifications") toggle_vesktop_notifications ;;
         "ncmpcpp") "$SCRIPTS/ncmpcpp.sh" ;;
     esac
