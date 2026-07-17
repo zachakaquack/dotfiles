@@ -10,7 +10,6 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_STATE_HOME="$HOME/.local/state"
-
 # get rid of the annoying zcompdump stuff
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 
@@ -36,6 +35,7 @@ export PATH
 export HYPRSHOT_DIR="$HOME/Pictures/screenshots"
 export ZSH="$HOME/.oh-my-zsh"
 export SCRIPTS="$HOME/scripts"
+export STORAGE="/mnt/storage"
 
 # moving everything from my home folder (including the zsh stuff above)
 export _Z_DATA="$XDG_CACHE_HOME/z"

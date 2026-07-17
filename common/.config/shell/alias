@@ -9,6 +9,7 @@ cp='cp -i' \
 mv='mv -i' \
 s='tv sesh' \
 todos='tv todo-comments' \
+logout='loginctl terminate-user 1000' \
 \
 gpp='g++ *.cpp -std=c++20 -Wall -g && ./a.out' \
 path='echo -e ${PATH//:/\\n}' \
