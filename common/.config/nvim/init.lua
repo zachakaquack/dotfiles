@@ -40,9 +40,6 @@ vim.keymap.set("i", "<S-Enter>", "<Enter><Esc>kA")
 vim.keymap.set("n", "j", "gj")
 vim.keymap.set("n", "k", "gk")
 
--- duplicate a line in insert mode
-vim.keymap.set("i", "<C-d>", "<Esc>:t.<Enter>a")
-
 -- move lines up and down
 vim.keymap.set("n", "<C-S-J>", ":m+1<Enter>")
 vim.keymap.set("n", "<C-S-K>", ":m-2<Enter>")
@@ -54,6 +51,9 @@ vim.keymap.set("n", "<leader>n", "/todo!()<Enter>cf)")
 
 -- restart lsp more easily
 vim.keymap.set("n", "<leader>l", ":LspRestart<Enter>")
+
+-- add to layout
+vim.fn.setreg("l", "yiWoself.main_layout.addWidget()_f(p")
 
 vim.g.have_nerd_font = true
 vim.o.number = true
@@ -198,7 +198,7 @@ require("lazy").setup({
 						extra_info_hl = "@comment",
 					},
 					-- The same applies to pyright/pylance
-					basedpyright = {
+					pyright = {
 						-- It is usually import path such as "os"
 						extra_info_hl = "@comment",
 					},
@@ -642,10 +642,12 @@ require("lazy").setup({
 			---@type table<string, vim.lsp.Config>
 			local servers = {
 				clangd = {},
+				hyprls = {},
 				basedpyright = {},
 				rust_analyzer = {},
 				stylua = {},
 				denols = {},
+				gopls = {},
 				-- Special Lua Config, as recommended by neovim help docs
 				lua_ls = {
 					on_init = function(client)
@@ -668,10 +670,10 @@ require("lazy").setup({
 								checkThirdParty = false,
 								-- NOTE: this is a lot slower and will cause issues when working on your own configuration.
 								--  See https://github.com/neovim/nvim-lspconfig/issues/3189
-								library = vim.tbl_extend("force", vim.api.nvim_get_runtime_file("", true), {
-									"${3rd}/luv/library",
-									"${3rd}/busted/library",
-								}),
+								-- library = vim.tbl_extend("force", vim.api.nvim_get_runtime_file("", true), {
+								-- 	"${3rd}/luv/library",
+								-- 	"${3rd}/busted/library",
+								-- }),
 							},
 						})
 					end,
