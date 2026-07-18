@@ -1,2 +1,11 @@
-*/.zcompdump*
+# common/.config/shell/.zcompdump* # doesnt work for some reason
 common/hypr/machine.conf
+
+# the entire directory is symlinked, so ignore the wal stuff
+common/.config/swaync/style.css
+common/.config/wleave/wlogout.css
+
+# more symlinked directory problems
+common/.config/tmux/plugins/*
+common/Pictures/screenshots/*
+
