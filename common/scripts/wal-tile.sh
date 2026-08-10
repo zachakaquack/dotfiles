@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-# "$@" is the wallpaper path
 wal -n -i "$1"
 awww img "$1" --transition-type fade --transition-step 255 --transition-fps 144
 cp $HOME/.cache/wal/colors-hyprland.conf $HOME/.config/hypr/colors.conf && hyprctl reload
