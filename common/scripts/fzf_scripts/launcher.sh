@@ -59,7 +59,7 @@ options+="Define Word""\\n"
 options+="Notes""\\n"
 options+="Music Controls""\\n"
 options+="$(get_vesktop_status_str)""\\n"
-options+="ncmpcpp""\\n"
+options+="Favorite Song""\\n"
 
 chooseprogram() { \
         d=$(date)
@@ -74,7 +74,7 @@ chooseprogram() { \
         "Notes") $SCRIPTS/noter/main.sh ;;
         "Music Controls") $SCRIPTS/music.sh ;;
         *"Vesktop Notifications") toggle_vesktop_notifications ;;
-        "ncmpcpp") "$SCRIPTS/ncmpcpp.sh" ;;
+        "Favorite Song") mpc --format '%file%' | head -1 >> $HOME/.config/mpd/playlists/BESTS.m3u ;;
     esac
 }
 
