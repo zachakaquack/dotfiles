@@ -40,18 +40,6 @@ vim.keymap.set("i", "<S-Enter>", "<Enter><Esc>kA")
 vim.keymap.set("n", "j", "gj")
 vim.keymap.set("n", "k", "gk")
 
--- move lines up and down
-vim.keymap.set("n", "<C-S-J>", ":m+1<Enter>")
-vim.keymap.set("n", "<C-S-K>", ":m-2<Enter>")
-
--- rust run
-vim.keymap.set("n", "<leader>r", ":!cargo run<Enter>")
--- replace todos
-vim.keymap.set("n", "<leader>n", "/todo!()<Enter>cf)")
-
--- restart lsp more easily
-vim.keymap.set("n", "<leader>l", ":LspRestart<Enter>")
-
 -- add to layout
 vim.fn.setreg("l", "yiWoself.main_layout.addWidget()_f(p")
 
