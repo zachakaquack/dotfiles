@@ -6,6 +6,8 @@ this uses stow for everything, so make sure you have that installed ;)
 
 to install, just install required programs and `stow -R common` then desktop or laptop
 
+for zach in the future: make sure to change the info in `./common/.gitconfig`!
+
 "changelog":
 
 - 2025-12-31T20:31:36UTC - switched from kitty to ghostty because hyprland's 0.53.0 update fucked up kitty's color rendering; and the colors do not match anymore

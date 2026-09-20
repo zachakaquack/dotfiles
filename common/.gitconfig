@@ -1,6 +1,6 @@
 [user]
-	email = zach12399@gmail.com
-	name = Zach Allen
+	email = <email>
+	name = Zach <last>
 	signingkey = ~/.ssh/id_ed25519.pub
 
 [init]
