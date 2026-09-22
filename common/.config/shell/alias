@@ -11,7 +11,7 @@ s='tv sesh' \
 todos='tv todo-comments' \
 logout='loginctl terminate-user 1000' \
 \
-gpp='g++ *.cpp -std=c++20 -Wall -g && ./a.out' \
+gpp='g++ *.cpp -std=c++20 -Wall && ./a.out' \
 path='echo -e ${PATH//:/\\n}' \
 venv='$HOME/scripts/manage_python_venv.sh' \
 findpy='fd . -t f --extension=".py" | xargs nvim' \
