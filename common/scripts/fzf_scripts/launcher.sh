@@ -30,8 +30,7 @@ run_minecraft(){
 }
 
 random_theme(){
-    # $SCRIPTS/random.sh
-    cwal --random
+    $SCRIPTS/random.sh
 }
 
 toggle_vesktop_notifications(){

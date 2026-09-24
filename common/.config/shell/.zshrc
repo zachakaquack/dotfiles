@@ -12,8 +12,8 @@ source $ZSH/oh-my-zsh.sh
 [ -f "$XDG_CONFIG_HOME/shell/alias" ] && source "$XDG_CONFIG_HOME/shell/alias"
 
 # load colors from wal
-(cat $HOME/.cache/cwal/sequences &)
-source $HOME/.cache/cwal/colors-tty.sh
+(cat $HOME/.cache/wal/sequences &)
+source $HOME/.cache/wal/colors-tty.sh
 
 # compdump location
 ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
