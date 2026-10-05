@@ -41,7 +41,7 @@
   "scripts": {
     "vesktop-onclick": {
       "run-on": "action",
-      "exec": "sh -c 'hyprctl dispatch 'hl.dsp.focus({workspace=2})'"
+      "exec": "hyprctl dispatch 'hl.dsp.focus({workspace=2})'",
       "app-name": "vesktop"
     }
   },
