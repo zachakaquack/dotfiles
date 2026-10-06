@@ -1,4 +1,4 @@
-#files: 905	version: 5.9.2
+#files: 878	version: 5.9.2
 
 _comps=(
 '-' '_precommand'
@@ -97,7 +97,6 @@ _comps=(
 'beep' '_beep'
 'bg' '_jobs_bg'
 'bibtex' '_bibtex'
-'bindgen' '_bindgen'
 'bindkey' '_bindkey'
 'bison' '_bison'
 'blkid' '_blkid'
@@ -169,7 +168,6 @@ _comps=(
 'chdman' '_chdman'
 'checkmodule' '_selinux'
 'checkpolicy' '_selinux'
-'checkupdates' '_checkupdates'
 'chfn' '_users'
 'chgrp' '_chown'
 'chimera' '_webbrowser'
@@ -236,6 +234,7 @@ _comps=(
 'ctags' '_ctags'
 'ctags-exuberant' '_ctags'
 'ctags-universal' '_ctags'
+'ctr' '_ctr'
 'curl' '_curl'
 'cut' '_cut'
 'cvs' '_cvs'
@@ -256,8 +255,6 @@ _comps=(
 'dd' '_dd'
 'declare' '_typeset'
 '-default-' '_default'
-'delta' '_delta'
-'deno' '_deno'
 'designate' '_openstack'
 'devtodo' '_devtodo'
 'df' '_df'
@@ -281,6 +278,8 @@ _comps=(
 'dmesg' '_dmesg'
 'dmidecode' '_dmidecode'
 'doas' '_doas'
+'docker' '_docker'
+'dolphin' '_dolphin'
 'domainname' '_yp'
 'dos2unix' '_dos2unix'
 'dotnet' '_dotnet'
@@ -291,6 +290,12 @@ _comps=(
 'dsh' '_dsh'
 'dtruss' '_dtruss'
 'du' '_du'
+'_dunst' '_dunst'
+'dunst' '_dunst'
+'_dunstctl' '_dunstctl'
+'dunstctl' '_dunstctl'
+'_dunstify' '_dunstify'
+'dunstify' '_dunstify'
 'dvibook' '_dvi'
 'dviconcat' '_dvi'
 'dvicopy' '_dvi'
@@ -342,8 +347,6 @@ _comps=(
 'extractres' '_psutils'
 'fakeroot' '_fakeroot'
 'false' '_nothing'
-'fastfetch' '_fastfetch'
-'fast-theme' '_fast-theme'
 'fc' '_fc'
 'fc-list' '_xft_fonts'
 'fc-match' '_xft_fonts'
@@ -682,10 +685,8 @@ _comps=(
 'join' '_join'
 'journalctl' '_journalctl'
 'jq' '_jq'
-'just' '_just'
 'kdeconnect-cli' '_kdeconnect'
 'kernel-install' '_kernel-install'
-'keyring' '_keyring'
 'keystone' '_openstack'
 'keytool' '_java'
 'kfmclient' '_kfmclient'
@@ -767,7 +768,6 @@ _comps=(
 'lua' '_lua'
 'lualatex' '_tex'
 'luarocks' '_luarocks'
-'luarocks-admin' '_luarocks-admin'
 'lvchange' '_lvm2'
 'lvconvert' '_lvm2'
 'lvcreate' '_lvm2'
@@ -824,7 +824,6 @@ _comps=(
 'mencal' '_mencal'
 'mere' '_mere'
 'merge' '_rcs'
-'meson' '_meson'
 'metaflac' '_flac'
 'mformat' '_mtools'
 'mgv' '_pspdf'
@@ -962,22 +961,14 @@ _comps=(
 'p4' '_perforce'
 'p4d' '_perforce'
 'pacat' '_pulseaudio'
-'paccache' '_paccache'
-'pacdiff' '_pacdiff'
 'pack' '_pack'
 'packf' '_mh'
-'paclist' '_paclist'
-'paclog-pkglist' '_paclog-pkglist'
 'pacman' '_pacman'
 'pacman-conf' '_pacman'
 'pacman-key' '_pacman'
 'pacman.static' '_pacman'
 'pacmd' '_pulseaudio'
-'pacscripts' '_pacscripts'
-'pacsearch' '_pacsearch'
-'pacsort' '_pacsort'
 'pactl' '_pulseaudio'
-'pactree' '_pactree'
 'padsp' '_pulseaudio'
 'pandoc' '_pandoc'
 'papers' '_papers'
@@ -1057,7 +1048,6 @@ _comps=(
 'podgrep' '_perl_modules'
 'podpath' '_perl_modules'
 'podtoc' '_perl_modules'
-'poetry' '_poetry'
 'poff' '_pon'
 'policytool' '_java'
 'pon' '_pon'
@@ -1068,6 +1058,7 @@ _comps=(
 'postmaster' '_postgresql'
 'postqueue' '_postfix'
 'postsuper' '_postfix'
+'powerprofilesctl' '_powerprofilesctl'
 'pr' '_pr'
 'prev' '_mh'
 'print' '_print'
@@ -1124,7 +1115,6 @@ _comps=(
 'quilt' '_quilt'
 'r' '_fc'
 'rake' '_rake'
-'rankmirrors' '_rankmirrors'
 'ranlib' '_ranlib'
 'rar' '_rar'
 'rc' '_sh'
@@ -1193,13 +1183,11 @@ _comps=(
 'rubber-pipe' '_rubber'
 'ruby' '_ruby'
 'ruby-mri' '_ruby'
-'ruff' '_ruff'
 'run0' '_run0'
 'runcon' '_selinux'
 'run-help' '_run-help'
 'rup' '_hosts'
 'rusage' '_precommand'
-'rustup' '_rustup'
 'rview' '_vim'
 'rvim' '_vim'
 'rwho' '_hosts'
@@ -1240,7 +1228,6 @@ _comps=(
 'serialver' '_java'
 'service' '_service'
 'sesearch' '_selinux'
-'sesh' '_sesh'
 'sestatus' '_selinux'
 'set' '_set'
 'setenforce' '_selinux'
@@ -1270,7 +1257,6 @@ _comps=(
 'showchar' '_psutils'
 'showmount' '_showmount'
 'shred' '_shred'
-'shtab' '_shtab'
 'shuf' '_shuf'
 'shutdown' '_shutdown'
 'sioyek' '_sioyek'
@@ -1339,6 +1325,7 @@ _comps=(
 'svnliteadmin' '_subversion'
 'swaks' '_swaks'
 'swanctl' '_swanctl'
+'swayimg' '_swayimg'
 'swaync' '_swaync'
 'swaync-client' '_swaync-client'
 'swift' '_swift'
@@ -1440,9 +1427,6 @@ _comps=(
 'type' '_which'
 'typeset' '_typeset'
 'udevadm' '_udevadm'
-'udiskie' '_udiskie'
-'udiskie-mount' '_udiskie-mount'
-'udiskie-umount' '_udiskie-umount'
 'udisksctl' '_udisks2'
 'ulimit' '_ulimit'
 'uml_mconsole' '_uml'
@@ -1475,7 +1459,6 @@ _comps=(
 'unzip' '_zip'
 'unzstd' '_zstd'
 'updatectl' '_updatectl'
-'updpkgsums' '_updpkgsums'
 'upower' '_upower'
 'uptime' '_uptime'
 'urxvt' '_urxvt'
@@ -1607,7 +1590,6 @@ _comps=(
 'wiggle' '_wiggle'
 'wipefs' '_wipefs'
 'wl-copy' '_wl-copy'
-'wleave' '_wleave'
 'wl-paste' '_wl-paste'
 'wodim' '_cdrecord'
 'wpa_cli' '_wpa_cli'
@@ -1683,7 +1665,6 @@ _comps=(
 'ypxfr' '_yp'
 'ysh' '_sh'
 'ytalk' '_other_accounts'
-'yt-dlp' '_yt-dlp'
 'zargs' '_zargs'
 'zathura' '_zathura'
 'zcalc' '_zcalc'
@@ -1866,29 +1847,24 @@ bindkey '^[,' _history-complete-newer
 bindkey '^[/' _history-complete-older
 bindkey '^[~' _bash_complete-word
 
-autoload -Uz _fast-theme _z _sesh _awww _bat \
-            _bindgen _bluetoothctl _bootctl _busctl _bwrap \
-            _cargo _checkupdates _coredumpctl _curl _delta \
-            _deno _dotnet _fastfetch _fd _foot \
-            _footclient _fuzzel _hostnamectl _hyprctl _img2sixel \
-            _insmod _journalctl _just _kdeconnect _kernel-install \
-            _keyring _kitty _localectl _loginctl _lsmod \
-            _luarocks _luarocks-admin _machinectl _meson _mkinitcpio \
-            _mpv _networkctl _ninja _oomctl _p11-kit \
-            _paccache _pacdiff _paclist _paclog-pkglist _pacman \
-            _pacscripts _pacsearch _pacsort _pactree _patchelf \
-            _pip _playerctl _poetry _pulseaudio _qpdf \
-            _rankmirrors _resolvectl _rg _rmmod _ruff \
-            _run0 _rustup _sd_bus_address _sd_hosts_or_user_at_host _sd_machines \
-            _sd_outputmodes _sd_unit_files _sensors _sensors-detect _shtab \
-            _storagectl _swaync _swaync-client _systemctl _systemd \
-            _systemd-analyze _systemd-cryptenroll _systemd-delta _systemd-hwdb _systemd-id128 \
-            _systemd-inhibit _systemd-nspawn _systemd-path _systemd-run _systemd-sysinstall \
-            _systemd-sysupdate _systemd-tmpfiles _timedatectl _tldr _tree-sitter \
-            _trust _udevadm _udiskie _udiskie-canonical_paths _udiskie-mount \
-            _udiskie-umount _udisks2 _updatectl _updpkgsums _upower \
-            _userdbctl _varlinkctl _wl-copy _wleave _wl-paste \
-            _wpctl _yay _yt-dlp _zathura _zoxide \
+autoload -Uz _z _awww _bat _bluetoothctl _bootctl \
+            _busctl _bwrap _cargo _coredumpctl _ctr \
+            _curl _docker _dolphin _dotnet _dunst \
+            _dunstctl _dunstify _fd _foot _footclient \
+            _fuzzel _hostnamectl _hyprctl _img2sixel _insmod \
+            _journalctl _kdeconnect _kernel-install _kitty _localectl \
+            _loginctl _lsmod _machinectl _mkinitcpio _mpv \
+            _networkctl _ninja _oomctl _p11-kit _pacman \
+            _patchelf _playerctl _powerprofilesctl _pulseaudio _qpdf \
+            _resolvectl _rg _rmmod _run0 _sd_bus_address \
+            _sd_hosts_or_user_at_host _sd_machines _sd_outputmodes _sd_unit_files _sensors \
+            _sensors-detect _storagectl _swayimg _swaync _swaync-client \
+            _systemctl _systemd _systemd-analyze _systemd-cryptenroll _systemd-delta \
+            _systemd-hwdb _systemd-id128 _systemd-inhibit _systemd-nspawn _systemd-path \
+            _systemd-run _systemd-sysinstall _systemd-sysupdate _systemd-tmpfiles _timedatectl \
+            _tldr _tree-sitter _trust _udevadm _udisks2 \
+            _updatectl _upower _userdbctl _varlinkctl _wl-copy \
+            _wl-paste _wpctl _yay _zathura _zoxide \
             _cdr _all_labels _all_matches _alternative _approximate \
             _arg_compile _arguments _as_if _bash_completions _cache_invalid \
             _call_function _combination _complete _complete_debug _complete_help \

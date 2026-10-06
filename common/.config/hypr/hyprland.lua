@@ -59,8 +59,8 @@ hl.config({
 		gaps_out = 0,
 
 		col = {
-			active_border = WAL_COLORS.colors.color11,
-			inactive_border = WAL_COLORS.colors.color7,
+			-- active_border = WAL_COLORS.colors.color11,
+			-- inactive_border = WAL_COLORS.colors.color7,
 		},
 	},
 	decoration = {
