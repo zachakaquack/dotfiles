@@ -1,7 +1,7 @@
 goes in either:
 
-`~/.librewolf/*.default-release/chrome`
+`~/.librewolf/*.default-*/chrome`
 
 or
 
-`~/.config/librewolf/*.default-release/chrome`
+`~/.config/librewolf/*.default-*/chrome`
