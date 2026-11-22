@@ -60,6 +60,7 @@ options+="Notes""\\n"
 options+="Music Controls""\\n"
 options+="$(get_vesktop_status_str)""\\n"
 options+="Favorite Song""\\n"
+options+="Start Timer""\\n"
 
 chooseprogram() { \
         d=$(date)
@@ -75,6 +76,7 @@ chooseprogram() { \
         "Music Controls") $SCRIPTS/music.sh ;;
         *"Vesktop Notifications") toggle_vesktop_notifications ;;
         "Favorite Song") mpc --format '%file%' | head -1 >> $HOME/.config/mpd/playlists/BESTS.m3u ;;
+        "Start Timer") $SCRIPTS/timermaker.sh
     esac
 }
 
